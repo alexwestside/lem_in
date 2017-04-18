@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
+libft/libft.h
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/libft/libft.h
+
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/libft/libft.h
+stdlib.h
+-
+string.h
+-
+unistd.h
+-
+
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/main.c
+lem_in.h
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
+
