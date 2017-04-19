@@ -123,6 +123,33 @@ lem_in/fast:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/build
 .PHONY : lem_in/fast
 
+input_validation.o: input_validation.c.o
+
+.PHONY : input_validation.o
+
+# target to build an object file
+input_validation.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/input_validation.c.o
+.PHONY : input_validation.c.o
+
+input_validation.i: input_validation.c.i
+
+.PHONY : input_validation.i
+
+# target to preprocess a source file
+input_validation.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/input_validation.c.i
+.PHONY : input_validation.c.i
+
+input_validation.s: input_validation.c.s
+
+.PHONY : input_validation.s
+
+# target to generate assembly for a file
+input_validation.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/input_validation.c.s
+.PHONY : input_validation.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lem_in"
+	@echo "... input_validation.o"
+	@echo "... input_validation.i"
+	@echo "... input_validation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

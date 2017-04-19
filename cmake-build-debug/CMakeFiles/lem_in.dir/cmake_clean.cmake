@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/main.c.o"
+  "CMakeFiles/lem_in.dir/input_validation.c.o"
   "lem_in.pdb"
   "lem_in"
 )

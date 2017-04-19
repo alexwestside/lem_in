@@ -3,7 +3,7 @@ project(lem_in)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")
 
-set(SOURCE_FILES main.c lem_in.h)
+set(SOURCE_FILES main.c lem_in.h input_validation.c)
 
 add_executable(lem_in ${SOURCE_FILES})
 
