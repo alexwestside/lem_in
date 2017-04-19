@@ -177,6 +177,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/main.c.s
 .PHONY : main.c.s
 
+usage.o: usage.c.o
+
+.PHONY : usage.o
+
+# target to build an object file
+usage.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/usage.c.o
+.PHONY : usage.c.o
+
+usage.i: usage.c.i
+
+.PHONY : usage.i
+
+# target to preprocess a source file
+usage.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/usage.c.i
+.PHONY : usage.c.i
+
+usage.s: usage.c.s
+
+.PHONY : usage.s
+
+# target to generate assembly for a file
+usage.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/usage.c.s
+.PHONY : usage.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +219,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... usage.o"
+	@echo "... usage.i"
+	@echo "... usage.s"
 .PHONY : help
 
 

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/input_validation.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/input_validation.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/main.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/main.c.o"
+  "/nfs/2016/o/orizhiy/ClionProjects/lem_in/usage.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/usage.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 
