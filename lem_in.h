@@ -7,29 +7,76 @@
 #import "libft/ft_printf.h"
 
 
-typedef struct	s_stdin
+//typedef struct	s_stdin
+//{
+//	char 		**std_in;
+//	int 		start	: 1;
+//	int 		end		: 1;
+//	int 		ants	: 1;
+//
+//}				t_stdin;
+
+typedef struct			s_connect
 {
-	char 		**std_in;
-	int 		start	: 1;
-	int 		end		: 1;
-	int 		ants	: 1;
+	struct s_room		*room;
+	struct s_connect 	*next;
+}						t_connect;
 
-}				t_stdin;
+typedef struct			s_route
+{
 
-int main();
-void ft_read_write(t_stdin **input);
-char **ft_realloc(char ***std_in, unsigned long int len);
-unsigned long int ft_two_dem_strlen(char **s);
-void valid_sart_end(t_stdin **input);
+
+}						t_route;
+
+typedef struct			s_room
+{
+	int					*id_room;
+	char				*x;
+	char				*y;
+	struct s_connect	*connect;
+	int					start;
+	int 				end;
+	int					ants;
+	struct s_room		*next;
+
+}						t_room;
+
+typedef struct			s_lemin
+{
+	int 				ants;
+	char				*name;
+//	int					id_room;
+	struct s_room		*room;
+	struct s_route		*rout;
+	struct s_lemin 		*next;
+}						t_lemin;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//int main();
+//void ft_read_write(t_stdin **input);
+//char **ft_realloc(char ***std_in, unsigned long int len);
+//unsigned long int ft_two_dem_strlen(char **s);
+//void valid_sart_end(t_stdin **input);
 //void ft_input_valid(t_stdin **input);
-void valid_sart_end(t_stdin **input);
-void valid_rooms(t_stdin **input);
-int valid_connect(char *s);
-int valid_ants(char *s);
-int ifisdigit_str(char **s);
-void valid_rooms_connect(t_stdin **input);
-
-void ft_input_valid(t_stdin **input, char *s);
+//void valid_sart_end(t_stdin **input);
+//void valid_rooms(t_stdin **input);
+//int valid_connect(char *s);
+//int valid_ants(char *s);
+//int ifisdigit_str(char **s);
+//void valid_rooms_connect(t_stdin **input);
+//
+//void ft_input_valid(t_stdin **input, char *s);
 
 
 
