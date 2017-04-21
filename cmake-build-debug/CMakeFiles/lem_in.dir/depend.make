@@ -7,6 +7,12 @@ CMakeFiles/lem_in.dir/input_validation.c.o: ../libft/ft_printf.h
 CMakeFiles/lem_in.dir/input_validation.c.o: ../libft/get_next_line.h
 CMakeFiles/lem_in.dir/input_validation.c.o: ../libft/libft.h
 
+CMakeFiles/lem_in.dir/input_validation_2.c.o: ../input_validation_2.c
+CMakeFiles/lem_in.dir/input_validation_2.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/input_validation_2.c.o: ../libft/ft_printf.h
+CMakeFiles/lem_in.dir/input_validation_2.c.o: ../libft/get_next_line.h
+CMakeFiles/lem_in.dir/input_validation_2.c.o: ../libft/libft.h
+
 CMakeFiles/lem_in.dir/main.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/main.c.o: ../libft/ft_printf.h
 CMakeFiles/lem_in.dir/main.c.o: ../libft/get_next_line.h

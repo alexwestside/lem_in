@@ -35,7 +35,10 @@ void ft_read_write(t_stdin **input)
 	i = -1;
 	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test4", O_RDONLY);
 	while (get_next_line(fd, &((*input)->std_in[++i])))
+	{
+		ft_input_valid(input, (*input)->std_in[i]);
 		(*input)->std_in = ft_realloc(&(*input)->std_in, ft_two_dem_strlen((*input)->std_in));
+	}
 	(*input)->std_in[i] = NULL;
 }
 
@@ -46,7 +49,7 @@ int main()
 	input->std_in = (char **)malloc(sizeof(char *) * 2);
 	input->std_in[1] = NULL;
 	ft_read_write(&input);
-	ft_input_valid(&input);
+//	ft_input_valid(&input);
 
 
 

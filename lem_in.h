@@ -9,9 +9,10 @@
 
 typedef struct	s_stdin
 {
-	char **std_in;
-	int start;
-	int end;
+	char 		**std_in;
+	int 		start	: 1;
+	int 		end		: 1;
+	int 		ants	: 1;
 
 }				t_stdin;
 
@@ -20,8 +21,16 @@ void ft_read_write(t_stdin **input);
 char **ft_realloc(char ***std_in, unsigned long int len);
 unsigned long int ft_two_dem_strlen(char **s);
 void valid_sart_end(t_stdin **input);
-void ft_input_valid(t_stdin **input);
+//void ft_input_valid(t_stdin **input);
+void valid_sart_end(t_stdin **input);
 void valid_rooms(t_stdin **input);
+int valid_connect(char *s);
+int valid_ants(char *s);
+int ifisdigit_str(char **s);
+void valid_rooms_connect(t_stdin **input);
+
+void ft_input_valid(t_stdin **input, char *s);
+
 
 
 
