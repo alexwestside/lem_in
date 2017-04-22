@@ -6,16 +6,6 @@
 #include "libft/get_next_line.h"
 #import "libft/ft_printf.h"
 
-
-//typedef struct	s_stdin
-//{
-//	char 		**std_in;
-//	int 		start	: 1;
-//	int 		end		: 1;
-//	int 		ants	: 1;
-//
-//}				t_stdin;
-
 typedef struct			s_connect
 {
 	struct s_room		*room;
@@ -54,7 +44,7 @@ typedef struct			s_lemin
 
 
 
-int main();
+
 void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next);
 void init_room(t_room **room);
 void read_and_valid(t_lemin **lemin, char ***std_in);
@@ -63,6 +53,22 @@ unsigned long int two_dem_strlen(char **s);
 void read_stdin(t_lemin **lemin, char *line);
 
 
+int if_is_digit_str(char *s);
+int limit_int(long int n);
+int count_ants(char *s);
+
+int type_num_ants(char *str);
+int type_room(char *str);
+int type_strt_end(char *str);
+int type_connet(char *str);
+int type_comment(char *str);
+
+
+
+void valid_ants(t_lemin **lemin, int ants);
+
+
+void ft_error(int id);
 
 
 
@@ -87,28 +93,6 @@ void read_stdin(t_lemin **lemin, char *line);
 //void valid_rooms_connect(t_stdin **input);
 //
 //void ft_input_valid(t_stdin **input, char *s);
-
-
-
-
-
-
-
-void ft_error(int id);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #endif //LEM_IN_LEM_IN_H_H

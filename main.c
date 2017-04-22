@@ -1,53 +1,27 @@
 
 #include "lem_in.h"
 
-//int if_is_digit_str(char *s)
-//{
-//	char *p;
-//
-//	p = s;
-//	while (*p)
-//	{
-//		if (!ft_isdigit(*p))
-//			return (0);
-//		p++;
-//	}
-//	return (1);
-//}
-//
-//int limit_int(long int n)
-//{
-//	if (n >	2147483647 || n < -2147483648)
-//		return (0);
-//	return (1);
-//}
-//
-//int valid_ants(char *s)
-//{
-//	char *p;
-//	long int n;
-//
-//	n = 0;
-//	p = s;
-//	if (!if_is_digit_str(p))
-//		ft_error(2);
-//	while (*s)
-//	{
-//		n = n * 10 + *s - '0';
-//		s++;
-//	}
-//	return (limit_int(n) ? 1 : 0);
-//}
-//
 void read_stdin(t_lemin **lemin, char *line)
 {
-	if (valid_ants(line))
+	if (type_num_ants(line))
 	{
-
-
-
-
-
+		valid_ants(lemin, ft_atoi(line));
+	}
+	else if (type_room(line))
+	{
+		return;
+	}
+	else if (type_strt_end(line))
+	{
+		valid_start_end(lemin);
+	}
+	else if (type_connet(line))
+	{
+		return;
+	}
+	else if (type_comment(line))
+	{
+		return;
 	}
 	else
 		ft_error(2);
@@ -84,7 +58,6 @@ int main()
 	std_in[1] = NULL;
 	init_lemin(&lemin, 0, NULL, NULL);
 	read_and_valid(&lemin, &std_in);
-
 
 
 }

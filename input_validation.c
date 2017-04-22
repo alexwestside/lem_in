@@ -1,6 +1,29 @@
-//
-//#include "lem_in.h"
-//
+
+#include "lem_in.h"
+
+void valid_ants(t_lemin **lemin, int ants)
+{
+	t_lemin *list;
+
+	list = *lemin;
+	while (list)
+	{
+		if (list->ants)
+			ft_error(2);
+		else
+			list->ants = ants;
+		list = list->next;
+	}
+}
+
+void valid_start_end(t_lemin **lemin)
+{
+
+
+
+
+}
+
 //int ifisdigit_str(char **s)
 //{
 //	char *p;
@@ -30,12 +53,12 @@
 //	n = 0;
 //	p = s;
 //	ifisdigit_str(&p);
-////	while (*p)
-////	{
-////		if (!ft_isdigit(*p))
-////			ft_error(2);
-////		p++;
-////	}
+//	while (*p)
+//	{
+//		if (!ft_isdigit(*p))
+//			ft_error(2);
+//		p++;
+//	}
 //	while (*s)
 //	{
 //		n = n * 10 + *s - '0';
@@ -161,7 +184,7 @@
 //		ft_error(2);
 //}
 //
-////void ft_input_valid(t_stdin **input)
+//void ft_input_valid(t_stdin **input)
 //void ft_input_valid(t_stdin **input, char *s)
 //{
 //	if (*s == '#' && !ft_isalpha(*(s + 1)))
@@ -173,13 +196,13 @@
 //
 //
 //
-////	(*input)->start = 1;
-////	(*input)->end = 1;
-////	if (!((*(*input)->std_in)))
-////		ft_error(1);
-////	if (!(*(*(*input)->std_in)))
-////		ft_error(2);
-////	valid_sart_end(input);
-////	valid_rooms(input);
-////	valid_rooms_connect(input);
+//	(*input)->start = 1;
+//	(*input)->end = 1;
+//	if (!((*(*input)->std_in)))
+//		ft_error(1);
+//	if (!(*(*(*input)->std_in)))
+//		ft_error(2);
+//	valid_sart_end(input);
+//	valid_rooms(input);
+//	valid_rooms_connect(input);
 //}

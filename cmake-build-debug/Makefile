@@ -258,6 +258,60 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/main.c.s
 .PHONY : main.c.s
 
+sub.o: sub.c.o
+
+.PHONY : sub.o
+
+# target to build an object file
+sub.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub.c.o
+.PHONY : sub.c.o
+
+sub.i: sub.c.i
+
+.PHONY : sub.i
+
+# target to preprocess a source file
+sub.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub.c.i
+.PHONY : sub.c.i
+
+sub.s: sub.c.s
+
+.PHONY : sub.s
+
+# target to generate assembly for a file
+sub.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub.c.s
+.PHONY : sub.c.s
+
+types_input.o: types_input.c.o
+
+.PHONY : types_input.o
+
+# target to build an object file
+types_input.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/types_input.c.o
+.PHONY : types_input.c.o
+
+types_input.i: types_input.c.i
+
+.PHONY : types_input.i
+
+# target to preprocess a source file
+types_input.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/types_input.c.i
+.PHONY : types_input.c.i
+
+types_input.s: types_input.c.s
+
+.PHONY : types_input.s
+
+# target to generate assembly for a file
+types_input.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/types_input.c.s
+.PHONY : types_input.c.s
+
 usage.o: usage.c.o
 
 .PHONY : usage.o
@@ -309,6 +363,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... sub.o"
+	@echo "... sub.i"
+	@echo "... sub.s"
+	@echo "... types_input.o"
+	@echo "... types_input.i"
+	@echo "... types_input.s"
 	@echo "... usage.o"
 	@echo "... usage.i"
 	@echo "... usage.s"

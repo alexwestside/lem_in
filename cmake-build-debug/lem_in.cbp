@@ -100,6 +100,12 @@
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/main.c">
 			<Option target="lem_in"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub.c">
+			<Option target="lem_in"/>
+		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/types_input.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/usage.c">
 			<Option target="lem_in"/>
 		</Unit>
