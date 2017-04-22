@@ -43,6 +43,7 @@ typedef struct			s_room
 
 typedef struct			s_lemin
 {
+//	char				*std_in;
 	int 				ants;
 	char				*name;
 //	int					id_room;
@@ -51,6 +52,15 @@ typedef struct			s_lemin
 	struct s_lemin 		*next;
 }						t_lemin;
 
+
+
+int main();
+void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next);
+void init_room(t_room **room);
+void read_and_valid(t_lemin **lemin, char ***std_in);
+char **ft_realloc(char ***std_in, unsigned long int len);
+unsigned long int two_dem_strlen(char **s);
+void read_stdin(t_lemin **lemin, char *line);
 
 
 

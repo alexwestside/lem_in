@@ -1,0 +1,28 @@
+
+#include "lem_in.h"
+
+void init_room(t_room **room)
+{
+	*room = (t_room *)malloc(sizeof(t_room));
+
+	(*room)->id_room = 0;
+	(*room)->x = 0;
+	(*room)->y = 0;
+	(*room)->connect = NULL;
+	(*room)->start = 0;
+	(*room)->end = 0;
+	(*room)->ants = 0;
+	(*room)->next = NULL;
+}
+
+void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
+{
+	*lemin = (t_lemin *)malloc(sizeof(t_lemin));
+	(*lemin)->room = (t_room *)malloc(sizeof(t_room));
+	init_room(&((*lemin)->room));
+	(*lemin)->rout = (t_route* )malloc(sizeof(t_route));
+
+	(*lemin)->ants = ants;
+	(*lemin)->name = name;
+	(*lemin)->next = next;
+}

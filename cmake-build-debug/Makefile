@@ -177,6 +177,60 @@ input_validation_2.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/input_validation_2.c.s
 .PHONY : input_validation_2.c.s
 
+lem_init.o: lem_init.c.o
+
+.PHONY : lem_init.o
+
+# target to build an object file
+lem_init.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_init.c.o
+.PHONY : lem_init.c.o
+
+lem_init.i: lem_init.c.i
+
+.PHONY : lem_init.i
+
+# target to preprocess a source file
+lem_init.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_init.c.i
+.PHONY : lem_init.c.i
+
+lem_init.s: lem_init.c.s
+
+.PHONY : lem_init.s
+
+# target to generate assembly for a file
+lem_init.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_init.c.s
+.PHONY : lem_init.c.s
+
+lem_realloc.o: lem_realloc.c.o
+
+.PHONY : lem_realloc.o
+
+# target to build an object file
+lem_realloc.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_realloc.c.o
+.PHONY : lem_realloc.c.o
+
+lem_realloc.i: lem_realloc.c.i
+
+.PHONY : lem_realloc.i
+
+# target to preprocess a source file
+lem_realloc.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_realloc.c.i
+.PHONY : lem_realloc.c.i
+
+lem_realloc.s: lem_realloc.c.s
+
+.PHONY : lem_realloc.s
+
+# target to generate assembly for a file
+lem_realloc.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_realloc.c.s
+.PHONY : lem_realloc.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -246,6 +300,12 @@ help:
 	@echo "... input_validation_2.o"
 	@echo "... input_validation_2.i"
 	@echo "... input_validation_2.s"
+	@echo "... lem_init.o"
+	@echo "... lem_init.i"
+	@echo "... lem_init.s"
+	@echo "... lem_realloc.o"
+	@echo "... lem_realloc.i"
+	@echo "... lem_realloc.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
