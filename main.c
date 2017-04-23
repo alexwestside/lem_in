@@ -11,11 +11,11 @@ void read_stdin(t_lemin **lemin, char *line)
 	{
 		return;
 	}
-	else if (type_strt_end(line))
+	else if (type_start_end(line))
 	{
 		valid_start_end(lemin);
 	}
-	else if (type_connet(line))
+	else if (type_connect(line))
 	{
 		return;
 	}
@@ -51,6 +51,11 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 
 int main()
 {
+//	char *s = "4-2";
+//	char **str = ft_strsplit(s, '-');
+//	printf("%s\n", str[0]);
+//	printf("%s\n", str[1]);
+
 	t_lemin *lemin;
 	char **std_in;
 

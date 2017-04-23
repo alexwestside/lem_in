@@ -46,14 +46,14 @@ int type_room(char *str)
 }
 
 
-int type_strt_end(char *str)
+int type_start_end(char *str)
 {
 	if (!strcmp(str, "##start") || !strcmp(str, "##start"))
 		return (1);
 	return (0);
 }
 
-int type_connet(char *str)
+int type_connect(char *str)
 {
 
 	return (0);

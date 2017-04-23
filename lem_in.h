@@ -59,8 +59,8 @@ int count_ants(char *s);
 
 int type_num_ants(char *str);
 int type_room(char *str);
-int type_strt_end(char *str);
-int type_connet(char *str);
+int type_start_end(char *str);
+int type_connect(char *str);
 int type_comment(char *str);
 
 
