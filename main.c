@@ -6,18 +6,21 @@ void read_stdin(t_lemin **lemin, char *line)
 	if (type_num_ants(line))
 	{
 		valid_ants(lemin, ft_atoi(line));
+
 	}
 	else if (type_room(line))
 	{
+
 		return;
 	}
 	else if (type_start_end(line))
 	{
 		valid_start_end(lemin);
+
 	}
 	else if (type_connect(line))
 	{
-		return;
+		valid_connect(lemin);
 	}
 	else if (type_comment(line))
 	{
@@ -57,33 +60,19 @@ int main()
 //	printf("%s\n", str[1]);
 
 	t_lemin *lemin;
-	char **std_in;
+//	char **std_in;
 
-	std_in = (char **)malloc(sizeof(char *) * 2);
-	std_in[1] = NULL;
+
 	init_lemin(&lemin, 0, NULL, NULL);
-	read_and_valid(&lemin, &std_in);
+	read_and_valid(&lemin, &lemin->std_in);
 
+
+//	int i = 0;
+//	while (lemin->std_in[i])
+//	{
+//		ft_printf("%s\n", lemin->std_in[i]);
+//		i++;
+//	}
 
 }
 
-
-
-
-
-//int main()
-//{
-//	t_stdin *input;
-//	input = (t_stdin *)malloc(sizeof(t_stdin));
-//	input->std_in = (char **)malloc(sizeof(char *) * 2);
-//	input->std_in[1] = NULL;
-//	ft_read_write(&input);
-//	ft_input_valid(&input);
-//
-//	int i = 0;
-//	while (input->std_in[i])
-//	{
-//		ft_printf("%s\n", input->std_in[i]);
-//		i++;
-//	}
-//}

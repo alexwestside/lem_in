@@ -15,6 +15,37 @@ int if_is_digit_str(char *s)
 	return (1);
 }
 
+int if_is_alpha_str(char *s)
+{
+	char *p;
+
+	p = s;
+	while (*p)
+	{
+		if (!ft_isalpha(*s))
+			return (0);
+		p++;
+	}
+	return (1);
+}
+
+int if_is_alnum_str(char *s)
+{
+	char *p;
+
+	p = s;
+	if (!p)
+		return (0);
+	while (*p)
+	{
+		if (!ft_isalpha(*p) && !ft_isdigit(*p))
+			return (0);
+		p++;
+	}
+	return (1);
+}
+
+
 int limit_int(long int n)
 {
 	if (n >	2147483647 || n < -2147483648)

@@ -18,6 +18,10 @@ void init_room(t_room **room)
 void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
 {
 	*lemin = (t_lemin *)malloc(sizeof(t_lemin));
+
+	(*lemin)->std_in = (char **)malloc(sizeof(char *) * 2);
+	(*lemin)->std_in[1] = NULL;
+
 	(*lemin)->room = (t_room *)malloc(sizeof(t_room));
 	init_room(&((*lemin)->room));
 	(*lemin)->rout = (t_route* )malloc(sizeof(t_route));

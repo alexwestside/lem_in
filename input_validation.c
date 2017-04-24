@@ -18,6 +18,28 @@ void valid_ants(t_lemin **lemin, int ants)
 
 void valid_start_end(t_lemin **lemin)
 {
+	t_room *room;
+	t_connect *connect;
+
+	room = (*lemin)->room;
+	while (room)
+	{
+		connect = room->connect;
+		while (connect)
+		{
+			if (connect->room)
+				ft_error(2);
+			connect = connect->next;
+		}
+		room = room->next;
+	}
+}
+
+void valid_connect(t_lemin **lemin)
+{
+
+
+
 
 
 

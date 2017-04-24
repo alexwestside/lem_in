@@ -33,7 +33,7 @@ typedef struct			s_room
 
 typedef struct			s_lemin
 {
-//	char				*std_in;
+	char				**std_in;
 	int 				ants;
 	char				*name;
 //	int					id_room;
@@ -66,6 +66,10 @@ int type_comment(char *str);
 
 
 void valid_ants(t_lemin **lemin, int ants);
+void valid_start_end(t_lemin **lemin);
+int if_is_alpha_str(char *s);
+int if_is_alnum_str(char *s);
+void valid_connect(t_lemin **lemin);
 
 
 void ft_error(int id);
