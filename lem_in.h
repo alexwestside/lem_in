@@ -20,6 +20,7 @@ typedef struct			s_route
 
 typedef struct			s_room
 {
+	char				*name;
 	int					*id_room;
 	char				*x;
 	char				*y;
@@ -35,7 +36,7 @@ typedef struct			s_lemin
 {
 	char				**std_in;
 	int 				ants;
-	char				*name;
+
 //	int					id_room;
 	struct s_room		*room;
 	struct s_route		*rout;
@@ -69,7 +70,8 @@ void valid_ants(t_lemin **lemin, int ants);
 void valid_start_end(t_lemin **lemin);
 int if_is_alpha_str(char *s);
 int if_is_alnum_str(char *s);
-void valid_connect(t_lemin **lemin);
+void valid_connect(t_lemin **lemin, char *line);
+void valid_room(t_lemin **lemin, char *line);
 
 
 void ft_error(int id);

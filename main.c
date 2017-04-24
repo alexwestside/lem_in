@@ -10,8 +10,8 @@ void read_stdin(t_lemin **lemin, char *line)
 	}
 	else if (type_room(line))
 	{
+		valid_room(lemin, line);
 
-		return;
 	}
 	else if (type_start_end(line))
 	{
@@ -20,12 +20,11 @@ void read_stdin(t_lemin **lemin, char *line)
 	}
 	else if (type_connect(line))
 	{
-		valid_connect(lemin);
+		valid_connect(lemin, line);
+
 	}
 	else if (type_comment(line))
-	{
-		return;
-	}
+		return ;
 	else
 		ft_error(2);
 }

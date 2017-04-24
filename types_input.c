@@ -57,13 +57,14 @@ int type_connect(char *str)
 	char **s;
 
 	if ((s = ft_strsplit(str, '-')))
-		if (!if_is_alnum_str(s[0]) || !if_is_alnum_str(s[2]))
+		if (!if_is_alnum_str(s[0]) || !if_is_alnum_str(s[1]))
 			return (0);
 	return (1);
 }
 
 int type_comment(char *str)
 {
-
+	if (*str == '#' && (ft_strcmp(str, "##start") && ft_strcmp(str, "##end")))
+		return (1);
 	return (0);
 }

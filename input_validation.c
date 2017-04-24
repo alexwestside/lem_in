@@ -16,6 +16,23 @@ void valid_ants(t_lemin **lemin, int ants)
 	}
 }
 
+void valid_room(t_lemin **lemin, char *line)
+{
+	t_room *room;
+	char **str;
+
+	room = (*lemin)->room;
+	str = ft_strsplit(line, ' ');
+	while (room)
+	{
+		if (!ft_strcmp(room->name, line) || room->connect || !(*lemin)->ants)
+			ft_error(2);
+		if (!ft_strcmp(room->x, str[1]) && !ft_strcmp(room->y, str[1]))
+			ft_error(2);
+		room = room->next;
+	}
+}
+
 void valid_start_end(t_lemin **lemin)
 {
 	t_room *room;
@@ -35,15 +52,36 @@ void valid_start_end(t_lemin **lemin)
 	}
 }
 
-void valid_connect(t_lemin **lemin)
+void valid_connect(t_lemin **lemin, char *line)
 {
+	char **str;
+	t_room *room;
+	t_connect *connect;
+	int flag;
 
-
-
-
-
-
-
+	str = ft_strsplit(line, '-');
+	room = (*lemin)->room;
+	flag = 0;
+	while (room)
+	{
+		if (room->name)
+		{
+			if (!ft_strcmp(str[0], room->name))
+			{
+				connect = room->connect;
+				while (connect)
+				{
+					if (!ft_strcmp(str[1], connect->room->name))
+						ft_error(2);
+					connect = connect->next;
+				}
+				flag++;
+			}
+		}
+		room = room->next;
+	}
+	if (!flag)
+		ft_error(2);
 }
 
 //int ifisdigit_str(char **s)

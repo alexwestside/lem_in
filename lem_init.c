@@ -6,6 +6,7 @@ void init_room(t_room **room)
 	*room = (t_room *)malloc(sizeof(t_room));
 
 	(*room)->id_room = 0;
+	(*room)->name = NULL;
 	(*room)->x = 0;
 	(*room)->y = 0;
 	(*room)->connect = NULL;
@@ -27,6 +28,6 @@ void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
 	(*lemin)->rout = (t_route* )malloc(sizeof(t_route));
 
 	(*lemin)->ants = ants;
-	(*lemin)->name = name;
+//	(*lemin)->name = name;
 	(*lemin)->next = next;
 }
