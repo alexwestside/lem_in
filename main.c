@@ -1,7 +1,7 @@
 
 #include "lem_in.h"
 
-void read_stdin(t_lemin **lemin, char *line)
+void read_stdin(t_lemin **lemin, char *line, int fd)
 {
 	if (type_num_ants(line))
 	{
@@ -16,7 +16,7 @@ void read_stdin(t_lemin **lemin, char *line)
 	else if (type_start_end(line))
 	{
 		valid_start_end(lemin);
-
+		check_start_end(lemin, fd);
 	}
 	else if (type_connect(line))
 	{
@@ -44,7 +44,7 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test4", O_RDONLY);
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{
-		read_stdin(lemin, (*std_in)[i]);
+		read_stdin(lemin, (*std_in)[i], fd);
 		*std_in = ft_realloc(&(*std_in), two_dem_strlen(*std_in));
 //		free(line);
 	}
