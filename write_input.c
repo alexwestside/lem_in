@@ -30,7 +30,7 @@ void write_connect(t_lemin **lemin, char *line)
 	t_room *room;
 	t_connect *connect;
 
-	str = ft_strsplit(line, ' ');
+	str = ft_strsplit(line, '-');
 	room = (*lemin)->room;
 	while (room->next)
 	{
@@ -40,11 +40,16 @@ void write_connect(t_lemin **lemin, char *line)
 			while(connect->next)
 				connect = connect->next;
 			init_connect(&connect->next);
-			connect->next->room = str[1];
+			connect->next->room->name = str[1];
+			return;
 		}
 		room = room->next;
 	}
 }
 
+void write_check_start_end(t_lemin **lemin, int fd)
+{
 
+
+}
 

@@ -1,6 +1,28 @@
 
 #include "lem_in.h"
 
+int atoi_lemin(char *str)
+{
+	int num;
+
+	num = 0;
+	*str == '-' ? str++ : 0;
+	while (*str)
+	{
+		num = num * 10 + *str - '0';
+		str++;
+	}
+	return (str[0] == '-' ? num * -1 : num);
+}
+
+int if_is_digit_sign_str(char *s)
+{
+	if (*s == '-' || *s == '+')
+		if (!if_is_digit_str(s + 1))
+			return (0);
+	return (1);
+}
+
 int if_is_digit_str(char *s)
 {
 	char *p;

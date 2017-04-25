@@ -16,7 +16,7 @@ void read_stdin(t_lemin **lemin, char *line, int fd)
 	else if (type_start_end(line))
 	{
 		valid_start_end(lemin);
-		check_start_end(lemin, fd);
+		write_check_start_end(lemin, fd);
 	}
 	else if (type_connect(line))
 	{
@@ -34,13 +34,9 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 {
 	int fd;
 	char *line;
-	t_lemin *lem_list;
-	t_room *room_list;
 	int i;
 
 	i = -1;
-	lem_list = (*lemin);
-	room_list = (*lemin)->room;
 	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test4", O_RDONLY);
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{

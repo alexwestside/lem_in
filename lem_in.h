@@ -55,6 +55,9 @@ void read_stdin(t_lemin **lemin, char *line, int fd);
 
 
 int if_is_digit_str(char *s);
+int if_is_digit_sign_str(char *s);
+int atoi_lemin(char *str);
+
 
 
 int limit_int(long int n);
@@ -82,6 +85,7 @@ void valid_room(t_lemin **lemin, char *line);
 void write_ants(t_lemin **lemin, char *line);
 void write_room(t_lemin **lemin, char *line);
 void write_connect(t_lemin **lemin, char *line);
+void write_check_start_end(t_lemin **lemin, int fd);
 
 
 
