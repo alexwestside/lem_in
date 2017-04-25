@@ -51,7 +51,7 @@ void init_room(t_room **room);
 void read_and_valid(t_lemin **lemin, char ***std_in);
 char **ft_realloc(char ***std_in, unsigned long int len);
 unsigned long int two_dem_strlen(char **s);
-void read_stdin(t_lemin **lemin, char *line, int fd);
+void read_stdin(t_lemin **lemin, char *line, int fd, int *i);
 
 
 int if_is_digit_str(char *s);
@@ -83,9 +83,9 @@ void valid_room(t_lemin **lemin, char *line);
 
 
 void write_ants(t_lemin **lemin, char *line);
-void write_room(t_lemin **lemin, char *line);
+void write_room(t_lemin **lemin, char *line, int start, int end);
 void write_connect(t_lemin **lemin, char *line);
-void write_check_start_end(t_lemin **lemin, int fd);
+void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i);
 
 
 
