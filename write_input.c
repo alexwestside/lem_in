@@ -24,5 +24,27 @@ void write_room(t_lemin **lemin, char *line)
 	init_room(&room);
 }
 
+void write_connect(t_lemin **lemin, char *line)
+{
+	char **str;
+	t_room *room;
+	t_connect *connect;
+
+	str = ft_strsplit(line, ' ');
+	room = (*lemin)->room;
+	while (room->next)
+	{
+		connect = room->connect;
+		if (!ft_strcmp(room->name, str[0]))
+		{
+			while(connect->next)
+				connect = connect->next;
+			init_connect(&connect->next);
+			connect->next->room = str[1];
+		}
+		room = room->next;
+	}
+}
+
 
 

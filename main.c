@@ -21,12 +21,12 @@ void read_stdin(t_lemin **lemin, char *line, int fd)
 	else if (type_connect(line))
 	{
 		valid_connect(lemin, line);
-
+		write_connect(lemin, line);
 	}
 	else if (type_comment(line))
 		return ;
 	else
-		ft_error(2);
+		return;
 }
 
 

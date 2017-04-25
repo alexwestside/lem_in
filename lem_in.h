@@ -55,7 +55,12 @@ void read_stdin(t_lemin **lemin, char *line, int fd);
 
 
 int if_is_digit_str(char *s);
+
+
 int limit_int(long int n);
+void init_connect(t_connect **connect);
+
+
 int count_ants(char *s);
 
 int type_num_ants(char *str);
@@ -76,6 +81,7 @@ void valid_room(t_lemin **lemin, char *line);
 
 void write_ants(t_lemin **lemin, char *line);
 void write_room(t_lemin **lemin, char *line);
+void write_connect(t_lemin **lemin, char *line);
 
 
 

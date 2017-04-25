@@ -1,6 +1,14 @@
 
 #include "lem_in.h"
 
+void init_connect(t_connect **connect)
+{
+	(*connect) = (t_connect *)malloc(sizeof(t_connect));
+	(*connect)->room =(t_room *)malloc(sizeof(t_room));
+	init_room(&((*connect)->room));
+	(*connect)->next = NULL;
+}
+
 void init_room(t_room **room)
 {
 	*room = (t_room *)malloc(sizeof(t_room));
