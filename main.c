@@ -6,12 +6,12 @@ void read_stdin(t_lemin **lemin, char *line, int fd)
 	if (type_num_ants(line))
 	{
 		valid_ants(lemin, ft_atoi(line));
-
+		write_ants(lemin, line);
 	}
 	else if (type_room(line))
 	{
 		valid_room(lemin, line);
-
+		write_room(lemin, line);
 	}
 	else if (type_start_end(line))
 	{

@@ -109,6 +109,9 @@
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/usage.c">
 			<Option target="lem_in"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/write_input.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

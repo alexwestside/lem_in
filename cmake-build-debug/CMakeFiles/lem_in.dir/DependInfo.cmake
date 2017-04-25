@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/sub.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/types_input.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/types_input.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/usage.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/usage.c.o"
+  "/nfs/2016/o/orizhiy/ClionProjects/lem_in/write_input.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/write_input.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

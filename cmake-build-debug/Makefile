@@ -339,6 +339,33 @@ usage.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/usage.c.s
 .PHONY : usage.c.s
 
+write_input.o: write_input.c.o
+
+.PHONY : write_input.o
+
+# target to build an object file
+write_input.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/write_input.c.o
+.PHONY : write_input.c.o
+
+write_input.i: write_input.c.i
+
+.PHONY : write_input.i
+
+# target to preprocess a source file
+write_input.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/write_input.c.i
+.PHONY : write_input.c.i
+
+write_input.s: write_input.c.s
+
+.PHONY : write_input.s
+
+# target to generate assembly for a file
+write_input.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/write_input.c.s
+.PHONY : write_input.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -372,6 +399,9 @@ help:
 	@echo "... usage.o"
 	@echo "... usage.i"
 	@echo "... usage.s"
+	@echo "... write_input.o"
+	@echo "... write_input.i"
+	@echo "... write_input.s"
 .PHONY : help
 
 

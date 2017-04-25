@@ -74,6 +74,11 @@ void valid_connect(t_lemin **lemin, char *line);
 void valid_room(t_lemin **lemin, char *line);
 
 
+void write_ants(t_lemin **lemin, char *line);
+void write_room(t_lemin **lemin, char *line);
+
+
+
 void ft_error(int id);
 
 
