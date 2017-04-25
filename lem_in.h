@@ -51,7 +51,7 @@ void init_room(t_room **room);
 void read_and_valid(t_lemin **lemin, char ***std_in);
 char **ft_realloc(char ***std_in, unsigned long int len);
 unsigned long int two_dem_strlen(char **s);
-void read_stdin(t_lemin **lemin, char *line, int fd, int *i);
+int read_stdin(t_lemin **lemin, char *line, int fd, int *i);
 
 
 int if_is_digit_str(char *s);

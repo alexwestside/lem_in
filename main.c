@@ -1,7 +1,7 @@
 
 #include "lem_in.h"
 
-void read_stdin(t_lemin **lemin, char *line, int fd, int *i)
+int read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 {
 	if (type_num_ants(line))
 	{
@@ -24,11 +24,9 @@ void read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 		write_connect(lemin, line);
 	}
 	else if (type_comment(line))
-		return ;
-	else
-		return;
+		return (1);
+	return (0);
 }
-
 
 void read_and_valid(t_lemin **lemin, char ***std_in)
 {
@@ -40,7 +38,8 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test4", O_RDONLY);
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{
-		read_stdin(lemin, (*std_in)[i], fd, &i);
+		if (!(read_stdin(lemin, (*std_in)[i], fd, &i)))
+			break;
 		*std_in = ft_realloc(&(*std_in), two_dem_strlen(*std_in));
 //		free(line);
 	}
@@ -49,18 +48,10 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 
 int main()
 {
-//	char *s = "4-2";
-//	char **str = ft_strsplit(s, '-');
-//	printf("%s\n", str[0]);
-//	printf("%s\n", str[1]);
-
 	t_lemin *lemin;
-//	char **std_in;
-
 
 	init_lemin(&lemin, 0, NULL, NULL);
 	read_and_valid(&lemin, &lemin->std_in);
-
 
 //	int i = 0;
 //	while (lemin->std_in[i])

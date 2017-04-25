@@ -45,3 +45,9 @@ CMakeFiles/lem_in.dir/usage.c.o: ../libft/get_next_line.h
 CMakeFiles/lem_in.dir/usage.c.o: ../libft/libft.h
 CMakeFiles/lem_in.dir/usage.c.o: ../usage.c
 
+CMakeFiles/lem_in.dir/write_input.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/write_input.c.o: ../libft/ft_printf.h
+CMakeFiles/lem_in.dir/write_input.c.o: ../libft/get_next_line.h
+CMakeFiles/lem_in.dir/write_input.c.o: ../libft/libft.h
+CMakeFiles/lem_in.dir/write_input.c.o: ../write_input.c
+
