@@ -89,6 +89,11 @@ void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i);
 int check_start_end(t_lemin **lemin);
 
 
+void need_data_check(t_lemin **lemin);
+void simple_data_check(t_lemin **lemin);
+
+
+
 
 void ft_error(int id);
 
