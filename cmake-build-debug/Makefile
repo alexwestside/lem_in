@@ -123,6 +123,33 @@ lem_in/fast:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/build
 .PHONY : lem_in/fast
 
+data_check.o: data_check.c.o
+
+.PHONY : data_check.o
+
+# target to build an object file
+data_check.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/data_check.c.o
+.PHONY : data_check.c.o
+
+data_check.i: data_check.c.i
+
+.PHONY : data_check.i
+
+# target to preprocess a source file
+data_check.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/data_check.c.i
+.PHONY : data_check.c.i
+
+data_check.s: data_check.c.s
+
+.PHONY : data_check.s
+
+# target to generate assembly for a file
+data_check.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/data_check.c.s
+.PHONY : data_check.c.s
+
 input_validation.o: input_validation.c.o
 
 .PHONY : input_validation.o
@@ -375,6 +402,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lem_in"
+	@echo "... data_check.o"
+	@echo "... data_check.i"
+	@echo "... data_check.s"
 	@echo "... input_validation.o"
 	@echo "... input_validation.i"
 	@echo "... input_validation.s"

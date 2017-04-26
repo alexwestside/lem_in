@@ -73,11 +73,11 @@ int valid_connect(t_lemin **lemin, char *line)
 	char **str;
 	t_room *room;
 	t_connect *connect;
-	int flag;
+//	int flag;
 
 	str = ft_strsplit(line, '-');
 	room = (*lemin)->room;
-	flag = 0;
+//	flag = 0;
 	while (room)
 	{
 		if (room->name)
@@ -91,15 +91,17 @@ int valid_connect(t_lemin **lemin, char *line)
 						return (0);
 					connect = connect->next;
 				}
-				flag++;
+//				flag++;
+				write_connect(lemin, line);
+				return (1);
 			}
 		}
 		room = room->next;
 	}
-	if (!flag)
-		return (0);
-	write_connect(lemin, line);
-	return (1);
+//	if (!flag)
+//		return (0);
+//	write_connect(lemin, line);
+	return (0);
 }
 
 //int ifisdigit_str(char **s)

@@ -94,10 +94,12 @@ int check_start_end(t_lemin **lemin)
 
 	str = (*lemin)->std_in;
 	while (*str)
+		str++;
+	str = str - 2;
+	if (str)
 	{
 		if (!ft_strcmp(*str, "##start") || !ft_strcmp(*str, "##end"))
 			return (1);
-		str++;
 	}
 	return (0);
 }

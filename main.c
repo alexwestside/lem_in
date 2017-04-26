@@ -35,6 +35,8 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 //		free(line);
 	}
 	(*std_in)[i] = NULL;
+	need_data_check(lemin);
+
 }
 
 int main()
