@@ -74,18 +74,19 @@ int type_comment(char *str);
 
 
 
-void valid_ants(t_lemin **lemin, int ants);
-void valid_start_end(t_lemin **lemin);
+int valid_ants(t_lemin **lemin, int ants, char *line);
+int valid_start_end(t_lemin **lemin, char *line, int fd, int *i);
 int if_is_alpha_str(char *s);
 int if_is_alnum_str(char *s);
-void valid_connect(t_lemin **lemin, char *line);
-void valid_room(t_lemin **lemin, char *line);
+int valid_connect(t_lemin **lemin, char *line);
+int valid_room(t_lemin **lemin, char *line);
 
 
 void write_ants(t_lemin **lemin, char *line);
 void write_room(t_lemin **lemin, char *line, int start, int end);
 void write_connect(t_lemin **lemin, char *line);
 void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i);
+int check_start_end(t_lemin **lemin);
 
 
 

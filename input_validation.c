@@ -1,7 +1,7 @@
 
 #include "lem_in.h"
 
-void valid_ants(t_lemin **lemin, int ants)
+int valid_ants(t_lemin **lemin, int ants, char *line)
 {
 	t_lemin *list;
 
@@ -9,31 +9,45 @@ void valid_ants(t_lemin **lemin, int ants)
 	while (list)
 	{
 		if (list->ants)
-			ft_error(2);
+			return (0);
 		else
 			list->ants = ants;
 		list = list->next;
 	}
+	write_ants(lemin, line);
+	return (1);
 }
 
-void valid_room(t_lemin **lemin, char *line)
+int valid_room(t_lemin **lemin, char *line)
 {
 	t_room *room;
 	char **str;
+	int start_end;
 
 	room = (*lemin)->room;
 	str = ft_strsplit(line, ' ');
+	start_end = check_start_end(lemin);
 	while (room)
 	{
-		if (!ft_strcmp(room->name, line) || room->connect || !(*lemin)->ants)
-			ft_error(2);
-		if (!ft_strcmp(room->x, str[1]) && !ft_strcmp(room->y, str[1]))
-			ft_error(2);
+		if (!room->name)
+		{
+			!start_end ? write_room(lemin, line, 0, 0) : 0;
+			return (1);
+		}
+		else
+		{
+			if (!ft_strcmp(room->name, line) || room->connect || !(*lemin)->ants)
+				return (0);
+			if (!ft_strcmp(room->x, str[1]) && !ft_strcmp(room->y, str[1]))
+				return (0);
+		}
 		room = room->next;
 	}
+//	write_room(lemin, line, 0, 0);
+	return (1);
 }
 
-void valid_start_end(t_lemin **lemin)
+int valid_start_end(t_lemin **lemin, char *line, int fd, int *i)
 {
 	t_room *room;
 	t_connect *connect;
@@ -45,14 +59,16 @@ void valid_start_end(t_lemin **lemin)
 		while (connect)
 		{
 			if (connect->room)
-				ft_error(2);
+				return (0);
 			connect = connect->next;
 		}
 		room = room->next;
 	}
+	write_check_start_end(lemin, line, fd, i);
+	return (1);
 }
 
-void valid_connect(t_lemin **lemin, char *line)
+int valid_connect(t_lemin **lemin, char *line)
 {
 	char **str;
 	t_room *room;
@@ -72,7 +88,7 @@ void valid_connect(t_lemin **lemin, char *line)
 				while (connect)
 				{
 					if (!ft_strcmp(str[1], connect->room->name))
-						ft_error(2);
+						return (0);
 					connect = connect->next;
 				}
 				flag++;
@@ -81,7 +97,9 @@ void valid_connect(t_lemin **lemin, char *line)
 		room = room->next;
 	}
 	if (!flag)
-		ft_error(2);
+		return (0);
+	write_connect(lemin, line);
+	return (1);
 }
 
 //int ifisdigit_str(char **s)

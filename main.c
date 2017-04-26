@@ -3,29 +3,20 @@
 
 int read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 {
+	int valid;
+
+	valid = 0;
 	if (type_num_ants(line))
-	{
-		valid_ants(lemin, ft_atoi(line));
-		write_ants(lemin, line);
-	}
+		valid = valid_ants(lemin, ft_atoi(line), line);
 	else if (type_room(line))
-	{
-		valid_room(lemin, line);
-		write_room(lemin, line, 0, 0);
-	}
+		valid = valid_room(lemin, line);
 	else if (type_start_end(line))
-	{
-		valid_start_end(lemin);
-		write_check_start_end(lemin, line, fd, i);
-	}
+		valid = valid_start_end(lemin, line, fd, i);
 	else if (type_connect(line))
-	{
-		valid_connect(lemin, line);
-		write_connect(lemin, line);
-	}
+		valid = valid_connect(lemin, line);
 	else if (type_comment(line))
-		return (1);
-	return (0);
+		valid = 1;
+	return (valid ? 1 : 0);
 }
 
 void read_and_valid(t_lemin **lemin, char ***std_in)

@@ -17,7 +17,7 @@ int type_room(char *str)
 	if (!str)
 		return (0);
 	s = ft_strsplit(str, ' ');
-	len = two_dem_strlen(s);
+	len = two_dem_strlen(s) - 1;
 	if (len != 3)
 		return (0);
 	if (if_is_alnum_str(s[0]))
@@ -37,11 +37,14 @@ int type_start_end(char *str)
 int type_connect(char *str)
 {
 	char **s;
+	unsigned long int len;
 
-	if ((s = ft_strsplit(str, '-')))
-		if (!if_is_alnum_str(s[0]) || !if_is_alnum_str(s[1]))
-			return (0);
-	return (1);
+	s = ft_strsplit(str, '-');
+	len = two_dem_strlen(s) - 1;
+	if (len == 2)
+		if (if_is_alnum_str(s[0]) || if_is_alnum_str(s[1]))
+			return (1);
+	return (0);
 }
 
 int type_comment(char *str)

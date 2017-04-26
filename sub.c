@@ -87,3 +87,17 @@ int count_ants(char *s)
 	}
 	return (limit_int(n) ? 1 : 0);
 }
+
+int check_start_end(t_lemin **lemin)
+{
+	char **str;
+
+	str = (*lemin)->std_in;
+	while (*str)
+	{
+		if (!ft_strcmp(*str, "##start") || !ft_strcmp(*str, "##end"))
+			return (1);
+		str++;
+	}
+	return (0);
+}

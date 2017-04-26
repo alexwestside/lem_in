@@ -23,7 +23,7 @@ void write_room(t_lemin **lemin, char *line, int start, int end)
 		room->start = start;
 		room->end = end;
 	}
-	init_room(&room);
+	init_room(&(room->next));
 }
 
 void write_connect(t_lemin **lemin, char *line)
@@ -39,11 +39,19 @@ void write_connect(t_lemin **lemin, char *line)
 		connect = room->connect;
 		if (!ft_strcmp(room->name, str[0]))
 		{
-			while (connect->next)
-				connect = connect->next;
-			init_connect(&connect->next);
-			connect->next->room->name = str[1];
-			return;
+			if (!connect)
+			{
+				init_connect(&connect);
+				connect->room->name = str[1];
+			}
+			else
+			{
+				while (connect->next)
+					connect = connect->next;
+				init_connect(&connect->next);
+				connect->next->room->name = str[1];
+				return;
+			}
 		}
 		room = room->next;
 	}
