@@ -36,13 +36,12 @@ void write_connect(t_lemin **lemin, char *line)
 	room = (*lemin)->room;
 	while (room->next)
 	{
-		if (!ft_strcmp(room->name, str[0]))
+		if (!ft_strcmp(room->name, str[0]) || !ft_strcmp(room->name, str[1]))
 		{
-//			connect = room->connect;
 			if (!room->connect)
 			{
 				init_connect(&(room->connect));
-				room->connect->room->name = str[1];
+				room->connect->room->name = !ft_strcmp(room->name, str[0]) ? str[1] : str[0];
 				return;
 			}
 			else
@@ -50,7 +49,7 @@ void write_connect(t_lemin **lemin, char *line)
 				while (room->connect->next)
 					room->connect = room->connect->next;
 				init_connect(&room->connect->next);
-				room->connect->next->room->name = str[1];
+				room->connect->next->room->name = !ft_strcmp(room->name, str[0]) ? str[1] : str[0];
 				return;
 			}
 		}
