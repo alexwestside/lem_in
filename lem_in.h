@@ -88,7 +88,7 @@ void write_ants(t_lemin **lemin, char *line);
 void write_room(t_lemin **lemin, char *line, int start, int end);
 void write_connect(t_lemin **lemin, char *line);
 void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i);
-int check_start_end(t_lemin **lemin);
+int check_start_end(t_lemin **lemin, char *line);
 
 
 void need_data_check(t_lemin **lemin);

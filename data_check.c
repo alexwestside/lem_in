@@ -63,20 +63,27 @@ void hard_data_check(t_lemin **lemin)
 		}
 		room = room->next;
 	}
-	while (!queue[i])
+	while (queue[i])
 	{
+		i = j;
 		room = (*lemin)->room;
-		while (!ft_strcmp(*queue, room->name))
+		while (room->name)
 		{
-			connect = room->connect;
-			while (connect)
+			if (!ft_strcmp(queue[i], room->name))
 			{
-				queue[++i] = connect->room->name;
-				connect = connect->next;
+				connect = room->connect;
+				while (connect)
+				{
+					queue[++i] = connect->room->name;
+					connect = connect->next;
+				}
+				break ;
 			}
 			room = room->next;
 		}
-		queue++;
+		i = j;
+		visit[i] = queue[i];
+		j++;
 	}
 
 

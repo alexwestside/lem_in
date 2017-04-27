@@ -26,7 +26,7 @@ int valid_room(t_lemin **lemin, char *line)
 
 	room = (*lemin)->room;
 	str = ft_strsplit(line, ' ');
-	start_end = check_start_end(lemin);
+	start_end = check_start_end(lemin, line);
 	while (room)
 	{
 		if (!room->name)
@@ -82,12 +82,12 @@ int valid_connect(t_lemin **lemin, char *line)
 	{
 		if (room->name)
 		{
-			if (!ft_strcmp(str[0], room->name))
+			if (!ft_strcmp(str[0], room->name) || !ft_strcmp(str[1], room->name))
 			{
 				connect = room->connect;
 				while (connect)
 				{
-					if (!ft_strcmp(str[1], connect->room->name))
+					if (!ft_strcmp(!ft_strcmp(str[0], room->name) ? str[1] : str[0], connect->room->name))
 						return (0);
 					connect = connect->next;
 				}

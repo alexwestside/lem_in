@@ -70,7 +70,7 @@ int if_is_alnum_str(char *s)
 
 int limit_int(long int n)
 {
-	if (n >	2147483647 || n < -2147483648)
+	if (n > 2147483647 || n < -2147483648)
 		return (0);
 	return (1);
 }
@@ -88,18 +88,35 @@ int count_ants(char *s)
 	return (limit_int(n) ? 1 : 0);
 }
 
-int check_start_end(t_lemin **lemin)
+int check_start_end(t_lemin **lemin, char *line)
 {
-	char **str;
+	char **s;
 
-	str = (*lemin)->std_in;
-	while (*str)
-		str++;
-	str = str - 2;
-	if (str)
-	{
-		if (!ft_strcmp(*str, "##start") || !ft_strcmp(*str, "##end"))
-			return (1);
-	}
+	s = (*lemin)->std_in;
+	while (ft_strcmp(*s, line))
+		s++;
+	s--;
+	if (!ft_strcmp(*s, "##start") || !ft_strcmp(*s, "##end"))
+		return (1);
 	return (0);
+
+//	char **str;
+//	int i = 0;
+
+//	str = (*lemin)->std_in;
+//	while ((*lemin)->std_in[i])
+//		i++;
+//	i -= 2;
+//	while (*str)
+//		str++;
+//	str = str - 2;
+//	if ((*lemin)->std_in)
+//	{
+//		if ((*lemin)->std_in[i])
+//		{
+//				if (!ft_strcmp((*lemin)->std_in[i], "##start") || !ft_strcmp((*lemin)->std_in[i], "##end"))
+//					return (1);
+//		}
+//	}
+//	return (0);
 }
