@@ -93,8 +93,9 @@ int check_start_end(t_lemin **lemin, char *line);
 
 void need_data_check(t_lemin **lemin);
 void simple_data_check(t_lemin **lemin);
-void hard_data_check(t_lemin **lemin);
+int hard_data_check(t_lemin **lemin);
 void init_queue_visit(t_lemin **lemin, int len);
+int check_visit(t_lemin **lemin, char *s);
 
 
 

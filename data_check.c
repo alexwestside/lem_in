@@ -4,7 +4,6 @@
 void need_data_check(t_lemin **lemin)
 {
 	simple_data_check(lemin);
-
 	t_room *room;
 	int i = -1;
 
@@ -15,7 +14,8 @@ void need_data_check(t_lemin **lemin)
 		i++;
 	}
 	init_queue_visit(lemin, i);
-	hard_data_check(lemin);
+	if (!hard_data_check(lemin))
+		ft_error(2);
 
 }
 
@@ -42,7 +42,7 @@ void simple_data_check(t_lemin **lemin)
 		ft_error(2);
 }
 
-void hard_data_check(t_lemin **lemin)
+int hard_data_check(t_lemin **lemin)
 {
 	t_room *room;
 	t_connect *connect;
@@ -83,17 +83,27 @@ void hard_data_check(t_lemin **lemin)
 		}
 		i = j;
 		visit[i] = queue[i];
+		if (check_visit(lemin, visit[i]))
+			return (1);
 		j++;
 	}
+	return (0);
+}
 
 
+int check_visit(t_lemin **lemin, char *s)
+{
+	t_room *room;
 
-
-
-
-
-
-
-
-
+	room = (*lemin)->room;
+	while (room->next)
+	{
+		if (!ft_strcmp(room->name, s))
+		{
+			if (room->end)
+				return (1);
+		}
+		room = room->next;
+	}
+	return (0);
 }
