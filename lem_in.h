@@ -35,6 +35,8 @@ typedef struct			s_room
 typedef struct			s_lemin
 {
 	char				**std_in;
+	char				**queue;
+	char				**visit;
 	int 				ants;
 
 //	int					id_room;
@@ -91,6 +93,7 @@ int check_start_end(t_lemin **lemin);
 
 void need_data_check(t_lemin **lemin);
 void simple_data_check(t_lemin **lemin);
+void hard_data_check(t_lemin **lemin);
 
 
 

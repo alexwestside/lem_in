@@ -30,6 +30,8 @@ void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
 
 	(*lemin)->std_in = (char **)malloc(sizeof(char *) * 2);
 	(*lemin)->std_in[1] = NULL;
+	(*lemin)->queue = NULL;
+	(*lemin)->visit = NULL;
 
 	(*lemin)->room = (t_room *)malloc(sizeof(t_room));
 	init_room(&((*lemin)->room));
@@ -38,4 +40,12 @@ void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
 	(*lemin)->ants = ants;
 //	(*lemin)->name = name;
 	(*lemin)->next = next;
+}
+
+void init_queue_visit(t_lemin **lemin, int len)
+{
+	(*lemin)->queue = (char **)malloc(sizeof(char *) * len + 1);
+	(*lemin)->visit = (char **)malloc(sizeof(char *) * len + 1);
+	(*lemin)->queue[len] = NULL;
+	(*lemin)->visit[len] = NULL;
 }
