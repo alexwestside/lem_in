@@ -26,10 +26,10 @@ void simple_data_check(t_lemin **lemin)
 
 	data = 0;
 	str = (*lemin)->std_in;
+	if ((*lemin)->ants)
+		data++;
 	while (*str)
 	{
-		if ((*lemin)->ants)
-			data++;
 		if (!ft_strcmp(*str, "##start"))
 			data++;
 		if (!ft_strcmp(*str, "##end"))
@@ -53,45 +53,37 @@ int hard_data_check(t_lemin **lemin)
 
 	queue = (*lemin)->queue;
 	visit = (*lemin)->visit;
-	room = (*lemin)->room;
-	while (room)
-	{
-		if (room->start)
-		{
-			queue[i] = room->name;
-			break;
-		}
-		room = room->next;
-	}
+	find_start(lemin, &queue);
 	while (queue[i])
 	{
-		i = j;
+		i = 0;
 		room = (*lemin)->room;
-		while (room->name)
+		if (check_visit(queue[i], visit))
 		{
-			if (!ft_strcmp(queue[i], room->name))
+			while (room->name)
 			{
-				connect = room->connect;
-				while (connect)
+				if (!ft_strcmp(queue[i], room->name))
 				{
-					queue[++i] = connect->room->name;
-					connect = connect->next;
+					visit[j] = queue[i];
+					if (check_visit_end(lemin, visit[j]))
+						return (1);
+					rewrite_queue(&queue);
+					connect = room->connect;
+					fill_queue(connect, &queue);
+					break;
 				}
-				break ;
+				room = room->next;
 			}
-			room = room->next;
+			j++;
 		}
-		i = j;
-		visit[i] = queue[i];
-		if (check_visit(lemin, visit[i]))
-			return (1);
-		j++;
+		else
+			rewrite_queue(&queue);
 	}
 	return (0);
 }
 
 
-int check_visit(t_lemin **lemin, char *s)
+int check_visit_end(t_lemin **lemin, char *s)
 {
 	t_room *room;
 
@@ -106,4 +98,61 @@ int check_visit(t_lemin **lemin, char *s)
 		room = room->next;
 	}
 	return (0);
+}
+
+int check_visit(char *name, char **visit)
+{
+	while (*visit)
+	{
+		if (!ft_strcmp(*visit, name))
+			return (0);
+		visit++;
+	}
+	return (1);
+}
+
+void rewrite_queue(char ***queue)
+{
+	char **s;
+	int i = 0;
+
+	s = (*queue);
+	while (s[i])
+	{
+		if (i == 0)
+			i++;
+		s[i - 1] = s[i];
+		i++;
+	}
+	s[i - 1] = NULL;
+}
+
+void fill_queue(t_connect *connect, char ***queue)
+{
+	int i = 0;
+
+	while ((*queue)[i])
+		i++;
+	while (connect)
+	{
+		(*queue)[i++] = connect->room->name;
+		connect = connect->next;
+	}
+}
+
+void find_start(t_lemin **lemin, char ***queue)
+{
+	t_room *room;
+	int i = 0;
+
+	room = (*lemin)->room;
+	while (room)
+	{
+		if (room->start)
+		{
+			(*queue)[i] = room->name;
+			break;
+		}
+		room = room->next;
+	}
 }

@@ -123,6 +123,33 @@ lem_in/fast:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/build
 .PHONY : lem_in/fast
 
+breadth_first_search.o: breadth_first_search.c.o
+
+.PHONY : breadth_first_search.o
+
+# target to build an object file
+breadth_first_search.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/breadth_first_search.c.o
+.PHONY : breadth_first_search.c.o
+
+breadth_first_search.i: breadth_first_search.c.i
+
+.PHONY : breadth_first_search.i
+
+# target to preprocess a source file
+breadth_first_search.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/breadth_first_search.c.i
+.PHONY : breadth_first_search.c.i
+
+breadth_first_search.s: breadth_first_search.c.s
+
+.PHONY : breadth_first_search.s
+
+# target to generate assembly for a file
+breadth_first_search.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/breadth_first_search.c.s
+.PHONY : breadth_first_search.c.s
+
 data_check.o: data_check.c.o
 
 .PHONY : data_check.o
@@ -402,6 +429,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lem_in"
+	@echo "... breadth_first_search.o"
+	@echo "... breadth_first_search.i"
+	@echo "... breadth_first_search.s"
 	@echo "... data_check.o"
 	@echo "... data_check.i"
 	@echo "... data_check.s"

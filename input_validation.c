@@ -85,6 +85,8 @@ int valid_connect(t_lemin **lemin, char *line)
 			if (!ft_strcmp(str[0], room->name) || !ft_strcmp(str[1], room->name))
 			{
 				connect = room->connect;
+				if (!valid_room_name(lemin, !ft_strcmp(str[0], room->name) ?  str[1] : str[0]))
+					return (0);
 				while (connect)
 				{
 					if (!ft_strcmp(!ft_strcmp(str[0], room->name) ? str[1] : str[0], connect->room->name))
@@ -103,6 +105,21 @@ int valid_connect(t_lemin **lemin, char *line)
 //	write_connect(lemin, line);
 	return (0);
 }
+
+int valid_room_name(t_lemin **lemin, char *s)
+{
+	t_room *room;
+
+	room = (*lemin)->room;
+	while (room->next)
+	{
+		if (!ft_strcmp(room->name, s))
+			return (1);
+		room = room->next;
+	}
+	return (0);
+}
+
 
 //int ifisdigit_str(char **s)
 //{

@@ -36,7 +36,6 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 	}
 	(*std_in)[i] = NULL;
 	need_data_check(lemin);
-
 }
 
 int main()
@@ -45,6 +44,7 @@ int main()
 
 	init_lemin(&lemin, 0, NULL, NULL);
 	read_and_valid(&lemin, &lemin->std_in);
+	bfs(lemin);
 
 //	int i = 0;
 //	while (lemin->std_in[i])

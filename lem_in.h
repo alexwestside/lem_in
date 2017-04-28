@@ -82,6 +82,7 @@ int if_is_alpha_str(char *s);
 int if_is_alnum_str(char *s);
 int valid_connect(t_lemin **lemin, char *line);
 int valid_room(t_lemin **lemin, char *line);
+int valid_room_name(t_lemin **lemin, char *s);
 
 
 void write_ants(t_lemin **lemin, char *line);
@@ -95,7 +96,11 @@ void need_data_check(t_lemin **lemin);
 void simple_data_check(t_lemin **lemin);
 int hard_data_check(t_lemin **lemin);
 void init_queue_visit(t_lemin **lemin, int len);
-int check_visit(t_lemin **lemin, char *s);
+int check_visit_end(t_lemin **lemin, char *s);
+int check_visit(char *name, char **visit);
+void rewrite_queue(char ***queue);
+void fill_queue(t_connect *connect, char ***queue);
+void find_start(t_lemin **lemin, char ***queue);
 
 
 

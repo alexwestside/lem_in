@@ -47,7 +47,7 @@ void init_queue_visit(t_lemin **lemin, int len)
 	int i ;
 
 	i = -1;
-	(*lemin)->queue = (char **)malloc(sizeof(char *) * len + 1);
+	(*lemin)->queue = (char **)malloc(sizeof(char *) * (len * len));
 	while (++i < len)
 		(*lemin)->queue[i] = NULL;
 	(*lemin)->queue[len] = NULL;
