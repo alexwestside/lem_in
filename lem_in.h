@@ -103,6 +103,9 @@ void fill_queue(t_connect *connect, char ***queue);
 void find_start(t_lemin **lemin, char ***queue);
 
 
+void bfs(t_lemin **lemin);
+
+
 
 
 void ft_error(int id);
