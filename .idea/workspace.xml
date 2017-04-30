@@ -12,11 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beea2e7c-9063-4e31-a394-39b2b14ed3f3" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/depend.make" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +27,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -41,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lem_in.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lem_in.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lem_in.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
@@ -492,7 +488,7 @@
       <workItem from="1493287236857" duration="18007000" />
       <workItem from="1493368685549" duration="11847000" />
       <workItem from="1493458024432" duration="1927000" />
-      <workItem from="1493550040100" duration="236000" />
+      <workItem from="1493550040100" duration="1492000" />
     </task>
     <task id="LOCAL-00001" summary="start lem_in">
       <created>1492521003569</created>
@@ -697,11 +693,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493404084575</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="bfs_1">
+      <created>1493571169311</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1493571169311</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162437000" />
+    <option name="totallyTimeSpent" value="163693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -1090,14 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="125" lean-forward="false" selection-start-line="5" selection-start-column="125" selection-end-line="5" selection-end-column="125" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lem_in.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1228,6 +1223,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="125" lean-forward="false" selection-start-line="5" selection-start-column="125" selection-end-line="5" selection-end-column="125" />
           <folding />
         </state>
       </provider>
