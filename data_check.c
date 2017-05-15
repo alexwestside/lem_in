@@ -66,7 +66,10 @@ int hard_data_check(t_lemin **lemin)
 				{
 					visit[j] = queue[i];
 					if (check_visit_end(lemin, visit[j]))
+					{
+						free_visit_and_queue((*lemin)->visit, (*lemin)->queue);
 						return (1);
+					}
 					rewrite_queue(&queue);
 					connect = room->connect;
 					fill_queue(connect, &queue);

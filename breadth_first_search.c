@@ -9,4 +9,6 @@ void bfs(t_lemin **lemin)
 
 
 
+
+
 }

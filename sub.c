@@ -120,3 +120,22 @@ int check_start_end(t_lemin **lemin, char *line)
 //	}
 //	return (0);
 }
+
+void free_visit_and_queue(char **visit, char **queue)
+{
+	while (*visit)
+	{
+		free(*visit);
+		*visit = NULL;
+		visit++;
+	}
+	while (*queue)
+	{
+//		free(*queue);
+		*queue = NULL;
+		queue++;
+	}
+//	ft_strdel(visit);
+//	ft_strdel(queue);
+
+}
