@@ -125,7 +125,7 @@ void free_visit_and_queue(char **visit, char **queue)
 {
 	while (*visit)
 	{
-		free(*visit);
+//		free(*visit);
 		*visit = NULL;
 		visit++;
 	}

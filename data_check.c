@@ -16,7 +16,6 @@ void need_data_check(t_lemin **lemin)
 	init_queue_visit(lemin, i);
 	if (!hard_data_check(lemin))
 		ft_error(2);
-
 }
 
 void simple_data_check(t_lemin **lemin)

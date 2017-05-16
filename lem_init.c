@@ -24,6 +24,16 @@ void init_room(t_room **room)
 	(*room)->next = NULL;
 }
 
+void init_routes(t_routes **routes)
+{
+	(*routes) = (t_routes *)malloc(sizeof(t_routes));
+	(*routes)->route = (t_route *)malloc(sizeof(t_route));
+	(*routes)->next = NULL;
+	(*routes)->route->room = NULL;
+	(*routes)->route->len_route = 0;
+	(*routes)->route->next = NULL;
+}
+
 void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
 {
 	*lemin = (t_lemin *)malloc(sizeof(t_lemin));
@@ -35,7 +45,8 @@ void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
 
 	(*lemin)->room = (t_room *)malloc(sizeof(t_room));
 	init_room(&((*lemin)->room));
-	(*lemin)->rout = (t_route* )malloc(sizeof(t_route));
+	init_routes(&((*lemin)->routes));
+//	(*lemin)->routes = (t_routes* )malloc(sizeof(t_routes));
 
 	(*lemin)->ants = ants;
 //	(*lemin)->name = name;

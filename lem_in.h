@@ -6,17 +6,24 @@
 #include "libft/get_next_line.h"
 #import "libft/ft_printf.h"
 
+typedef struct			s_route
+{
+	char 				*room;
+	int					len_route;
+	struct s_route		*next;
+}						t_route;
+
+typedef struct			s_routes
+{
+	struct s_route		*route;
+	struct s_routes		*next;
+}						t_routes;
+
 typedef struct			s_connect
 {
 	struct s_room		*room;
 	struct s_connect 	*next;
 }						t_connect;
-
-typedef struct			s_route
-{
-
-
-}						t_route;
 
 typedef struct			s_room
 {
@@ -41,7 +48,7 @@ typedef struct			s_lemin
 
 //	int					id_room;
 	struct s_room		*room;
-	struct s_route		*rout;
+	struct s_routes		*routes;
 	struct s_lemin 		*next;
 }						t_lemin;
 
