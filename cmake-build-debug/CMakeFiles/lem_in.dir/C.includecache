@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/nfs/2016/o/orizhiy/ClionProjects/lem_in/breadth_first_search.c
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/data_check.c
 lem_in.h
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
 
-/nfs/2016/o/orizhiy/ClionProjects/lem_in/data_check.c
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/depth_first_search.c
 lem_in.h
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
 

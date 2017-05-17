@@ -9,13 +9,14 @@
 typedef struct			s_route
 {
 	char 				*room;
-	int					len_route;
+//	int					len_route;
 	struct s_route		*next;
 }						t_route;
 
 typedef struct			s_routes
 {
 	struct s_route		*route;
+	int					len_route;
 	struct s_routes		*next;
 }						t_routes;
 
@@ -113,8 +114,8 @@ void find_start(t_lemin **lemin, char ***queue);
 void free_visit_and_queue(char **visit, char **queue);
 
 
-void dfs(t_lemin **lemin);
-
+//void dfs(t_lemin **lemin);
+void dfs(t_lemin **lemin, char **queue, char **visit);
 
 
 
@@ -122,8 +123,8 @@ void ft_error(int id);
 
 
 
-
-
+void print_1(t_lemin *lemin);
+void print_2(t_routes *routes);
 
 
 

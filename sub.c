@@ -139,3 +139,44 @@ void free_visit_and_queue(char **visit, char **queue)
 //	ft_strdel(queue);
 
 }
+
+void print_1(t_lemin *lemin)
+{
+	t_routes *rs;
+	t_route *r;
+	int route = 1;
+
+	rs = lemin->routes;
+	while (rs->route->room)
+	{
+		ft_printf("Route #%d, Len = %d, Links: ", route, rs->len_route);
+		route++;
+		r = rs->route;
+		while (r->room)
+		{
+			ft_printf("%s", r->room);
+			if (ft_strcmp(r->room, "f"))
+				ft_printf(" - ");
+			r = r->next;
+		}
+		ft_printf("\n");
+		rs = rs->next;
+	}
+}
+
+void print_2(t_routes *routes)
+{
+	t_routes *rs;
+	t_route *r;
+
+	rs = routes;
+	while (rs->next->route->room)
+		rs = rs->next;
+	r = rs->route;
+	while (r->room)
+	{
+		ft_printf("%s - ", r->room);
+		r = r->next;
+	}
+	ft_printf("\n");
+}

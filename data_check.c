@@ -90,14 +90,17 @@ int check_visit_end(t_lemin **lemin, char *s)
 	t_room *room;
 
 	room = (*lemin)->room;
-	while (room->next)
+	if (s)
 	{
-		if (!ft_strcmp(room->name, s))
+		while (room->next)
 		{
-			if (room->end)
-				return (1);
+			if (!ft_strcmp(room->name, s))
+			{
+				if (room->end)
+					return (1);
+			}
+			room = room->next;
 		}
-		room = room->next;
 	}
 	return (0);
 }

@@ -45,8 +45,8 @@ int main()
 	init_lemin(&lemin, 0, NULL, NULL);
 	read_and_valid(&lemin, &lemin->std_in);
 	find_start(&lemin, &lemin->queue);
-	bfs(&lemin);
-
+	dfs(&lemin, lemin->queue, lemin->visit);
+	print_1(lemin);
 //	int i = 0;
 //	while (lemin->std_in[i])
 //	{

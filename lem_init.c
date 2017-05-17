@@ -27,10 +27,10 @@ void init_room(t_room **room)
 void init_routes(t_routes **routes)
 {
 	(*routes) = (t_routes *)malloc(sizeof(t_routes));
-	(*routes)->route = (t_route *)malloc(sizeof(t_route));
+	(*routes)->len_route = -1;
 	(*routes)->next = NULL;
+	(*routes)->route = (t_route *)malloc(sizeof(t_route));
 	(*routes)->route->room = NULL;
-	(*routes)->route->len_route = 0;
 	(*routes)->route->next = NULL;
 }
 
