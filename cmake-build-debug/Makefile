@@ -123,33 +123,6 @@ lem_in/fast:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/build
 .PHONY : lem_in/fast
 
-breadth_first_search.o: breadth_first_search.c.o
-
-.PHONY : breadth_first_search.o
-
-# target to build an object file
-breadth_first_search.c.o:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/breadth_first_search.c.o
-.PHONY : breadth_first_search.c.o
-
-breadth_first_search.i: breadth_first_search.c.i
-
-.PHONY : breadth_first_search.i
-
-# target to preprocess a source file
-breadth_first_search.c.i:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/breadth_first_search.c.i
-.PHONY : breadth_first_search.c.i
-
-breadth_first_search.s: breadth_first_search.c.s
-
-.PHONY : breadth_first_search.s
-
-# target to generate assembly for a file
-breadth_first_search.c.s:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/breadth_first_search.c.s
-.PHONY : breadth_first_search.c.s
-
 data_check.o: data_check.c.o
 
 .PHONY : data_check.o
@@ -176,6 +149,33 @@ data_check.s: data_check.c.s
 data_check.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/data_check.c.s
 .PHONY : data_check.c.s
+
+depth_first_search.o: depth_first_search.c.o
+
+.PHONY : depth_first_search.o
+
+# target to build an object file
+depth_first_search.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/depth_first_search.c.o
+.PHONY : depth_first_search.c.o
+
+depth_first_search.i: depth_first_search.c.i
+
+.PHONY : depth_first_search.i
+
+# target to preprocess a source file
+depth_first_search.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/depth_first_search.c.i
+.PHONY : depth_first_search.c.i
+
+depth_first_search.s: depth_first_search.c.s
+
+.PHONY : depth_first_search.s
+
+# target to generate assembly for a file
+depth_first_search.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/depth_first_search.c.s
+.PHONY : depth_first_search.c.s
 
 input_validation.o: input_validation.c.o
 
@@ -429,12 +429,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lem_in"
-	@echo "... breadth_first_search.o"
-	@echo "... breadth_first_search.i"
-	@echo "... breadth_first_search.s"
 	@echo "... data_check.o"
 	@echo "... data_check.i"
 	@echo "... data_check.s"
+	@echo "... depth_first_search.o"
+	@echo "... depth_first_search.i"
+	@echo "... depth_first_search.s"
 	@echo "... input_validation.o"
 	@echo "... input_validation.i"
 	@echo "... input_validation.s"

@@ -82,7 +82,7 @@ void check_fill_visit(char **visit, char *queue)
 	visit[i] = queue;
 }
 
-void bfs(t_lemin **lemin)
+void dfs(t_lemin **lemin)
 {
 	int i = 0;
 //	t_route route;
@@ -100,7 +100,8 @@ void bfs(t_lemin **lemin)
 //				(*lemin)->visit[i] = (*lemin)->queue[i];
 				check_fill_visit((*lemin)->visit, (*lemin)->queue[i]);
 				fill_connect_in_queue(room, (*lemin)->visit, (*lemin)->queue);
-				bfs(lemin);
+				dfs(lemin);
+				write(1, "1", 10);
 
 			}
 			room = room->next;

@@ -82,10 +82,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/breadth_first_search.c">
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/data_check.c">
 			<Option target="lem_in"/>
 		</Unit>
-		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/data_check.c">
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/depth_first_search.c">
 			<Option target="lem_in"/>
 		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/input_validation.c">

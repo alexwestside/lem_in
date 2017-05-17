@@ -113,7 +113,7 @@ void find_start(t_lemin **lemin, char ***queue);
 void free_visit_and_queue(char **visit, char **queue);
 
 
-void bfs(t_lemin **lemin);
+void dfs(t_lemin **lemin);
 
 
 
