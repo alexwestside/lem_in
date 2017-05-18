@@ -123,6 +123,33 @@ lem_in/fast:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/build
 .PHONY : lem_in/fast
 
+choice.o: choice.c.o
+
+.PHONY : choice.o
+
+# target to build an object file
+choice.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/choice.c.o
+.PHONY : choice.c.o
+
+choice.i: choice.c.i
+
+.PHONY : choice.i
+
+# target to preprocess a source file
+choice.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/choice.c.i
+.PHONY : choice.c.i
+
+choice.s: choice.c.s
+
+.PHONY : choice.s
+
+# target to generate assembly for a file
+choice.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/choice.c.s
+.PHONY : choice.c.s
+
 data_check.o: data_check.c.o
 
 .PHONY : data_check.o
@@ -429,6 +456,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lem_in"
+	@echo "... choice.o"
+	@echo "... choice.i"
+	@echo "... choice.s"
 	@echo "... data_check.o"
 	@echo "... data_check.i"
 	@echo "... data_check.s"

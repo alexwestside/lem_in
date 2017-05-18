@@ -59,16 +59,10 @@ int main()
 
 	init_lemin(&lemin, 0, NULL, NULL);
 	read_and_valid(&lemin, &lemin->std_in);
-//	find_start(&lemin, &lemin->queue);
-//	dfs(&lemin, lemin->queue, lemin->visit);
 	dfs(&lemin, start_room(lemin));
 	print_1(lemin);
-//	int i = 0;
-//	while (lemin->std_in[i])
-//	{
-//		ft_printf("%s\n", lemin->std_in[i]);
-//		i++;
-//	}
+	make_route_pack(&lemin);
+
 
 }
 

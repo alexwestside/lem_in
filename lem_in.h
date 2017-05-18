@@ -70,19 +70,18 @@ int if_is_digit_sign_str(char *s);
 int atoi_lemin(char *str);
 
 
-
 int limit_int(long int n);
 void init_connect(t_connect **connect);
 
 
 int count_ants(char *s);
 
+
 int type_num_ants(char *str);
 int type_room(char *str);
 int type_start_end(char *str);
 int type_connect(char *str);
 int type_comment(char *str);
-
 
 
 int valid_ants(t_lemin **lemin, int ants, char *line);
@@ -115,15 +114,18 @@ void find_start(t_lemin **lemin, char ***queue);
 void free_visit_and_queue(char **visit, char **queue);
 
 
-//void dfs(t_lemin **lemin);
-//void dfs(t_lemin **lemin, char **queue, char **visit);
-
-//void dfs(t_lemin **lemin);
-
 void dfs(t_lemin **lemmin, t_room *next_room);
+void re_fill_visit(char **visit);
+t_room *find_next_room(t_lemin **lemin, char *room);
+void fill_visit(char **visit, char *room);
+int choose_link(char **visit, char *room);
+void make_route(char **visit, t_routes **routes);
+
+
+void make_route_pack(t_lemin **lemin);
+
 
 void ft_error(int id);
-
 
 
 void print_1(t_lemin *lemin);

@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/write_input.c.o"
   "CMakeFiles/lem_in.dir/data_check.c.o"
   "CMakeFiles/lem_in.dir/depth_first_search.c.o"
+  "CMakeFiles/lem_in.dir/choice.c.o"
   "lem_in.pdb"
   "lem_in"
 )
