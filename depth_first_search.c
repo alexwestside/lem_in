@@ -1,21 +1,55 @@
 
 #include "lem_in.h"
 
-//void make_visit(char *room, char **visit)
+//void make_route(t_routes **routes, char **visit)
 //{
+//	t_routes *rs;
+//	t_route *r;
 //	int i = 0;
 //
-//	while (visit[i])
-//		i++;
-//	visit[i] = room;
+//	if ((*routes))
+//	{
+//		rs = (*routes);
+//		while (rs->next)
+//			rs = rs->next;
+//		rs->next = (t_routes *) malloc(sizeof(t_routes));
+//		rs->next->next = NULL;
+//		rs->next->len_route = -1;
+//		rs->next->route = (t_route *) malloc(sizeof(t_route));
+//		rs->next->route->room = NULL;
+//		rs->next->route->next = NULL;
+//		r = rs->route;
+//		while (visit[i])
+//		{
+//			r->room = visit[i];
+//			r->next = (t_route *) malloc(sizeof(t_route));
+//			r->next->room = NULL;
+//			r->next->next = NULL;
+//			r = r->next;
+//			rs->len_route++;
+//			i++;
+//		}
+//	}
+//	print_2((*routes));
 //}
 //
-//void dfs(t_lemin **lemin, char **queue, char **visit)
+//int check_route(char **visit)
 //{
-//	int i = 0;
 //
-//	make_visit(queue[i], visit);
-//	refill_queue((*lemin)->room, queue);
+//
+//	return (1);
+//}
+//
+//void dfs(t_lemin **lemin)
+//{
+//	t_room *room;
+//
+//	if (check_route((*lemin)->visit))
+//	{
+//		make_route(&((*lemin)->routes), (*lemin)->visit);
+//		return;
+//	}
+//	room = (*lemin)->room;
 //
 //
 //
@@ -24,7 +58,6 @@
 //
 //
 //}
-
 
 void make_route(t_routes **routes, char **visit)
 {

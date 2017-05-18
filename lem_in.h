@@ -45,6 +45,7 @@ typedef struct			s_lemin
 	char				**std_in;
 	char				**queue;
 	char				**visit;
+	char				**route;
 	int 				ants;
 
 //	int					id_room;
