@@ -147,7 +147,7 @@ void print_1(t_lemin *lemin)
 	int route = 1;
 
 	rs = lemin->routes;
-	while (rs->route->room)
+	while (rs)
 	{
 		ft_printf("Route #%d, Len = %d, Links: ", route, rs->len_route);
 		route++;
@@ -174,6 +174,19 @@ void print_2(t_routes *routes)
 		rs = rs->next;
 	r = rs->route;
 	while (r->room)
+	{
+		ft_printf("%s - ", r->room);
+		r = r->next;
+	}
+	ft_printf("\n");
+}
+
+void print_3(t_routes *routes)
+{
+	t_route *r;
+
+	r = routes->route;
+	while (r->next)
 	{
 		ft_printf("%s - ", r->room);
 		r = r->next;

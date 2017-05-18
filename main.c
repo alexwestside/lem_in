@@ -61,6 +61,7 @@ int main()
 	read_and_valid(&lemin, &lemin->std_in);
 	dfs(&lemin, start_room(lemin));
 	print_1(lemin);
+	ft_printf("\n\n\n");
 	make_route_pack(&lemin);
 
 

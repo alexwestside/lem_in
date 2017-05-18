@@ -6,53 +6,63 @@
 #include "libft/get_next_line.h"
 #import "libft/ft_printf.h"
 
-typedef struct			s_route
+typedef struct				s_route
 {
-	char 				*room;
-//	int					len_route;
-	struct s_route		*next;
-}						t_route;
+	char 					*room;
+//	int						len_route;
+	struct s_route			*next;
+}							t_route;
 
-typedef struct			s_routes
+typedef struct				s_routes
 {
-	struct s_route		*route;
-	int					len_route;
-	struct s_routes		*next;
-}						t_routes;
+	struct s_route			*route;
+	int						len_route;
+	struct s_routes			*next;
+	struct s_routes			*prev;
+}							t_routes;
 
-typedef struct			s_connect
+typedef struct 				s_pack_routes
 {
-	struct s_room		*room;
-	struct s_connect 	*next;
-}						t_connect;
+	struct s_routes			*routes;
+	struct s_pack_routes	*next;
 
-typedef struct			s_room
+}							t_pack_routes;
+
+typedef struct				s_connect
 {
-	char				*name;
-	int					*id_room;
-	char				*x;
-	char				*y;
-	struct s_connect	*connect;
-	int					start;
-	int 				end;
-	int					ants;
-	struct s_room		*next;
+	struct s_room			*room;
+	struct s_connect 		*next;
+}							t_connect;
 
-}						t_room;
-
-typedef struct			s_lemin
+typedef struct				s_room
 {
-	char				**std_in;
-	char				**queue;
-	char				**visit;
-	char				**route;
-	int 				ants;
+	char					*name;
+	int						*id_room;
+	char					*x;
+	char					*y;
+	struct s_connect		*connect;
+	int						start;
+	int 					end;
+	int						ants;
+	struct s_room			*next;
 
-//	int					id_room;
-	struct s_room		*room;
-	struct s_routes		*routes;
-	struct s_lemin 		*next;
-}						t_lemin;
+}							t_room;
+
+typedef struct				s_lemin
+{
+	char					**std_in;
+	char					**queue;
+	char					**visit;
+	char					**route;
+	int 					ants;
+
+//	int						id_room;
+	struct s_room			*room;
+	struct s_routes			*routes;
+	struct s_pack_routes	*pack_routes;
+
+	struct s_lemin 			*next;
+}							t_lemin;
 
 
 
@@ -130,6 +140,7 @@ void ft_error(int id);
 
 void print_1(t_lemin *lemin);
 void print_2(t_routes *routes);
+void print_3(t_routes *routes);
 
 
 

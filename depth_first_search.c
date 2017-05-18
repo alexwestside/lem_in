@@ -25,6 +25,7 @@ void make_route(char **visit, t_routes **routes)
 	rs->next->route = NULL;
 	rs->next->len_route = -1;
 	rs->next->next = NULL;
+	rs->next->prev = rs;
 	rs->next->route = (t_route *)malloc(sizeof(t_route));
 	rs->next->route->room = NULL;
 	rs->next->route->next = NULL;
