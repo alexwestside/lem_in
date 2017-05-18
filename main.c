@@ -26,7 +26,7 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 	int i;
 
 	i = -1;
-	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/123", O_RDONLY);
+	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test2", O_RDONLY);
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{
 		if (!(read_stdin(lemin, (*std_in)[i], fd, &i)))
@@ -38,15 +38,30 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 	need_data_check(lemin);
 }
 
+
+t_room *start_room(t_lemin *lemin)
+{
+	t_room *start_room;
+
+	start_room = lemin->room;
+	while (start_room)
+	{
+		if (start_room->start)
+			break;
+		start_room = start_room->next;
+	}
+	return (start_room);
+}
+
 int main()
 {
 	t_lemin *lemin;
 
 	init_lemin(&lemin, 0, NULL, NULL);
 	read_and_valid(&lemin, &lemin->std_in);
-	find_start(&lemin, &lemin->queue);
+//	find_start(&lemin, &lemin->queue);
 //	dfs(&lemin, lemin->queue, lemin->visit);
-	dfs(&lemin);
+	dfs(&lemin, start_room(lemin));
 	print_1(lemin);
 //	int i = 0;
 //	while (lemin->std_in[i])

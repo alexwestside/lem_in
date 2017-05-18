@@ -118,8 +118,9 @@ void free_visit_and_queue(char **visit, char **queue);
 //void dfs(t_lemin **lemin);
 //void dfs(t_lemin **lemin, char **queue, char **visit);
 
-void dfs(t_lemin **lemin);
+//void dfs(t_lemin **lemin);
 
+void dfs(t_lemin **lemmin, t_room *next_room);
 
 void ft_error(int id);
 
