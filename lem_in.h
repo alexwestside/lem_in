@@ -24,6 +24,7 @@ typedef struct				s_routes
 typedef struct 				s_pack_routes
 {
 	struct s_routes			*routes;
+	int						count_routes;
 	struct s_pack_routes	*next;
 
 }							t_pack_routes;
@@ -133,6 +134,8 @@ void make_route(char **visit, t_routes **routes);
 
 
 void make_route_pack(t_lemin **lemin);
+
+void make_a_choice(t_lemin **lemin);
 
 
 void ft_error(int id);

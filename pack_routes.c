@@ -44,6 +44,7 @@ void init_pack_routes(t_lemin **lemin)
 	if (!pack_routes)
 	{
 		(*lemin)->pack_routes = (t_pack_routes *) malloc(sizeof(t_pack_routes));
+		(*lemin)->pack_routes->count_routes = 0;
 		(*lemin)->pack_routes->next = NULL;
 		(*lemin)->pack_routes->routes = (t_routes *) malloc(sizeof(t_routes));
 		(*lemin)->pack_routes->routes->next = NULL;
@@ -58,6 +59,7 @@ void init_pack_routes(t_lemin **lemin)
 		while(pack_routes->next)
 			pack_routes = pack_routes->next;
 		pack_routes->next = (t_pack_routes *) malloc(sizeof(t_pack_routes));
+		pack_routes->next->count_routes = 0;
 		pack_routes->next->next = NULL;
 		pack_routes->next->routes = (t_routes *) malloc(sizeof(t_routes));
 		pack_routes->next->routes->next = NULL;
@@ -162,4 +164,6 @@ void make_route_pack(t_lemin **lemin)
 	init_pack_routes(lemin);
 	make_pack_routes(lemin);
 	print_4(lemin);
+
+
 }

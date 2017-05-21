@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/lem_init.c.o"
   "CMakeFiles/lem_in.dir/sub.c.o"
   "CMakeFiles/lem_in.dir/types_input.c.o"
+  "CMakeFiles/lem_in.dir/pack_routes.c.o"
   "CMakeFiles/lem_in.dir/write_input.c.o"
   "CMakeFiles/lem_in.dir/data_check.c.o"
   "CMakeFiles/lem_in.dir/depth_first_search.c.o"

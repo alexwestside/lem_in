@@ -63,7 +63,7 @@ int main()
 	print_1(lemin);
 	ft_printf("\n\n\n");
 	make_route_pack(&lemin);
-
+	make_a_choice(&lemin);
 
 
 }

@@ -249,9 +249,33 @@ CMakeFiles/lem_in.dir/types_input.c.o.provides: CMakeFiles/lem_in.dir/types_inpu
 CMakeFiles/lem_in.dir/types_input.c.o.provides.build: CMakeFiles/lem_in.dir/types_input.c.o
 
 
+CMakeFiles/lem_in.dir/pack_routes.c.o: CMakeFiles/lem_in.dir/flags.make
+CMakeFiles/lem_in.dir/pack_routes.c.o: ../pack_routes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/lem_in.dir/pack_routes.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/pack_routes.c.o   -c /nfs/2016/o/orizhiy/ClionProjects/lem_in/pack_routes.c
+
+CMakeFiles/lem_in.dir/pack_routes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lem_in.dir/pack_routes.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/o/orizhiy/ClionProjects/lem_in/pack_routes.c > CMakeFiles/lem_in.dir/pack_routes.c.i
+
+CMakeFiles/lem_in.dir/pack_routes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lem_in.dir/pack_routes.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/o/orizhiy/ClionProjects/lem_in/pack_routes.c -o CMakeFiles/lem_in.dir/pack_routes.c.s
+
+CMakeFiles/lem_in.dir/pack_routes.c.o.requires:
+
+.PHONY : CMakeFiles/lem_in.dir/pack_routes.c.o.requires
+
+CMakeFiles/lem_in.dir/pack_routes.c.o.provides: CMakeFiles/lem_in.dir/pack_routes.c.o.requires
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/pack_routes.c.o.provides.build
+.PHONY : CMakeFiles/lem_in.dir/pack_routes.c.o.provides
+
+CMakeFiles/lem_in.dir/pack_routes.c.o.provides.build: CMakeFiles/lem_in.dir/pack_routes.c.o
+
+
 CMakeFiles/lem_in.dir/write_input.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/write_input.c.o: ../write_input.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/lem_in.dir/write_input.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/lem_in.dir/write_input.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/write_input.c.o   -c /nfs/2016/o/orizhiy/ClionProjects/lem_in/write_input.c
 
 CMakeFiles/lem_in.dir/write_input.c.i: cmake_force
@@ -275,7 +299,7 @@ CMakeFiles/lem_in.dir/write_input.c.o.provides.build: CMakeFiles/lem_in.dir/writ
 
 CMakeFiles/lem_in.dir/data_check.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/data_check.c.o: ../data_check.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/lem_in.dir/data_check.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/lem_in.dir/data_check.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/data_check.c.o   -c /nfs/2016/o/orizhiy/ClionProjects/lem_in/data_check.c
 
 CMakeFiles/lem_in.dir/data_check.c.i: cmake_force
@@ -299,7 +323,7 @@ CMakeFiles/lem_in.dir/data_check.c.o.provides.build: CMakeFiles/lem_in.dir/data_
 
 CMakeFiles/lem_in.dir/depth_first_search.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/depth_first_search.c.o: ../depth_first_search.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/lem_in.dir/depth_first_search.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/lem_in.dir/depth_first_search.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/depth_first_search.c.o   -c /nfs/2016/o/orizhiy/ClionProjects/lem_in/depth_first_search.c
 
 CMakeFiles/lem_in.dir/depth_first_search.c.i: cmake_force
@@ -323,7 +347,7 @@ CMakeFiles/lem_in.dir/depth_first_search.c.o.provides.build: CMakeFiles/lem_in.d
 
 CMakeFiles/lem_in.dir/choice.c.o: CMakeFiles/lem_in.dir/flags.make
 CMakeFiles/lem_in.dir/choice.c.o: ../choice.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/lem_in.dir/choice.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/lem_in.dir/choice.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lem_in.dir/choice.c.o   -c /nfs/2016/o/orizhiy/ClionProjects/lem_in/choice.c
 
 CMakeFiles/lem_in.dir/choice.c.i: cmake_force
@@ -355,6 +379,7 @@ lem_in_OBJECTS = \
 "CMakeFiles/lem_in.dir/lem_init.c.o" \
 "CMakeFiles/lem_in.dir/sub.c.o" \
 "CMakeFiles/lem_in.dir/types_input.c.o" \
+"CMakeFiles/lem_in.dir/pack_routes.c.o" \
 "CMakeFiles/lem_in.dir/write_input.c.o" \
 "CMakeFiles/lem_in.dir/data_check.c.o" \
 "CMakeFiles/lem_in.dir/depth_first_search.c.o" \
@@ -371,6 +396,7 @@ lem_in: CMakeFiles/lem_in.dir/lem_realloc.c.o
 lem_in: CMakeFiles/lem_in.dir/lem_init.c.o
 lem_in: CMakeFiles/lem_in.dir/sub.c.o
 lem_in: CMakeFiles/lem_in.dir/types_input.c.o
+lem_in: CMakeFiles/lem_in.dir/pack_routes.c.o
 lem_in: CMakeFiles/lem_in.dir/write_input.c.o
 lem_in: CMakeFiles/lem_in.dir/data_check.c.o
 lem_in: CMakeFiles/lem_in.dir/depth_first_search.c.o
@@ -378,7 +404,7 @@ lem_in: CMakeFiles/lem_in.dir/choice.c.o
 lem_in: CMakeFiles/lem_in.dir/build.make
 lem_in: ../libft/libft.a
 lem_in: CMakeFiles/lem_in.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking C executable lem_in"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C executable lem_in"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lem_in.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -394,6 +420,7 @@ CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/lem_realloc.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/lem_init.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/sub.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/types_input.c.o.requires
+CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/pack_routes.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/write_input.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/data_check.c.o.requires
 CMakeFiles/lem_in.dir/requires: CMakeFiles/lem_in.dir/depth_first_search.c.o.requires
