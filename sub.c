@@ -193,3 +193,30 @@ void print_3(t_routes *routes)
 	}
 	ft_printf("\n");
 }
+
+void print_4(t_lemin **lemin)
+{
+	t_pack_routes *prs;
+	t_routes *rs;
+	t_route *r;
+
+	ft_printf("\n\n");
+	prs = (*lemin)->pack_routes;
+	while (prs)
+	{
+		rs = prs->routes;
+		while (rs)
+		{
+			r = rs->route;
+			while (r->next)
+			{
+				ft_printf("%s - ", r->room);
+				r = r->next;
+			}
+			rs = rs->next;
+			ft_printf("\n");
+		}
+		prs = prs->next;
+		ft_printf("\n");
+	}
+}

@@ -141,6 +141,7 @@ void ft_error(int id);
 void print_1(t_lemin *lemin);
 void print_2(t_routes *routes);
 void print_3(t_routes *routes);
+void print_4(t_lemin **lemin);
 
 
 
