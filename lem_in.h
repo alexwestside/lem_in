@@ -137,6 +137,8 @@ void make_route_pack(t_lemin **lemin);
 
 void make_a_choice(t_lemin **lemin);
 
+void print_lemin(t_pack_routes *choice, t_lemin **lemin);
+
 
 void ft_error(int id);
 

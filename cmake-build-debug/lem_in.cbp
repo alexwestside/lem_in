@@ -112,6 +112,9 @@
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/pack_routes.c">
 			<Option target="lem_in"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/print_lemin.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub.c">
 			<Option target="lem_in"/>
 		</Unit>

@@ -55,6 +55,12 @@ CMakeFiles/lem_in.dir/pack_routes.c.o: ../libft/get_next_line.h
 CMakeFiles/lem_in.dir/pack_routes.c.o: ../libft/libft.h
 CMakeFiles/lem_in.dir/pack_routes.c.o: ../pack_routes.c
 
+CMakeFiles/lem_in.dir/print_lemin.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/print_lemin.c.o: ../libft/ft_printf.h
+CMakeFiles/lem_in.dir/print_lemin.c.o: ../libft/get_next_line.h
+CMakeFiles/lem_in.dir/print_lemin.c.o: ../libft/libft.h
+CMakeFiles/lem_in.dir/print_lemin.c.o: ../print_lemin.c
+
 CMakeFiles/lem_in.dir/sub.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/sub.c.o: ../libft/ft_printf.h
 CMakeFiles/lem_in.dir/sub.c.o: ../libft/get_next_line.h

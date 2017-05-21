@@ -19,9 +19,9 @@ void fill_count_routes(t_lemin **lemin)
 	}
 }
 
-t_routes *routes_choice(t_lemin **lemin)
+t_pack_routes *routes_choice(t_lemin **lemin)
 {
-	t_routes *choice;
+	t_pack_routes *choice;
 	t_routes *rs;
 	t_pack_routes *prs;
 	int moves;
@@ -42,12 +42,12 @@ t_routes *routes_choice(t_lemin **lemin)
 		if (moves && tmp < moves)
 		{
 			moves = tmp;
-			choice = prs->routes;
+			choice = prs;
 		}
 		if (!moves)
 		{
 			moves = tmp;
-			choice = prs->routes;
+			choice = prs;
 		}
 		prs = prs->next;
 	}
@@ -56,10 +56,9 @@ t_routes *routes_choice(t_lemin **lemin)
 
 void make_a_choice(t_lemin **lemin)
 {
-	t_routes *rs;
+	t_pack_routes *choice;
 
 	fill_count_routes(lemin);
-	rs = routes_choice(lemin);
-
-
+	choice = routes_choice(lemin);
+	print_lemin(choice, lemin);
 }

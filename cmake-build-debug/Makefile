@@ -366,6 +366,33 @@ pack_routes.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/pack_routes.c.s
 .PHONY : pack_routes.c.s
 
+print_lemin.o: print_lemin.c.o
+
+.PHONY : print_lemin.o
+
+# target to build an object file
+print_lemin.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin.c.o
+.PHONY : print_lemin.c.o
+
+print_lemin.i: print_lemin.c.i
+
+.PHONY : print_lemin.i
+
+# target to preprocess a source file
+print_lemin.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin.c.i
+.PHONY : print_lemin.c.i
+
+print_lemin.s: print_lemin.c.s
+
+.PHONY : print_lemin.s
+
+# target to generate assembly for a file
+print_lemin.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin.c.s
+.PHONY : print_lemin.c.s
+
 sub.o: sub.c.o
 
 .PHONY : sub.o
@@ -510,6 +537,9 @@ help:
 	@echo "... pack_routes.o"
 	@echo "... pack_routes.i"
 	@echo "... pack_routes.s"
+	@echo "... print_lemin.o"
+	@echo "... print_lemin.i"
+	@echo "... print_lemin.s"
 	@echo "... sub.o"
 	@echo "... sub.i"
 	@echo "... sub.s"
