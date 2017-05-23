@@ -32,6 +32,7 @@ void init_routes(t_routes **routes)
 	(*routes)->prev = NULL;
 	(*routes)->route = (t_route *)malloc(sizeof(t_route));
 	(*routes)->route->room = NULL;
+	(*routes)->route->ant = 0;
 	(*routes)->route->next = NULL;
 }
 

@@ -9,6 +9,7 @@
 typedef struct				s_route
 {
 	char 					*room;
+	int						ant;
 //	int						len_route;
 	struct s_route			*next;
 }							t_route;
@@ -137,8 +138,11 @@ void make_route_pack(t_lemin **lemin);
 
 void make_a_choice(t_lemin **lemin);
 
-void print_lemin(t_pack_routes *choice, t_lemin **lemin);
-
+//void print_lemin(t_routes *choice, t_route *route, int count_routes, t_lemin **lemin);
+//void print_lemin(t_routes *choice, t_route *route, int count_routes, int ants);
+//void print_lemin(t_routes *choice, t_route *route, int count_routes, int ants, t_lemin **lemin);
+//void print_lemin(t_routes *choice, int count_routes, int ant, t_lemin **lemin);
+void print_lemin(t_pack_routes *pack_routes, int count_routes, int ant, t_lemin **lemin);
 
 void ft_error(int id);
 
