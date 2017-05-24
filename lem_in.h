@@ -12,6 +12,7 @@ typedef struct				s_route
 	int						ant;
 //	int						len_route;
 	struct s_route			*next;
+	struct s_route			*prev;
 }							t_route;
 
 typedef struct				s_routes
