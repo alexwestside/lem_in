@@ -60,5 +60,5 @@ void make_a_choice(t_lemin **lemin)
 
 	fill_count_routes(lemin);
 	choice = routes_choice(lemin);
-	print_lemin(choice, choice->count_routes, 1, lemin);
+	print_lemin(&(choice->routes), lemin, 1);
 }

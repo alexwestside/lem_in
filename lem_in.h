@@ -143,7 +143,8 @@ void make_a_choice(t_lemin **lemin);
 //void print_lemin(t_routes *choice, t_route *route, int count_routes, int ants);
 //void print_lemin(t_routes *choice, t_route *route, int count_routes, int ants, t_lemin **lemin);
 //void print_lemin(t_routes *choice, int count_routes, int ant, t_lemin **lemin);
-void print_lemin(t_pack_routes *pack_routes, int count_routes, int ant, t_lemin **lemin);
+//void print_lemin(t_pack_routes *pack_routes, int count_routes, int ant, t_lemin **lemin);
+void print_lemin(t_routes **routes, t_lemin **lemin, int ant);
 
 void ft_error(int id);
 
