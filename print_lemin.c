@@ -211,13 +211,15 @@ int if_ampty(t_pack_routes *pack_routes)
 	return (1);
 }
 
-void print_lemin(t_pack_routes *pack_routes, int count_routes, int ant, t_lemin **lemin)
-{
-	move_ant_new(&pack_routes, lemin, &ant);
-	move_ant_old(&pack_routes, lemin);
-	while (!if_ampty(pack_routes))
-	{
-		move_ant_new(&pack_routes, lemin, &ant);
-		move_ant_old(&pack_routes, lemin);
-	}
-}
+//void print_lemin(t_pack_routes *pack_routes, int count_routes, int ant, t_lemin **lemin)
+//{
+//	move_ant_new(&pack_routes, lemin, &ant);
+//	move_ant_old(&pack_routes, lemin);
+//	while (!if_ampty(pack_routes))
+//	{
+//		move_ant_new(&pack_routes, lemin, &ant);
+//		move_ant_old(&pack_routes, lemin);
+//	}
+//}
+
+void print_lemin()
