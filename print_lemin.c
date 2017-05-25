@@ -307,9 +307,12 @@ void end(t_route **room, t_lemin **lemin)
 {
 	char *end;
 
-	end = is_end(lemin);
-	if (!ft_strcmp((*room)->room, end))
-		(*room)->ant = 0;
+	if ((*room)->room)
+	{
+		end = is_end(lemin);
+		if (!ft_strcmp((*room)->room, end))
+			(*room)->ant = 0;
+	}
 	return;
 }
 
@@ -324,8 +327,15 @@ void push_old_ants(t_routes **routes, t_lemin **lemin)
 		r = rs->route->next;
 		if (route_is_ampty(r))
 		{
-			while (r->next->ant)
+			while (r->next->room)
+			{
+				if (r->ant && !r->next->ant)
+					break;
 				r = r->next;
+			}
+//			while (r->next->ant)
+//				r = r->next;
+//			if (r->next->ant)
 			r->next->ant = r->ant;
 			r->ant = 0;
 			ft_printf("L%d-%s ", r->next->ant, r->next->room);
