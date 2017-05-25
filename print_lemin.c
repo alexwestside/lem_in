@@ -234,9 +234,12 @@ void move_new_ants(t_routes **routes, t_lemin **lemin, int *ant)
 		r = rs->route->next;
 		if (!r->ant)
 		{
-			r->ant = *ant;
-			ft_printf("L%d-%s ", *ant, r->room);
-			(*ant)++;
+			if ((*ant) <= (*lemin)->ants)
+			{
+				r->ant = *ant;
+				ft_printf("L%d-%s ", *ant, r->room);
+				(*ant)++;
+			}
 		}
 		rs = rs->next;
 	}
@@ -351,8 +354,17 @@ void push_old_ants(t_routes **routes, t_lemin **lemin)
 	}
 }
 
+void print_stdin(t_lemin **lemin)
+{
+
+
+
+
+}
+
 void print_lemin(t_routes **routes, t_lemin **lemin, int ant)
 {
+	print_stdin(lemin);
 	move_new_ants(routes, lemin, &ant);
 	ft_printf("\n");
 	while (ant <= (*lemin)->ants)

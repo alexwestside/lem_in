@@ -9,11 +9,14 @@ void fill_count_routes(t_lemin **lemin)
 	prs = (*lemin)->pack_routes;
 	while (prs)
 	{
-		rs = prs->routes;
-		while (rs)
+		if (prs->routes->route->room)
 		{
-			prs->count_routes++;
-			rs = rs->next;
+			rs = prs->routes;
+			while (rs)
+			{
+				prs->count_routes++;
+				rs = rs->next;
+			}
 		}
 		prs = prs->next;
 	}
@@ -33,21 +36,24 @@ t_pack_routes *routes_choice(t_lemin **lemin)
 	prs = (*lemin)->pack_routes;
 	while (prs)
 	{
-		rs = prs->routes;
-		while (rs)
+		if (prs->routes->route->room)
 		{
-			tmp += ((*lemin)->ants / prs->count_routes) * rs->len_route;
-			rs = rs->next;
-		}
-		if (moves && tmp < moves)
-		{
-			moves = tmp;
-			choice = prs;
-		}
-		if (!moves)
-		{
-			moves = tmp;
-			choice = prs;
+			rs = prs->routes;
+			while (rs)
+			{
+				tmp += ((*lemin)->ants / prs->count_routes) * rs->len_route;
+				rs = rs->next;
+			}
+			if (moves && tmp < moves)
+			{
+				moves = tmp;
+				choice = prs;
+			}
+			if (!moves)
+			{
+				moves = tmp;
+				choice = prs;
+			}
 		}
 		prs = prs->next;
 	}
