@@ -349,7 +349,7 @@ void push_old_ants(t_routes **routes, t_lemin **lemin)
 		if (!rs)
 		{
 			rs = (*routes);
-			ft_printf("\n");
+//			ft_printf("\n");
 		}
 	}
 }
