@@ -1,18 +1,16 @@
 
 #ifndef LEM_IN_LEM_IN_H_H
-#define LEM_IN_LEM_IN_H_H
+# define LEM_IN_LEM_IN_H_H
 
-#include "libft/libft.h"
-#include "libft/get_next_line.h"
-#import "libft/ft_printf.h"
+# include "libft/libft.h"
+# include "libft/get_next_line.h"
+# import "libft/ft_printf.h"
 
 typedef struct				s_route
 {
 	char 					*room;
 	int						ant;
-//	int						len_route;
 	struct s_route			*next;
-	struct s_route			*prev;
 }							t_route;
 
 typedef struct				s_routes
@@ -58,12 +56,9 @@ typedef struct				s_lemin
 	char					**visit;
 	char					**route;
 	int 					ants;
-
-//	int						id_room;
 	struct s_room			*room;
 	struct s_routes			*routes;
 	struct s_pack_routes	*pack_routes;
-
 	struct s_lemin 			*next;
 }							t_lemin;
 
@@ -156,25 +151,6 @@ void print_1(t_lemin *lemin);
 void print_2(t_routes *routes);
 void print_3(t_routes *routes);
 void print_4(t_lemin **lemin);
-
-
-
-
-
-//int main();
-//void ft_read_write(t_stdin **input);
-//char **ft_realloc(char ***std_in, unsigned long int len);
-//unsigned long int ft_two_dem_strlen(char **s);
-//void valid_sart_end(t_stdin **input);
-//void ft_input_valid(t_stdin **input);
-//void valid_sart_end(t_stdin **input);
-//void valid_rooms(t_stdin **input);
-//int valid_connect(char *s);
-//int valid_ants(char *s);
-//int ifisdigit_str(char **s);
-//void valid_rooms_connect(t_stdin **input);
-//
-//void ft_input_valid(t_stdin **input, char *s);
 
 
 #endif //LEM_IN_LEM_IN_H_H
