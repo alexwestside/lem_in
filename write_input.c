@@ -64,7 +64,7 @@ void write_connect(t_lemin **lemin, char *line)
 
 void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i)
 {
- 	(*lemin)->std_in;
+// 	(*lemin)->std_in;
 	get_next_line(fd, &((*lemin)->std_in[++(*i)]));
 	if (type_room((*lemin)->std_in[(*i)]))
 	{

@@ -134,20 +134,23 @@ void fill_visit(char **visit, char *room);
 int choose_link(char **visit, char *room);
 void make_route(char **visit, t_routes **routes);
 
-
 void make_route_pack(t_lemin **lemin);
 
 void make_a_choice(t_lemin **lemin);
 
-//void print_lemin(t_routes *choice, t_route *route, int count_routes, t_lemin **lemin);
-//void print_lemin(t_routes *choice, t_route *route, int count_routes, int ants);
-//void print_lemin(t_routes *choice, t_route *route, int count_routes, int ants, t_lemin **lemin);
-//void print_lemin(t_routes *choice, int count_routes, int ant, t_lemin **lemin);
-//void print_lemin(t_pack_routes *pack_routes, int count_routes, int ant, t_lemin **lemin);
 void print_lemin(t_routes **routes, t_lemin **lemin, int ant);
+void print_stdin(t_lemin **lemin);
+void push_one_route(t_routes **routes, t_lemin **lemin);
+void push_old_ants(t_routes **routes, t_lemin **lemin);
+void end(t_route **room, t_lemin **lemin);
+int route_is_ampty(t_route *route);
+int routes_is_ampty(t_routes **routes);
+void move_old_ants(t_routes **routes, t_lemin **lemin);
+void move_new_ants(t_routes **routes, t_lemin **lemin, int *ant);
+void check_ant_in_end(t_route **route, t_lemin **lemin);
+char *is_end(t_lemin **lemin);
 
 void ft_error(int id);
-
 
 void print_1(t_lemin *lemin);
 void print_2(t_routes *routes);
