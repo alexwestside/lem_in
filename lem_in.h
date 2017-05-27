@@ -145,6 +145,11 @@ void move_new_ants(t_routes **routes, t_lemin **lemin, int *ant);
 void check_ant_in_end(t_route **route, t_lemin **lemin);
 char *is_end(t_lemin **lemin);
 
+
+void free_lemin(t_lemin **lemin);
+void free_twodem_str(char **s);
+
+
 void ft_error(int id);
 
 void print_1(t_lemin *lemin);

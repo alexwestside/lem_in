@@ -204,6 +204,33 @@ depth_first_search.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/depth_first_search.c.s
 .PHONY : depth_first_search.c.s
 
+free_lemin.o: free_lemin.c.o
+
+.PHONY : free_lemin.o
+
+# target to build an object file
+free_lemin.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/free_lemin.c.o
+.PHONY : free_lemin.c.o
+
+free_lemin.i: free_lemin.c.i
+
+.PHONY : free_lemin.i
+
+# target to preprocess a source file
+free_lemin.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/free_lemin.c.i
+.PHONY : free_lemin.c.i
+
+free_lemin.s: free_lemin.c.s
+
+.PHONY : free_lemin.s
+
+# target to generate assembly for a file
+free_lemin.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/free_lemin.c.s
+.PHONY : free_lemin.c.s
+
 input_validation.o: input_validation.c.o
 
 .PHONY : input_validation.o
@@ -519,6 +546,9 @@ help:
 	@echo "... depth_first_search.o"
 	@echo "... depth_first_search.i"
 	@echo "... depth_first_search.s"
+	@echo "... free_lemin.o"
+	@echo "... free_lemin.i"
+	@echo "... free_lemin.s"
 	@echo "... input_validation.o"
 	@echo "... input_validation.i"
 	@echo "... input_validation.s"

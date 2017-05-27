@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/depth_first_search.c.o"
   "CMakeFiles/lem_in.dir/choice.c.o"
   "CMakeFiles/lem_in.dir/print_lemin.c.o"
+  "CMakeFiles/lem_in.dir/free_lemin.c.o"
   "lem_in.pdb"
   "lem_in"
 )
