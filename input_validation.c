@@ -31,18 +31,26 @@ int valid_room(t_lemin **lemin, char *line)
 	{
 		if (!room->name)
 		{
+			free_twodem_str(str);
 			!start_end ? write_room(lemin, line, 0, 0) : 0;
 			return (1);
 		}
 		else
 		{
 			if (!ft_strcmp(room->name, line) || room->connect || !(*lemin)->ants)
+			{
+				free_twodem_str(str);
 				return (0);
+			}
 			if (!ft_strcmp(room->x, str[1]) && !ft_strcmp(room->y, str[2]))
+			{
+				free_twodem_str(str);
 				return (0);
+			}
 		}
 		room = room->next;
 	}
+	free_twodem_str(str);
 //	write_room(lemin, line, 0, 0);
 	return (1);
 }
@@ -73,11 +81,9 @@ int valid_connect(t_lemin **lemin, char *line)
 	char **str;
 	t_room *room;
 	t_connect *connect;
-//	int flag;
 
 	str = ft_strsplit(line, '-');
 	room = (*lemin)->room;
-//	flag = 0;
 	while (room)
 	{
 		if (room->name)
@@ -93,16 +99,12 @@ int valid_connect(t_lemin **lemin, char *line)
 						return (0);
 					connect = connect->next;
 				}
-//				flag++;
 				write_connect(lemin, line);
 				return (1);
 			}
 		}
 		room = room->next;
 	}
-//	if (!flag)
-//		return (0);
-//	write_connect(lemin, line);
 	return (0);
 }
 

@@ -19,6 +19,12 @@ CMakeFiles/lem_in.dir/depth_first_search.c.o: ../libft/ft_printf.h
 CMakeFiles/lem_in.dir/depth_first_search.c.o: ../libft/get_next_line.h
 CMakeFiles/lem_in.dir/depth_first_search.c.o: ../libft/libft.h
 
+CMakeFiles/lem_in.dir/free_lemin.c.o: ../free_lemin.c
+CMakeFiles/lem_in.dir/free_lemin.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/free_lemin.c.o: ../libft/ft_printf.h
+CMakeFiles/lem_in.dir/free_lemin.c.o: ../libft/get_next_line.h
+CMakeFiles/lem_in.dir/free_lemin.c.o: ../libft/libft.h
+
 CMakeFiles/lem_in.dir/input_validation.c.o: ../input_validation.c
 CMakeFiles/lem_in.dir/input_validation.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/input_validation.c.o: ../libft/ft_printf.h
