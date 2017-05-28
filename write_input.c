@@ -22,6 +22,7 @@ void write_room(t_lemin **lemin, char *line, int start, int end)
 		room->y = str[2];
 		room->start = start;
 		room->end = end;
+//		str = NULL;
 	}
 	init_room(&(room->next));
 }
@@ -42,7 +43,6 @@ void write_connect(t_lemin **lemin, char *line)
 			{
 				init_connect(&(room->connect));
 				room->connect->room->name = !ft_strcmp(room->name, str[0]) ? str[1] : str[0];
-//				return;
 			}
 			else
 			{
@@ -55,7 +55,6 @@ void write_connect(t_lemin **lemin, char *line)
 				}
 				init_connect(&(connect->next));
 				connect->next->room->name = !ft_strcmp(room->name, str[0]) ? str[1] : str[0];
-//				return;
 			}
 		}
 		room = room->next;

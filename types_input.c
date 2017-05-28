@@ -53,8 +53,14 @@ int type_connect(char *str)
 	s = ft_strsplit(str, '-');
 	len = two_dem_strlen(s) - 1;
 	if (len == 2)
+	{
 		if (if_is_alnum_str(s[0]) || if_is_alnum_str(s[1]))
+		{
+//			free_twodem_str(s);
 			return (1);
+		}
+	}
+	free_twodem_str(s);
 	return (0);
 }
 
