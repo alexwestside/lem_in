@@ -13,7 +13,7 @@ void make_route(char **visit, t_routes **routes)
 	r = rs->route;
 	while (visit[i])
 	{
-		r->room = visit[i];
+		r->room = ft_strdup(visit[i]);
 		r->next = (t_route *) malloc(sizeof(t_route));
 		r->next->room = NULL;
 		r->next->ant = 0;

@@ -54,7 +54,7 @@ typedef struct				s_lemin
 	char					**std_in;
 	char					**queue;
 	char					**visit;
-	char					**route;
+//	char					**route;
 	int 					ants;
 	struct s_room			*room;
 	struct s_routes			*routes;
@@ -130,6 +130,12 @@ int choose_link(char **visit, char *room);
 void make_route(char **visit, t_routes **routes);
 
 void make_route_pack(t_lemin **lemin);
+void make_pack_routes(t_lemin **lemin);
+int check_cross1(t_routes **routes, t_route *route);
+int check_cross2(t_route *r1, t_route *r2);
+void add_route(t_routes **routes, t_routes *rs);
+void init_pack_routes(t_lemin **lemin);
+void sort_routes(t_lemin **lemin, int i);
 
 void make_a_choice(t_lemin **lemin);
 

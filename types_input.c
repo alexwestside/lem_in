@@ -56,7 +56,7 @@ int type_connect(char *str)
 	{
 		if (if_is_alnum_str(s[0]) || if_is_alnum_str(s[1]))
 		{
-//			free_twodem_str(s);
+			free_twodem_str(s);
 			return (1);
 		}
 	}

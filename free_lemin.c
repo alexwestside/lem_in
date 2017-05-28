@@ -19,7 +19,7 @@ void free_pack_routes(t_pack_routes **pack_routes)
 //	free(*pack_routes);
 }
 
-void free_route2(t_route **route)
+void free_route(t_route **route)
 {
 	t_route *r;
 
@@ -47,7 +47,7 @@ void free_routes(t_routes **routes)
 		while (rs->next->next)
 			rs = rs->next;
 		r = rs->next->route;
-		free_route2(&r);
+		free_route(&r);
 		free(r);
 		rs->next->prev = NULL;
 		free(rs->next);
@@ -55,7 +55,7 @@ void free_routes(t_routes **routes)
 		rs = *routes;
 	}
 	r = rs->route;
-	free_route2(&r);
+	free_route(&r);
 	free(rs->route);
 	rs->route = NULL;
 	free(*routes);
@@ -90,10 +90,10 @@ void free_room(t_room **room)
 //	free((*room));
 }
 
-void free_route(char **route)
-{
-	free_twodem_str(route);
-}
+//void free_route(char **route)
+//{
+//	free_twodem_str(route);
+//}
 
 void free_visit(char **visit)
 {
@@ -115,7 +115,7 @@ void free_lemin(t_lemin **lemin)
 	free_stdin((*lemin)->std_in);
 	free_queue((*lemin)->queue);
 	free_visit((*lemin)->visit);
-	free_route((*lemin)->route);
+//	free_route((*lemin)->route);
 	free_room(&(*lemin)->room);
 	free_routes(&(*lemin)->routes);
 	free_pack_routes(&(*lemin)->pack_routes);

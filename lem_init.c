@@ -65,12 +65,12 @@ void init_queue_visit(t_lemin **lemin, int len)
 		(*lemin)->queue[i] = NULL;
 	(*lemin)->queue[len] = NULL;
 	i = -1;
-	(*lemin)->visit = (char **)malloc(sizeof(char *) * len + 1);
+	(*lemin)->visit = (char **)malloc(sizeof(char *) * (len + 1));
 	while (++i < len)
-		(*lemin)->queue[i] = NULL;
+		(*lemin)->visit[i] = NULL;
 	(*lemin)->visit[len] = NULL;
-	(*lemin)->route = (char **)malloc(sizeof(char *) * len + 1);
-	while (++i < len)
-		(*lemin)->route[i] = NULL;
-	(*lemin)->route[len] = NULL;
+//	(*lemin)->route = (char **)malloc(sizeof(char *) * (len + 1));
+//	while (++i < len)
+//		(*lemin)->route[i] = NULL;
+//	(*lemin)->route[len] = NULL;
 }

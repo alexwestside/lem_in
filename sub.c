@@ -61,9 +61,13 @@ int if_is_alnum_str(char *s)
 	while (*p)
 	{
 		if (!ft_isalpha(*p) && !ft_isdigit(*p))
+		{
+			p = NULL;
 			return (0);
+		}
 		p++;
 	}
+	p = NULL;
 	return (1);
 }
 
@@ -99,45 +103,20 @@ int check_start_end(t_lemin **lemin, char *line)
 	if (!ft_strcmp(*s, "##start") || !ft_strcmp(*s, "##end"))
 		return (1);
 	return (0);
-
-//	char **str;
-//	int i = 0;
-
-//	str = (*lemin)->std_in;
-//	while ((*lemin)->std_in[i])
-//		i++;
-//	i -= 2;
-//	while (*str)
-//		str++;
-//	str = str - 2;
-//	if ((*lemin)->std_in)
-//	{
-//		if ((*lemin)->std_in[i])
-//		{
-//				if (!ft_strcmp((*lemin)->std_in[i], "##start") || !ft_strcmp((*lemin)->std_in[i], "##end"))
-//					return (1);
-//		}
-//	}
-//	return (0);
 }
 
 void free_visit_and_queue(char **visit, char **queue)
 {
 	while (*visit)
 	{
-//		free(*visit);
 		*visit = NULL;
 		visit++;
 	}
 	while (*queue)
 	{
-//		free(*queue);
 		*queue = NULL;
 		queue++;
 	}
-//	ft_strdel(visit);
-//	ft_strdel(queue);
-
 }
 
 void print_1(t_lemin *lemin)

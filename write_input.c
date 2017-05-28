@@ -23,7 +23,7 @@ void write_room(t_lemin **lemin, char *line, int start, int end)
 		room->y = ft_strdup(str[2]);
 		room->start = start;
 		room->end = end;
-//		free_twodem_str(str);
+		free_twodem_str(str);
 	}
 	init_room(&(room->next));
 }
@@ -43,7 +43,7 @@ void write_connect(t_lemin **lemin, char *line)
 			if (!room->connect)
 			{
 				init_connect(&(room->connect));
-				room->connect->room->name = !ft_strcmp(room->name, str[0]) ? str[1] : str[0];
+				room->connect->room->name = !ft_strcmp(room->name, str[0]) ? ft_strdup(str[1]) : ft_strdup(str[0]);
 			}
 			else
 			{
@@ -51,15 +51,20 @@ void write_connect(t_lemin **lemin, char *line)
 				while (connect->next)
 				{
 					if (!ft_strcmp(connect->room->name, !ft_strcmp(room->name, str[0]) ? str[1] : str[0]))
-						break ;
+					{
+						free_twodem_str(str);
+						break;
+					}
 					connect = connect->next;
 				}
 				init_connect(&(connect->next));
-				connect->next->room->name = !ft_strcmp(room->name, str[0]) ? str[1] : str[0];
+				connect->next->room->name = !ft_strcmp(room->name, str[0]) ? ft_strdup(str[1]) : ft_strdup(str[0]);
 			}
 		}
 		room = room->next;
 	}
+	free_twodem_str(str);
+//	free(str);
 }
 
 void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i)
