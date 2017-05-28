@@ -23,6 +23,7 @@ char **ft_realloc(char ***std_in, unsigned long int len)
 	while ((*std_in)[++i])
 		str[i] = ft_strdup((*std_in)[i]);
 	str[i] = NULL;
-	free(*std_in);
+//	free(*std_in);
+	free_twodem_str(*std_in);
 	return (str);
 }

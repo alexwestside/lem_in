@@ -23,7 +23,7 @@ void write_room(t_lemin **lemin, char *line, int start, int end)
 		room->y = ft_strdup(str[2]);
 		room->start = start;
 		room->end = end;
-		free_twodem_str(str);
+//		free_twodem_str(str);
 	}
 	init_room(&(room->next));
 }
@@ -65,17 +65,24 @@ void write_connect(t_lemin **lemin, char *line)
 void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i)
 {
 // 	(*lemin)->std_in;
+	char *s = ft_strdup(line);
+
+	(*lemin)->std_in = ft_realloc(&(*lemin)->std_in, two_dem_strlen((*lemin)->std_in));
 	get_next_line(fd, &((*lemin)->std_in[++(*i)]));
 	if (type_room((*lemin)->std_in[(*i)]))
 	{
 		valid_room(lemin, (*lemin)->std_in[(*i)]);
-		if (!ft_strcmp(line, "##start"))
+		if (!ft_strcmp(/*line*/s, "##start"))
 			write_room(lemin, (*lemin)->std_in[(*i)], 1, 0);
-		if (!ft_strcmp(line, "##end"))
+		if (!ft_strcmp(/*line*/s, "##end"))
 			write_room(lemin, (*lemin)->std_in[(*i)], 0, 1);
-		(*lemin)->std_in = ft_realloc(&(*lemin)->std_in, two_dem_strlen((*lemin)->std_in));
+		free(s);
+//		(*lemin)->std_in = ft_realloc(&(*lemin)->std_in, two_dem_strlen((*lemin)->std_in));
 	}
 	else
-		return ;
+	{
+		free(s);
+		return;
+	}
 }
 
