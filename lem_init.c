@@ -12,7 +12,6 @@ void init_connect(t_connect **connect)
 void init_room(t_room **room)
 {
 	*room = (t_room *)malloc(sizeof(t_room));
-
 	(*room)->id_room = 0;
 	(*room)->name = NULL;
 	(*room)->x = 0;
@@ -26,7 +25,7 @@ void init_room(t_room **room)
 
 void init_routes(t_routes **routes)
 {
-	(*routes) = (t_routes *)malloc(sizeof(t_routes));
+	*routes = (t_routes *)malloc(sizeof(t_routes));
 	(*routes)->len_route = -1;
 	(*routes)->next = NULL;
 	(*routes)->prev = NULL;
@@ -45,7 +44,7 @@ void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
 	(*lemin)->queue = NULL;
 	(*lemin)->visit = NULL;
 
-	(*lemin)->room = (t_room *)malloc(sizeof(t_room));
+//	(*lemin)->room = (t_room *)malloc(sizeof(t_room));
 	init_room(&((*lemin)->room));
 	init_routes(&((*lemin)->routes));
 //	(*lemin)->routes = (t_routes* )malloc(sizeof(t_routes));
@@ -53,6 +52,7 @@ void init_lemin(t_lemin **lemin, int ants, char *name, t_lemin *next)
 	(*lemin)->ants = ants;
 //	(*lemin)->name = name;
 	(*lemin)->next = next;
+//	free(name);
 }
 
 void init_queue_visit(t_lemin **lemin, int len)

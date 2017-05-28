@@ -3,30 +3,36 @@
 
 void sort_routes(t_lemin **lemin, int i)
 {
-	t_routes *routes;
+	t_routes *rs;
 	t_routes *tmp;
+	int k = 0;
 
 	while (i)
 	{
 		i = 0;
-		routes = (*lemin)->routes;
-		while (routes)
+		rs = (*lemin)->routes;
+		while (rs)
 		{
-			if (routes->next)
+			if (rs->next)
 			{
-				if (routes->len_route > routes->next->len_route)
+				if (rs->len_route > rs->next->len_route)
 				{
-					tmp = routes->next;
-					tmp->prev = routes->prev;
-					tmp->next ? tmp->next->prev = routes : 0;
-					routes->next = tmp->next;
-					tmp->next = routes;
-					routes->prev ? routes->prev->next = tmp : 0;
-					routes->prev = tmp;
-					routes = tmp;
+					tmp = rs->next;
+					tmp->prev = rs->prev;
+					tmp->next ? tmp->next->prev = rs : 0;
+					rs->next = tmp->next;
+					tmp->next = rs;
+					rs->prev ? rs->prev->next = tmp : 0;
+					rs->prev ? rs->prev = tmp : 0; /* дописал rs->prev ? было rs->prev = tmp*/
+					rs = tmp;
 					i = 1;
 				}
-				routes = routes->next;
+//				k++;
+//				if (k == 506)
+//					write(1, "1", 1);
+//				if ((*lemin)->routes->prev)
+//					write(1, "1", 1);
+				rs = rs->next;
 			}
 			else
 				break;

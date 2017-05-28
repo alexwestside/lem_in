@@ -54,6 +54,10 @@ void free_routes(t_routes **routes)
 		rs->next = NULL;
 		rs = *routes;
 	}
+	r = rs->route;
+	free_route2(&r);
+	free(rs->route);
+	rs->route = NULL;
 	free(*routes);
 }
 

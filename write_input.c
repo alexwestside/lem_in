@@ -11,18 +11,19 @@ void write_room(t_lemin **lemin, char *line, int start, int end)
 	t_room *room;
 	char **str;
 
-	str = ft_strsplit(line, ' ');
+//	str = ft_strsplit(line, ' ');
 	room = (*lemin)->room;
 	while (room->next)
 		room = room->next;
 	if (!room->name)
 	{
-		room->name = str[0];
-		room->x = str[1];
-		room->y = str[2];
+		str = ft_strsplit(line, ' ');
+		room->name = ft_strdup(str[0]);
+		room->x = ft_strdup(str[1]);
+		room->y = ft_strdup(str[2]);
 		room->start = start;
 		room->end = end;
-//		str = NULL;
+		free_twodem_str(str);
 	}
 	init_room(&(room->next));
 }

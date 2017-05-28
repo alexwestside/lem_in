@@ -21,7 +21,7 @@ char **ft_realloc(char ***std_in, unsigned long int len)
 	str = (char **)malloc(sizeof(char *) * (len + 1));
 	str[len] = NULL;
 	while ((*std_in)[++i])
-		str[i] = (*std_in)[i];
+		str[i] = ft_strdup((*std_in)[i]);
 	str[i] = NULL;
 	free(*std_in);
 	return (str);
