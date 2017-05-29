@@ -18,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lem_in.dir/print_lemin_2.c.o"
   "CMakeFiles/lem_in.dir/DELETE_IT.c.o"
   "CMakeFiles/lem_in.dir/sub_2.c.o"
+  "CMakeFiles/lem_in.dir/sub_data_check.c.o"
   "lem_in.pdb"
   "lem_in"
 )

@@ -133,6 +133,9 @@
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub_2.c">
 			<Option target="lem_in"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub_data_check.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/types_input.c">
 			<Option target="lem_in"/>
 		</Unit>

@@ -110,7 +110,8 @@ int check_start_end(t_lemin **lemin, char *line);
 
 void need_data_check(t_lemin **lemin);
 void simple_data_check(t_lemin **lemin);
-int hard_data_check(t_lemin **lemin);
+//int hard_data_check(t_lemin **lemin);
+int		hard_data_check(t_lemin **lemin, int i, int j);
 void init_queue_visit(t_lemin **lemin, int len);
 int check_visit_end(t_lemin **lemin, char *s);
 int check_visit(char *name, char **visit);
@@ -128,6 +129,7 @@ t_room *find_next_room(t_lemin **lemin, char *room);
 void fill_visit(char **visit, char *room);
 int choose_link(char **visit, char *room);
 void make_route(char **visit, t_routes **routes);
+void	make_route_other(t_routes **rs);
 
 void make_route_pack(t_lemin **lemin);
 void make_pack_routes(t_lemin **lemin);
@@ -135,6 +137,7 @@ int check_cross1(t_routes **routes, t_route *route);
 int check_cross2(t_route *r1, t_route *r2);
 void add_route(t_routes **routes, t_routes *rs);
 void init_pack_routes(t_lemin **lemin);
+void	init_pack_routes_if(t_lemin **lemin);
 void sort_routes(t_lemin **lemin, int i);
 
 void make_a_choice(t_lemin **lemin);

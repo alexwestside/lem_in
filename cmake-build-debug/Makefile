@@ -555,6 +555,33 @@ sub_2.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub_2.c.s
 .PHONY : sub_2.c.s
 
+sub_data_check.o: sub_data_check.c.o
+
+.PHONY : sub_data_check.o
+
+# target to build an object file
+sub_data_check.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub_data_check.c.o
+.PHONY : sub_data_check.c.o
+
+sub_data_check.i: sub_data_check.c.i
+
+.PHONY : sub_data_check.i
+
+# target to preprocess a source file
+sub_data_check.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub_data_check.c.i
+.PHONY : sub_data_check.c.i
+
+sub_data_check.s: sub_data_check.c.s
+
+.PHONY : sub_data_check.s
+
+# target to generate assembly for a file
+sub_data_check.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub_data_check.c.s
+.PHONY : sub_data_check.c.s
+
 types_input.o: types_input.c.o
 
 .PHONY : types_input.o
@@ -693,6 +720,9 @@ help:
 	@echo "... sub_2.o"
 	@echo "... sub_2.i"
 	@echo "... sub_2.s"
+	@echo "... sub_data_check.o"
+	@echo "... sub_data_check.i"
+	@echo "... sub_data_check.s"
 	@echo "... types_input.o"
 	@echo "... types_input.i"
 	@echo "... types_input.s"

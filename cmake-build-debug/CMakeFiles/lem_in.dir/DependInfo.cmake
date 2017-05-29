@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/print_lemin_2.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/print_lemin_2.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/sub.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub_2.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/sub_2.c.o"
+  "/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub_data_check.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/sub_data_check.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/types_input.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/types_input.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/usage.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/usage.c.o"
   "/nfs/2016/o/orizhiy/ClionProjects/lem_in/write_input.c" "/nfs/2016/o/orizhiy/ClionProjects/lem_in/cmake-build-debug/CMakeFiles/lem_in.dir/write_input.c.o"
