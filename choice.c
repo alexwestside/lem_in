@@ -22,7 +22,8 @@ void			fill_count_routes(t_lemin **lemin)
 	}
 }
 
-void routes_choice_if(int *moves, int *tmp, t_pack_routes **choice, t_pack_routes **prs)
+void			routes_choice_if(int *moves, int *tmp,
+	t_pack_routes **choice, t_pack_routes **prs)
 {
 	if (*moves && *tmp < *moves)
 	{
@@ -59,16 +60,6 @@ t_pack_routes	*routes_choice(t_lemin **lemin)
 				rs = rs->next;
 			}
 			routes_choice_if(&moves, &tmp, &choice, &prs);
-//			if (moves && tmp < moves)
-//			{
-//				moves = tmp;
-//				choice = prs;
-//			}
-//			if (!moves)
-//			{
-//				moves = tmp;
-//				choice = prs;
-//			}
 		}
 		prs = prs->next;
 	}
