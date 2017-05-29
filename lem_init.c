@@ -4,7 +4,7 @@
 void init_connect(t_connect **connect)
 {
 	(*connect) = (t_connect *)malloc(sizeof(t_connect));
-	(*connect)->room =(t_room *)malloc(sizeof(t_room));
+//	(*connect)->room =(t_room *)malloc(sizeof(t_room));
 	init_room(&((*connect)->room));
 	(*connect)->next = NULL;
 }

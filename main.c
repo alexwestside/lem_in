@@ -22,7 +22,7 @@ int read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 void read_and_valid(t_lemin **lemin, char ***std_in)
 {
 	int fd;
-	char *line;
+//	char *line;
 	int i;
 
 	i = -1;
@@ -34,6 +34,7 @@ void read_and_valid(t_lemin **lemin, char ***std_in)
 		*std_in = ft_realloc(&(*std_in), two_dem_strlen(*std_in));
 //		free(line);
 	}
+	free((*std_in)[i]);
 	(*std_in)[i] = NULL;
 	need_data_check(lemin);
 }
@@ -65,6 +66,7 @@ int main()
 	make_route_pack(&lemin);
 	make_a_choice(&lemin);
 	free_lemin(&lemin);
+	free(lemin);
 	sleep(1000);
 	return (0);
 }

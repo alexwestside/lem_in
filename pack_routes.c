@@ -38,8 +38,11 @@ void sort_routes(t_lemin **lemin, int i)
 				break;
 		}
 	}
+	tmp->next = NULL;
+	free(tmp->route);
+	free(tmp);
 	ft_printf("\n");
-	print_1(*lemin);
+//	print_1(*lemin);
 }
 
 void init_pack_routes(t_lemin **lemin)
@@ -88,9 +91,9 @@ void add_route(t_routes **routes, t_routes *rs)
 	prs->next = (t_routes *)malloc(sizeof(t_routes));
 	prs->next->next = NULL;
 	prs->next->prev = prs;
-	prs->next->route = (t_route *)malloc(sizeof(t_route));
-	prs->next->route->room = NULL;
-	prs->next->route->next = NULL;
+//	prs->next->route = (t_route *)malloc(sizeof(t_route));
+//	prs->next->route->room = NULL;
+//	prs->next->route->next = NULL;
 	prs->next->len_route= 0;
 	prs->next->route = rs->route;
 	prs->next->len_route = rs->len_route;
@@ -146,6 +149,7 @@ void make_pack_routes(t_lemin **lemin)
 	pack_routes = (*lemin)->pack_routes;
 	while (routes)
 	{
+		free(pack_routes->routes->route);
 		pack_routes->routes->route = routes->route;
 		pack_routes->routes->len_route = routes->len_route;
 

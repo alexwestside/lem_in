@@ -41,10 +41,21 @@ void free_pack_routes(t_pack_routes **pack_routes)
 	{
 		while (prs->next->next)
 			prs = prs->next;
-		prs->next->routes = NULL;
-		prs->next->count_routes = 0;
-		free(prs->next);
-		prs->next = NULL;
+		if (prs->next->routes->route->room)
+		{
+			free(prs->next->routes);
+			prs->next->routes = NULL;
+			prs->next->count_routes = 0;
+			free(prs->next);
+			prs->next = NULL;
+		}
+		else
+		{
+			free(prs->next->routes->route);
+			free(prs->next->routes);
+			free(prs->next);
+			prs->next = NULL;
+		}
 		prs = *pack_routes;
 	}
 	prs = NULL;
