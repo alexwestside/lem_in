@@ -1,6 +1,17 @@
 
 #include "lem_in.h"
 
+void	make_route_pack(t_lemin **lemin)
+{
+	int	i;
+
+	i = 1;
+	sort_routes(lemin, i);
+	(*lemin)->pack_routes = NULL;
+	init_pack_routes(lemin);
+	make_pack_routes(lemin);
+}
+
 int		read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 {
 	int	valid;

@@ -139,8 +139,12 @@ void add_route(t_routes **routes, t_routes *rs);
 void init_pack_routes(t_lemin **lemin);
 void	init_pack_routes_if(t_lemin **lemin);
 void sort_routes(t_lemin **lemin, int i);
+void	sort_routes_if(t_routes **tmp, t_routes **rs, int *i);
 
 void make_a_choice(t_lemin **lemin);
+t_pack_routes	*routes_choice(t_lemin **lemin);
+void			routes_choice_if(int *moves, int *tmp, t_pack_routes **choice, t_pack_routes **prs);
+void			fill_count_routes(t_lemin **lemin);
 
 void print_lemin(t_routes **routes, t_lemin **lemin, int ant);
 void print_stdin(t_lemin **lemin);

@@ -1,7 +1,7 @@
 
 #include "lem_in.h"
 
-void sort_routes_if(t_routes **tmp, t_routes **rs, int *i)
+void	sort_routes_if(t_routes **tmp, t_routes **rs, int *i)
 {
 	*tmp = (*rs)->next;
 	(*tmp)->prev = (*rs)->prev;
@@ -28,18 +28,7 @@ void	sort_routes(t_lemin **lemin, int i)
 			if (rs->next)
 			{
 				if (rs->len_route > rs->next->len_route)
-				{
 					sort_routes_if(&tmp, &rs, &i);
-//					tmp = rs->next;
-//					tmp->prev = rs->prev;
-//					tmp->next ? tmp->next->prev = rs : 0;
-//					rs->next = tmp->next;
-//					tmp->next = rs;
-//					rs->prev ? rs->prev->next = tmp : 0;
-//					rs->prev ? rs->prev = tmp : 0;
-//					rs = tmp;
-//					i = 1;
-				}
 				rs = rs->next;
 			}
 			else
@@ -115,15 +104,4 @@ void	make_pack_routes(t_lemin **lemin)
 		init_pack_routes(lemin);
 		pack_routes = pack_routes->next;
 	}
-}
-
-void	make_route_pack(t_lemin **lemin)
-{
-	int	i;
-
-	i = 1;
-	sort_routes(lemin, i);
-	(*lemin)->pack_routes = NULL;
-	init_pack_routes(lemin);
-	make_pack_routes(lemin);
 }

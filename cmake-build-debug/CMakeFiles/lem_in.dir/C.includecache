@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/DELETE_IT.c
+
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/choice.c
 lem_in.h
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
@@ -39,6 +41,10 @@ libft/ft_printf.h
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/libft/ft_printf.h
 
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_init.c
+lem_in.h
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
+
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_init_2.c
 lem_in.h
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
 
@@ -100,7 +106,19 @@ lem_in.h
 lem_in.h
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
 
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/print_lemin_2.c
+lem_in.h
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
+
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/sub.c
+lem_in.h
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
+
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub_2.c
+lem_in.h
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
+
+/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub_data_check.c
 lem_in.h
 /nfs/2016/o/orizhiy/ClionProjects/lem_in/lem_in.h
 
