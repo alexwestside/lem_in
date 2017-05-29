@@ -1,6 +1,19 @@
 
 #include "lem_in.h"
 
+void sort_routes_if(t_routes **tmp, t_routes **rs, int *i)
+{
+	*tmp = (*rs)->next;
+	(*tmp)->prev = (*rs)->prev;
+	(*tmp)->next ? (*tmp)->next->prev = *rs : 0;
+	(*rs)->next = (*tmp)->next;
+	(*tmp)->next = (*rs);
+	(*rs)->prev ? (*rs)->prev->next = *tmp : 0;
+	(*rs)->prev ? (*rs)->prev = *tmp : 0;
+	*rs = *tmp;
+	*i = 1;
+}
+
 void	sort_routes(t_lemin **lemin, int i)
 {
 	t_routes	*rs;
@@ -16,32 +29,32 @@ void	sort_routes(t_lemin **lemin, int i)
 			{
 				if (rs->len_route > rs->next->len_route)
 				{
-					tmp = rs->next;
-					tmp->prev = rs->prev;
-					tmp->next ? tmp->next->prev = rs : 0;
-					rs->next = tmp->next;
-					tmp->next = rs;
-					rs->prev ? rs->prev->next = tmp : 0;
-					rs->prev ? rs->prev = tmp : 0; /* дописал rs->prev ? было rs->prev = tmp*/
-					rs = tmp;
-					i = 1;
+					sort_routes_if(&tmp, &rs, &i);
+//					tmp = rs->next;
+//					tmp->prev = rs->prev;
+//					tmp->next ? tmp->next->prev = rs : 0;
+//					rs->next = tmp->next;
+//					tmp->next = rs;
+//					rs->prev ? rs->prev->next = tmp : 0;
+//					rs->prev ? rs->prev = tmp : 0;
+//					rs = tmp;
+//					i = 1;
 				}
 				rs = rs->next;
 			}
 			else
-				break;
+				break ;
 		}
 	}
 	tmp->next = NULL;
 	free(tmp->route);
 	free(tmp);
-//	print_1(*lemin);
 }
 
 int		check_cross2(t_route *r1, t_route *r2)
 {
 	t_route	*r2_;
-	int i;
+	int		i;
 
 	i = 0;
 	while (r1->next)
@@ -91,7 +104,6 @@ void	make_pack_routes(t_lemin **lemin)
 		free(pack_routes->routes->route);
 		pack_routes->routes->route = routes->route;
 		pack_routes->routes->len_route = routes->len_route;
-
 		rs = (*lemin)->routes;
 		while (rs)
 		{
@@ -101,7 +113,7 @@ void	make_pack_routes(t_lemin **lemin)
 		}
 		routes = routes->next;
 		init_pack_routes(lemin);
-		pack_routes	= pack_routes->next;
+		pack_routes = pack_routes->next;
 	}
 }
 
@@ -114,5 +126,4 @@ void	make_route_pack(t_lemin **lemin)
 	(*lemin)->pack_routes = NULL;
 	init_pack_routes(lemin);
 	make_pack_routes(lemin);
-//	print_4(lemin);
 }
