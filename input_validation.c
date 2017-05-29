@@ -1,9 +1,9 @@
 
 #include "lem_in.h"
 
-int valid_ants(t_lemin **lemin, int ants, char *line)
+int		valid_ants(t_lemin **lemin, int ants, char *line)
 {
-	t_lemin *list;
+	t_lemin	*list;
 
 	list = *lemin;
 	while (list)
@@ -18,47 +18,10 @@ int valid_ants(t_lemin **lemin, int ants, char *line)
 	return (1);
 }
 
-int valid_room(t_lemin **lemin, char *line)
+int		valid_start_end(t_lemin **lemin, char *line, int fd, int *i)
 {
-	t_room *room;
-	char **str;
-	int start_end;
-
-	room = (*lemin)->room;
-	str = ft_strsplit(line, ' ');
-	start_end = check_start_end(lemin, line);
-	while (room)
-	{
-		if (!room->name)
-		{
-			free_twodem_str(str);
-			!start_end ? write_room(lemin, line, 0, 0) : 0;
-			return (1);
-		}
-		else
-		{
-			if (!ft_strcmp(room->name, line) || room->connect || !(*lemin)->ants)
-			{
-				free_twodem_str(str);
-				return (0);
-			}
-			if (!ft_strcmp(room->x, str[1]) && !ft_strcmp(room->y, str[2]))
-			{
-				free_twodem_str(str);
-				return (0);
-			}
-		}
-		room = room->next;
-	}
-	free_twodem_str(str);
-//	write_room(lemin, line, 0, 0);
-	return (1);
-}
-
-int valid_start_end(t_lemin **lemin, char *line, int fd, int *i)
-{
-	t_room *room;
-	t_connect *connect;
+	t_room		*room;
+	t_connect	*connect;
 
 	room = (*lemin)->room;
 	while (room)
@@ -76,11 +39,11 @@ int valid_start_end(t_lemin **lemin, char *line, int fd, int *i)
 	return (1);
 }
 
-int valid_connect(t_lemin **lemin, char *line)
+int		valid_connect(t_lemin **lemin, char *line)
 {
-	char **str;
-	t_room *room;
-	t_connect *connect;
+	char		**str;
+	t_room		*room;
+	t_connect	*connect;
 
 	str = ft_strsplit(line, '-');
 	room = (*lemin)->room;
@@ -113,19 +76,5 @@ int valid_connect(t_lemin **lemin, char *line)
 		room = room->next;
 	}
 	free_twodem_str(str);
-	return (0);
-}
-
-int valid_room_name(t_lemin **lemin, char *s)
-{
-	t_room *room;
-
-	room = (*lemin)->room;
-	while (room->next)
-	{
-		if (!ft_strcmp(room->name, s))
-			return (1);
-		room = room->next;
-	}
 	return (0);
 }

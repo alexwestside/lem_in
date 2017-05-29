@@ -1,9 +1,9 @@
 
 #include "lem_in.h"
 
-unsigned long int two_dem_strlen(char **s)
+unsigned long int		two_dem_strlen(char **s)
 {
-	char **p;
+	char	**p;
 
 	p = s;
 	while (*p)
@@ -11,11 +11,10 @@ unsigned long int two_dem_strlen(char **s)
 	return ((p - s) + 1);
 }
 
-
-char **ft_realloc(char ***std_in, unsigned long int len)
+char					**ft_realloc(char ***std_in, unsigned long int len)
 {
-	char **str;
-	int i;
+	char	**str;
+	int		i;
 
 	i = -1;
 	str = (char **)malloc(sizeof(char *) * (len + 1));
@@ -23,7 +22,6 @@ char **ft_realloc(char ***std_in, unsigned long int len)
 	while ((*std_in)[++i])
 		str[i] = ft_strdup((*std_in)[i]);
 	str[i] = NULL;
-//	free(*std_in);
 	free_twodem_str(*std_in);
 	return (str);
 }

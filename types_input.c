@@ -1,7 +1,7 @@
 
 #include "lem_in.h"
 
-int type_num_ants(char *str)
+int		type_num_ants(char *str)
 {
 	if (if_is_digit_str(str))
 		if (count_ants(str))
@@ -9,10 +9,10 @@ int type_num_ants(char *str)
 	return (0);
 }
 
-int type_room(char *str)
+int		type_room(char *str)
 {
-	char **s;
-	unsigned long int len;
+	char				**s;
+	unsigned long int	len;
 
 	if (!str)
 		return (0);
@@ -38,17 +38,17 @@ int type_room(char *str)
 	return (0);
 }
 
-int type_start_end(char *str)
+int		type_start_end(char *str)
 {
 	if (!strcmp(str, "##start") || !strcmp(str, "##end"))
 		return (1);
 	return (0);
 }
 
-int type_connect(char *str)
+int		type_connect(char *str)
 {
-	char **s;
-	unsigned long int len;
+	char				**s;
+	unsigned long int	len;
 
 	s = ft_strsplit(str, '-');
 	len = two_dem_strlen(s) - 1;
@@ -64,7 +64,7 @@ int type_connect(char *str)
 	return (0);
 }
 
-int type_comment(char *str)
+int		type_comment(char *str)
 {
 	if (*str == '#' && (ft_strcmp(str, "##start") && ft_strcmp(str, "##end")))
 		return (1);

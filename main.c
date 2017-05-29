@@ -1,7 +1,7 @@
 
 #include "lem_in.h"
 
-int			read_stdin(t_lemin **lemin, char *line, int fd, int *i)
+int		read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 {
 	int	valid;
 
@@ -19,17 +19,17 @@ int			read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 	return (valid ? 1 : 0);
 }
 
-void		read_and_valid(t_lemin **lemin, char ***std_in)
+void	read_and_valid(t_lemin **lemin, char ***std_in)
 {
 	int	fd;
 	int	i;
 
 	i = -1;
-	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test2", O_RDONLY);
+	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/!!!test!!!", O_RDONLY);
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{
 		if (!(read_stdin(lemin, (*std_in)[i], fd, &i)))
-			break;
+			break ;
 		*std_in = ft_realloc(&(*std_in), two_dem_strlen(*std_in));
 	}
 	free((*std_in)[i]);
@@ -37,8 +37,7 @@ void		read_and_valid(t_lemin **lemin, char ***std_in)
 	need_data_check(lemin);
 }
 
-
-t_room		*start_room(t_lemin *lemin)
+t_room	*start_room(t_lemin *lemin)
 {
 	t_room	*start_room;
 
@@ -46,26 +45,23 @@ t_room		*start_room(t_lemin *lemin)
 	while (start_room)
 	{
 		if (start_room->start)
-			break;
+			break ;
 		start_room = start_room->next;
 	}
 	return (start_room);
 }
 
-int			main()
+int		main(void)
 {
 	t_lemin	*lemin;
 
 	init_lemin(&lemin, 0, NULL, NULL);
 	read_and_valid(&lemin, &lemin->std_in);
 	dfs(&lemin, start_room(lemin));
-	print_1(lemin);
-	ft_printf("\n\n\n");
 	make_route_pack(&lemin);
 	make_a_choice(&lemin);
 //	free_lemin(&lemin);
 //	free(lemin);
-	sleep(1000);
+//	sleep(1000);
 	return (0);
 }
-

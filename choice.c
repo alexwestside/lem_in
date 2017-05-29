@@ -1,10 +1,10 @@
 
 #include "lem_in.h"
 
-void fill_count_routes(t_lemin **lemin)
+void			fill_count_routes(t_lemin **lemin)
 {
-	t_pack_routes *prs;
-	t_routes *rs;
+	t_pack_routes	*prs;
+	t_routes		*rs;
 
 	prs = (*lemin)->pack_routes;
 	while (prs)
@@ -22,13 +22,13 @@ void fill_count_routes(t_lemin **lemin)
 	}
 }
 
-t_pack_routes *routes_choice(t_lemin **lemin)
+t_pack_routes	*routes_choice(t_lemin **lemin)
 {
-	t_pack_routes *choice;
-	t_routes *rs;
-	t_pack_routes *prs;
-	int moves;
-	int tmp;
+	t_pack_routes	*choice;
+	t_routes		*rs;
+	t_pack_routes	*prs;
+	int				moves;
+	int				tmp;
 
 	choice = NULL;
 	moves = 0;
@@ -60,9 +60,9 @@ t_pack_routes *routes_choice(t_lemin **lemin)
 	return (choice);
 }
 
-void make_a_choice(t_lemin **lemin)
+void			make_a_choice(t_lemin **lemin)
 {
-	t_pack_routes *choice;
+	t_pack_routes	*choice;
 
 	fill_count_routes(lemin);
 	choice = routes_choice(lemin);

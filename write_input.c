@@ -1,17 +1,16 @@
 
 #include "lem_in.h"
 
-void write_ants(t_lemin **lemin, char *line)
+void	write_ants(t_lemin **lemin, char *line)
 {
 	(*lemin)->ants = ft_atoi(line);
 }
 
-void write_room(t_lemin **lemin, char *line, int start, int end)
+void	write_room(t_lemin **lemin, char *line, int start, int end)
 {
 	t_room *room;
 	char **str;
 
-//	str = ft_strsplit(line, ' ');
 	room = (*lemin)->room;
 	while (room->next)
 		room = room->next;
@@ -28,11 +27,11 @@ void write_room(t_lemin **lemin, char *line, int start, int end)
 	init_room(&(room->next));
 }
 
-void write_connect(t_lemin **lemin, char *line)
+void	write_connect(t_lemin **lemin, char *line)
 {
-	char **str;
-	t_room *room;
-	t_connect *connect;
+	char		**str;
+	t_room		*room;
+	t_connect	*connect;
 
 	str = ft_strsplit(line, '-');
 	room = (*lemin)->room;
@@ -64,14 +63,13 @@ void write_connect(t_lemin **lemin, char *line)
 		room = room->next;
 	}
 	free_twodem_str(str);
-//	free(str);
 }
 
-void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i)
+void	write_check_start_end(t_lemin **lemin, char *line, int fd, int *i)
 {
-// 	(*lemin)->std_in;
-	char *s = ft_strdup(line);
+	char	*s;
 
+	s = ft_strdup(line);
 	(*lemin)->std_in = ft_realloc(&(*lemin)->std_in, two_dem_strlen((*lemin)->std_in));
 	get_next_line(fd, &((*lemin)->std_in[++(*i)]));
 	if (type_room((*lemin)->std_in[(*i)]))
@@ -82,7 +80,6 @@ void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i)
 		if (!ft_strcmp(/*line*/s, "##end"))
 			write_room(lemin, (*lemin)->std_in[(*i)], 0, 1);
 		free(s);
-//		(*lemin)->std_in = ft_realloc(&(*lemin)->std_in, two_dem_strlen((*lemin)->std_in));
 	}
 	else
 	{

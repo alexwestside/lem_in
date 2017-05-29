@@ -14,24 +14,6 @@ void free_twodem_str(char **s)
 	free(s);
 }
 
-void free_visit(char **visit)
-{
-	free_twodem_str(visit);
-//	*visit = NULL;
-}
-
-void free_queue(char **queue)
-{
-	free_twodem_str(queue);
-//	*queue = NULL;
-}
-
-void free_stdin(char **str)
-{
-	free_twodem_str(str);
-//	*str = NULL;
-}
-
 void free_pack_routes(t_pack_routes **pack_routes)
 {
 	t_pack_routes *prs;
@@ -172,11 +154,11 @@ void free_room(t_room **room)
 
 void free_lemin(t_lemin **lemin)
 {
-	free_stdin((*lemin)->std_in);
+	free_twodem_str((*lemin)->std_in);
 	(*lemin)->std_in = NULL;
-	free_queue((*lemin)->queue);
+	free_twodem_str((*lemin)->queue);
 	(*lemin)->queue = NULL;
-	free_visit((*lemin)->visit);
+	free_twodem_str((*lemin)->visit);
 	(*lemin)->visit = NULL;
 	free_pack_routes(&(*lemin)->pack_routes);
 	free_routes(&(*lemin)->routes);

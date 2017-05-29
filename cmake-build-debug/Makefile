@@ -123,6 +123,33 @@ lem_in/fast:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/build
 .PHONY : lem_in/fast
 
+DELETE_IT.o: DELETE_IT.c.o
+
+.PHONY : DELETE_IT.o
+
+# target to build an object file
+DELETE_IT.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/DELETE_IT.c.o
+.PHONY : DELETE_IT.c.o
+
+DELETE_IT.i: DELETE_IT.c.i
+
+.PHONY : DELETE_IT.i
+
+# target to preprocess a source file
+DELETE_IT.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/DELETE_IT.c.i
+.PHONY : DELETE_IT.c.i
+
+DELETE_IT.s: DELETE_IT.c.s
+
+.PHONY : DELETE_IT.s
+
+# target to generate assembly for a file
+DELETE_IT.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/DELETE_IT.c.s
+.PHONY : DELETE_IT.c.s
+
 choice.o: choice.c.o
 
 .PHONY : choice.o
@@ -312,6 +339,33 @@ lem_init.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_init.c.s
 .PHONY : lem_init.c.s
 
+lem_init_2.o: lem_init_2.c.o
+
+.PHONY : lem_init_2.o
+
+# target to build an object file
+lem_init_2.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_init_2.c.o
+.PHONY : lem_init_2.c.o
+
+lem_init_2.i: lem_init_2.c.i
+
+.PHONY : lem_init_2.i
+
+# target to preprocess a source file
+lem_init_2.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_init_2.c.i
+.PHONY : lem_init_2.c.i
+
+lem_init_2.s: lem_init_2.c.s
+
+.PHONY : lem_init_2.s
+
+# target to generate assembly for a file
+lem_init_2.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/lem_init_2.c.s
+.PHONY : lem_init_2.c.s
+
 lem_realloc.o: lem_realloc.c.o
 
 .PHONY : lem_realloc.o
@@ -420,6 +474,33 @@ print_lemin.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin.c.s
 .PHONY : print_lemin.c.s
 
+print_lemin_2.o: print_lemin_2.c.o
+
+.PHONY : print_lemin_2.o
+
+# target to build an object file
+print_lemin_2.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_2.c.o
+.PHONY : print_lemin_2.c.o
+
+print_lemin_2.i: print_lemin_2.c.i
+
+.PHONY : print_lemin_2.i
+
+# target to preprocess a source file
+print_lemin_2.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_2.c.i
+.PHONY : print_lemin_2.c.i
+
+print_lemin_2.s: print_lemin_2.c.s
+
+.PHONY : print_lemin_2.s
+
+# target to generate assembly for a file
+print_lemin_2.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_2.c.s
+.PHONY : print_lemin_2.c.s
+
 sub.o: sub.c.o
 
 .PHONY : sub.o
@@ -446,6 +527,33 @@ sub.s: sub.c.s
 sub.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub.c.s
 .PHONY : sub.c.s
+
+sub_2.o: sub_2.c.o
+
+.PHONY : sub_2.o
+
+# target to build an object file
+sub_2.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub_2.c.o
+.PHONY : sub_2.c.o
+
+sub_2.i: sub_2.c.i
+
+.PHONY : sub_2.i
+
+# target to preprocess a source file
+sub_2.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub_2.c.i
+.PHONY : sub_2.c.i
+
+sub_2.s: sub_2.c.s
+
+.PHONY : sub_2.s
+
+# target to generate assembly for a file
+sub_2.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/sub_2.c.s
+.PHONY : sub_2.c.s
 
 types_input.o: types_input.c.o
 
@@ -537,6 +645,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... lem_in"
+	@echo "... DELETE_IT.o"
+	@echo "... DELETE_IT.i"
+	@echo "... DELETE_IT.s"
 	@echo "... choice.o"
 	@echo "... choice.i"
 	@echo "... choice.s"
@@ -558,6 +669,9 @@ help:
 	@echo "... lem_init.o"
 	@echo "... lem_init.i"
 	@echo "... lem_init.s"
+	@echo "... lem_init_2.o"
+	@echo "... lem_init_2.i"
+	@echo "... lem_init_2.s"
 	@echo "... lem_realloc.o"
 	@echo "... lem_realloc.i"
 	@echo "... lem_realloc.s"
@@ -570,9 +684,15 @@ help:
 	@echo "... print_lemin.o"
 	@echo "... print_lemin.i"
 	@echo "... print_lemin.s"
+	@echo "... print_lemin_2.o"
+	@echo "... print_lemin_2.i"
+	@echo "... print_lemin_2.s"
 	@echo "... sub.o"
 	@echo "... sub.i"
 	@echo "... sub.s"
+	@echo "... sub_2.o"
+	@echo "... sub_2.i"
+	@echo "... sub_2.s"
 	@echo "... types_input.o"
 	@echo "... types_input.i"
 	@echo "... types_input.s"
