@@ -35,17 +35,20 @@ void free_stdin(char **str)
 void free_pack_routes(t_pack_routes **pack_routes)
 {
 	t_pack_routes *prs;
+	t_route *r;
+	int i;
 
 	prs = *pack_routes;
 	while ((*pack_routes)->next)
 	{
+		i = -1;
 		while (prs->next->next)
 			prs = prs->next;
 		if (prs->next->routes->route->room)
 		{
 			free(prs->next->routes);
 			prs->next->routes = NULL;
-			prs->next->count_routes = 0;
+//			prs->next->count_routes = 0;
 			free(prs->next);
 			prs->next = NULL;
 		}
