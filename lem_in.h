@@ -72,18 +72,13 @@ char **ft_realloc(char ***std_in, unsigned long int len);
 unsigned long int two_dem_strlen(char **s);
 int read_stdin(t_lemin **lemin, char *line, int fd, int *i);
 
-
 int if_is_digit_str(char *s);
 int if_is_digit_sign_str(char *s);
 int atoi_lemin(char *str);
-
-
 int limit_int(long int n);
 void init_connect(t_connect **connect);
 
-
 int count_ants(char *s);
-
 
 int type_num_ants(char *str);
 int type_room(char *str);
@@ -94,7 +89,6 @@ int type_comment(char *str);
 
 int valid_ants(t_lemin **lemin, int ants, char *line);
 int valid_start_end(t_lemin **lemin, char *line, int fd, int *i);
-int if_is_alpha_str(char *s);
 int if_is_alnum_str(char *s);
 int valid_connect(t_lemin **lemin, char *line);
 int valid_room(t_lemin **lemin, char *line);
@@ -148,8 +142,6 @@ void			fill_count_routes(t_lemin **lemin);
 
 void print_lemin(t_routes **routes, t_lemin **lemin, int ant);
 void print_stdin(t_lemin **lemin);
-//void push_one_route(t_routes **routes, t_lemin **lemin);
-//void	push_one_route(t_routes **routes, t_lemin **lemin, int flag);
 void	push_one_route(t_routes **routes, t_lemin **lemin, int flag, int ant);
 void push_old_ants(t_routes **routes, t_lemin **lemin);
 void end(t_route **room, t_lemin **lemin);

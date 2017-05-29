@@ -54,7 +54,7 @@ int		valid_connect(t_lemin **lemin, char *line)
 			if (!ft_strcmp(str[0], room->name) || !ft_strcmp(str[1], room->name))
 			{
 				connect = room->connect;
-				if (!valid_room_name(lemin, !ft_strcmp(str[0], room->name) ?  str[1] : str[0]))
+				if (!valid_room_name(lemin, !ft_strcmp(str[0], room->name) ? str[1] : str[0]))
 				{
 					free_twodem_str(str);
 					return (0);
