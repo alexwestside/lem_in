@@ -14,9 +14,44 @@ void free_twodem_str(char **s)
 	free(s);
 }
 
+void free_visit(char **visit)
+{
+	free_twodem_str(visit);
+//	*visit = NULL;
+}
+
+void free_queue(char **queue)
+{
+	free_twodem_str(queue);
+//	*queue = NULL;
+}
+
+void free_stdin(char **str)
+{
+	free_twodem_str(str);
+//	*str = NULL;
+}
+
 void free_pack_routes(t_pack_routes **pack_routes)
 {
-//	free(*pack_routes);
+	t_pack_routes *prs;
+
+	prs = *pack_routes;
+	while ((*pack_routes)->next)
+	{
+		while (prs->next->next)
+			prs = prs->next;
+		prs->next->routes = NULL;
+		prs->next->count_routes = 0;
+		free(prs->next);
+		prs->next = NULL;
+		prs = *pack_routes;
+	}
+	prs = NULL;
+	(*pack_routes)->routes = NULL;
+	(*pack_routes)->routes = 0;
+	free((*pack_routes));
+	(*pack_routes) = NULL;
 }
 
 void free_route(t_route **route)
@@ -26,14 +61,18 @@ void free_route(t_route **route)
 	r = *route;
 	while ((*route)->next)
 	{
- 		while (r->next->room)
+		while (r->next->next)
 			r = r->next;
+		free(r->next->room);
+		r->next->room = NULL;
 		free(r->next);
 		r->next = NULL;
-		r->room = NULL;
 		r = *route;
 	}
-//	free(*route);
+	r = NULL;
+	free((*route)->room);
+	(*route)->room = NULL;
+	free(*route);
 }
 
 void free_routes(t_routes **routes)
@@ -48,29 +87,39 @@ void free_routes(t_routes **routes)
 			rs = rs->next;
 		r = rs->next->route;
 		free_route(&r);
-		free(r);
+		rs->next->route = NULL;
 		rs->next->prev = NULL;
 		free(rs->next);
 		rs->next = NULL;
 		rs = *routes;
 	}
-	r = rs->route;
-	free_route(&r);
-	free(rs->route);
-	rs->route = NULL;
+	rs = NULL;
+	r = NULL;
+	free_route(&(*routes)->route);
+	(*routes)->route = NULL;
 	free(*routes);
+	*routes = NULL;
 }
-
 
 void free_connect(t_connect **connect)
 {
 	t_connect *c;
 
 	c = *connect;
-	while (c)
+	if (c)
 	{
-		free(c->room->name);
-		c = c->next;
+		while ((*connect)->next)
+		{
+			while (c->next->next)
+				c = c->next;
+			c->next->room = NULL;
+			free(c->next);
+			c->next = NULL;
+			c = *connect;
+		}
+		c = NULL;
+		(*connect)->room = NULL;
+		free(*connect);
 	}
 }
 
@@ -79,44 +128,44 @@ void free_room(t_room **room)
 	t_room *r;
 
 	r = *room;
-	while (r)
+	while ((*room)->next)
 	{
-		free(r->name);
-		free(r->x);
-		free(r->y);
-		free_connect(&(r->connect));
-		r = r->next;
+		while (r->next->next)
+			r = r->next;
+		free_connect(&r->next->connect);
+		free(r->next->name);
+		r->next->name = NULL;
+		free(r->next->x);
+		r->next->x = NULL;
+		free(r->next->y);
+		r->next->y = NULL;
+		r->next->connect = NULL;
+		free(r->next);
+		r->next = NULL;
+		r = *room;
 	}
-//	free((*room));
-}
-
-//void free_route(char **route)
-//{
-//	free_twodem_str(route);
-//}
-
-void free_visit(char **visit)
-{
-	free_twodem_str(visit);
-}
-
-void free_queue(char **queue)
-{
-	free_twodem_str(queue);
-}
-
-void free_stdin(char **str)
-{
-	free_twodem_str(str);
+	r = NULL;
+	free((*room)->name);
+	(*room)->name = NULL;
+	free((*room)->x);
+	(*room)->x = NULL;
+	free((*room)->y);
+	(*room)->y = NULL;
+	free_connect(&(*room)->connect);
+	(*room)->connect = NULL;
+	free(*room);
 }
 
 void free_lemin(t_lemin **lemin)
 {
 	free_stdin((*lemin)->std_in);
+	(*lemin)->std_in = NULL;
 	free_queue((*lemin)->queue);
+	(*lemin)->queue = NULL;
 	free_visit((*lemin)->visit);
-//	free_route((*lemin)->route);
-	free_room(&(*lemin)->room);
-	free_routes(&(*lemin)->routes);
+	(*lemin)->visit = NULL;
 	free_pack_routes(&(*lemin)->pack_routes);
+	free_routes(&(*lemin)->routes);
+	free_room(&(*lemin)->room);
+	(*lemin)->room = NULL;
 }
