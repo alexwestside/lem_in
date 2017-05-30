@@ -27,7 +27,7 @@ int		check_start_end(t_lemin **lemin, char *line)
 	return (0);
 }
 
-void	free_visit_and_queue(char **visit, char **queue)
+void	*free_visit_and_queue(char **visit, char **queue)
 {
 	while (*visit)
 	{
@@ -39,6 +39,7 @@ void	free_visit_and_queue(char **visit, char **queue)
 		*queue = NULL;
 		queue++;
 	}
+	return (NULL);
 }
 
 char	*is_end(t_lemin **lemin)
