@@ -11,14 +11,14 @@ void	init_connect(t_connect **connect)
 void	init_room(t_room **room)
 {
 	*room = (t_room *)malloc(sizeof(t_room));
-	(*room)->id_room = 0;
+//	(*room)->id_room = 0;
 	(*room)->name = NULL;
 	(*room)->x = 0;
 	(*room)->y = 0;
 	(*room)->connect = NULL;
 	(*room)->start = 0;
 	(*room)->end = 0;
-	(*room)->ants = 0;
+//	(*room)->ants = 0;
 	(*room)->next = NULL;
 }
 

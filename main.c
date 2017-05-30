@@ -71,8 +71,6 @@ int		main(void)
 	dfs(&lemin, start_room(lemin));
 	make_route_pack(&lemin);
 	make_a_choice(&lemin);
-//	free_lemin(&lemin);
-//	free(lemin);
 //	sleep(1000);
 	return (0);
 }
