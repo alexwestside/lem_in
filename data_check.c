@@ -50,9 +50,8 @@ int		hard_data_check(t_lemin **lemin, int j, char **queue, char **visit)
 	queue = (*lemin)->queue;
 	visit = (*lemin)->visit;
 	find_start(lemin, &queue);
-	while (queue[0])
+	while (queue[0] && (room = (*lemin)->room))
 	{
-		room = (*lemin)->room;
 		if (check_visit(queue[0], visit))
 		{
 			while (room->name)

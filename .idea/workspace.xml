@@ -13,11 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="beea2e7c-9063-4e31-a394-39b2b14ed3f3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input_validation.c" afterPath="$PROJECT_DIR$/input_validation.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input_validation_2.c" afterPath="$PROJECT_DIR$/input_validation_2.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lem_in.h" afterPath="$PROJECT_DIR$/lem_in.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/write_input.c" afterPath="$PROJECT_DIR$/write_input.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_check.c" afterPath="$PROJECT_DIR$/data_check.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +32,8 @@
       <file leaf-file-name="lem_in.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lem_in.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="102" column="70" lean-forward="false" selection-start-line="102" selection-start-column="70" selection-end-line="102" selection-end-column="70" />
+            <state relative-caret-position="196">
+              <caret line="111" column="76" lean-forward="false" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
               <folding>
                 <element signature="e#55#80#0" expanded="true" />
               </folding>
@@ -48,8 +44,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="828">
-              <caret line="76" column="15" lean-forward="true" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
+            <state relative-caret-position="378">
+              <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -87,7 +83,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="write_input.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="write_input.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/write_input.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="108">
@@ -97,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_check.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data_check.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data_check.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="708">
+              <caret line="66" column="48" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="66" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -200,8 +196,8 @@
       <file leaf-file-name="sub.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sub.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
+            <state relative-caret-position="615">
+              <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -269,19 +265,19 @@
         <option value="$PROJECT_DIR$/lem_realloc.c" />
         <option value="$PROJECT_DIR$/DELETE_IT.c" />
         <option value="$PROJECT_DIR$/sub_2.c" />
-        <option value="$PROJECT_DIR$/sub.c" />
         <option value="$PROJECT_DIR$/usage.c" />
         <option value="$PROJECT_DIR$/lem_init_2.c" />
         <option value="$PROJECT_DIR$/sub_data_check.c" />
-        <option value="$PROJECT_DIR$/data_check.c" />
         <option value="$PROJECT_DIR$/choice.c" />
         <option value="$PROJECT_DIR$/pack_routes.c" />
         <option value="$PROJECT_DIR$/free_lemin.c" />
         <option value="$PROJECT_DIR$/input_validation_2.c" />
         <option value="$PROJECT_DIR$/input_validation.c" />
-        <option value="$PROJECT_DIR$/lem_in.h" />
         <option value="$PROJECT_DIR$/write_input.c" />
+        <option value="$PROJECT_DIR$/sub.c" />
+        <option value="$PROJECT_DIR$/lem_in.h" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/data_check.c" />
       </list>
     </option>
   </component>
@@ -614,21 +610,7 @@
       <workItem from="1495963032961" duration="16661000" />
       <workItem from="1495984571127" duration="9200000" />
       <workItem from="1496046493309" duration="25739000" />
-      <workItem from="1496145409867" duration="3823000" />
-    </task>
-    <task id="LOCAL-00037" summary="bfs_2">
-      <created>1495008672019</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1495008672019</updated>
-    </task>
-    <task id="LOCAL-00038" summary="bfs_3">
-      <created>1495033876051</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1495033876051</updated>
+      <workItem from="1496145409867" duration="5904000" />
     </task>
     <task id="LOCAL-00039" summary="bfs_4">
       <created>1495046783797</created>
@@ -959,11 +941,25 @@
       <option name="project" value="LOCAL" />
       <updated>1496152576402</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="norm_11">
+      <created>1496153524647</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1496153524647</updated>
+    </task>
+    <task id="LOCAL-00087" summary="norm_12">
+      <created>1496158841930</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1496158841930</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="387890000" />
+    <option name="totallyTimeSpent" value="389971000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -1018,8 +1014,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="print_03" />
-    <MESSAGE value="print_04" />
     <MESSAGE value="print_05" />
     <MESSAGE value="print_06" />
     <MESSAGE value="print_07" />
@@ -1043,14 +1037,16 @@
     <MESSAGE value="norm_8" />
     <MESSAGE value="norm_9" />
     <MESSAGE value="norm_10" />
-    <option name="LAST_COMMIT_MESSAGE" value="norm_10" />
+    <MESSAGE value="norm_11" />
+    <MESSAGE value="norm_12" />
+    <option name="LAST_COMMIT_MESSAGE" value="norm_12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="718" />
+      <option name="time" value="721" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -1324,14 +1320,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sub.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" column="18" lean-forward="false" selection-start-line="51" selection-start-column="18" selection-end-line="51" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sub_2.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="975">
@@ -1420,29 +1408,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_check.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/print_lemin.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1060">
           <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lem_in.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="102" column="70" lean-forward="false" selection-start-line="102" selection-start-column="70" selection-end-line="102" selection-end-column="70" />
-          <folding>
-            <element signature="e#55#80#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1472,18 +1442,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="828">
-          <caret line="76" column="15" lean-forward="true" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/write_input.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sub.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="18" lean-forward="false" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lem_in.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="111" column="76" lean-forward="false" selection-start-line="111" selection-start-column="76" selection-end-line="111" selection-end-column="76" />
+          <folding>
+            <element signature="e#55#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="46" column="24" lean-forward="true" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_check.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="66" column="48" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="66" selection-end-column="48" />
           <folding />
         </state>
       </provider>
