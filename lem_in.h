@@ -98,7 +98,9 @@ int valid_room_name(t_lemin **lemin, char *s);
 
 void write_ants(t_lemin **lemin, char *line);
 void write_room(t_lemin **lemin, char *line, int start, int end);
-void write_connect(t_lemin **lemin, char *line);
+//void write_connect(t_lemin **lemin, char *line);
+void	write_connect(t_lemin **lemin, char *line, char **str);
+void write_connect_if(char **str, t_room **room, t_connect **connect);
 void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i);
 int check_start_end(t_lemin **lemin, char *line);
 

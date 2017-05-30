@@ -73,6 +73,6 @@ int		main(void)
 	make_a_choice(&lemin);
 //	free_lemin(&lemin);
 //	free(lemin);
-//	sleep(1000);
+	sleep(1000);
 	return (0);
 }

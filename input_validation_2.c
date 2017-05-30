@@ -28,25 +28,18 @@ int		valid_room(t_lemin **lemin, char *line)
 	{
 		if (!room->name)
 		{
-			free_twodem_str(str);
 			!start_end ? write_room(lemin, line, 0, 0) : 0;
-			return (1);
+			return (free_twodem_str(str) == NULL ? 1 : 1);
 		}
 		else
 		{
-			if (!ft_strcmp(room->name, line) || room->connect || !(*lemin)->ants)
-			{
-				free_twodem_str(str);
-				return (0);
-			}
+			if (!ft_strcmp(room->name, line) ||
+					room->connect || !(*lemin)->ants)
+				return (free_twodem_str(str) == NULL ? 0 : 0);
 			if (!ft_strcmp(room->x, str[1]) && !ft_strcmp(room->y, str[2]))
-			{
-				free_twodem_str(str);
-				return (0);
-			}
+				return (free_twodem_str(str) == NULL ? 0 : 0);
 		}
 		room = room->next;
 	}
-	free_twodem_str(str);
-	return (1);
+	return (free_twodem_str(str) == NULL ? 1 : 1);
 }

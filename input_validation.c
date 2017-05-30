@@ -60,7 +60,7 @@ int		valid_connect(t_lemin **lemin, char *line, char **str, t_room *room)
 					return (free_twodem_str(str) == NULL ? 0 : 0);
 				connect = connect->next;
 			}
-			write_connect(lemin, line);
+			write_connect(lemin, line, ft_strsplit(line, '-'));
 			return (free_twodem_str(str) == NULL ? 1 : 1);
 		}
 		room = room->next;
