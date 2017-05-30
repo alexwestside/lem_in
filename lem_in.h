@@ -2,6 +2,15 @@
 #ifndef LEM_IN_LEM_IN_H_H
 # define LEM_IN_LEM_IN_H_H
 
+# define RED   "\x1B[31m"
+# define GRN   "\x1B[32m"
+# define YEL   "\x1B[33m"
+# define BLU   "\x1B[34m"
+# define MAG   "\x1B[35m"
+# define CYN   "\x1B[36m"
+# define WHT   "\x1B[37m"
+# define END   "\x1B[0m"
+
 # include "libft/libft.h"
 # include "libft/get_next_line.h"
 # include "libft/ft_printf.h"
@@ -129,6 +138,7 @@ void						move_old_ants(t_routes **routes, t_lemin **lemin);
 void						move_new_ants(t_routes **routes, t_lemin **lemin, int *ant);
 void						check_ant_in_end(t_route **route, t_lemin **lemin);
 char						*is_end(t_lemin **lemin);
+void print_ants(int *ant, char *s, t_lemin **lemin);
 
 int							if_is_alnum_str(char *s);
 int							if_is_digit_str(char *s);

@@ -15,7 +15,8 @@ void	move_new_ants(t_routes **routes, t_lemin **lemin, int *ant)
 			if ((*ant) <= (*lemin)->ants)
 			{
 				r->ant = *ant;
-				ft_printf("L%d-%s ", *ant, r->room);
+				print_ants(ant, r->room, lemin);
+//				ft_printf("L%d-%s ", *ant, r->room);
 				(*ant)++;
 			}
 		}
