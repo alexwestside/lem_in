@@ -90,7 +90,6 @@ int type_comment(char *str);
 int valid_ants(t_lemin **lemin, int ants, char *line);
 int valid_start_end(t_lemin **lemin, char *line, int fd, int *i);
 int if_is_alnum_str(char *s);
-//int valid_connect(t_lemin **lemin, char *line, char **str);
 int		valid_connect(t_lemin **lemin, char *line, char **str, t_room *room);
 int valid_room(t_lemin **lemin, char *line);
 int valid_room_name(t_lemin **lemin, char *s);
@@ -98,7 +97,6 @@ int valid_room_name(t_lemin **lemin, char *s);
 
 void write_ants(t_lemin **lemin, char *line);
 void write_room(t_lemin **lemin, char *line, int start, int end);
-//void write_connect(t_lemin **lemin, char *line);
 void	write_connect(t_lemin **lemin, char *line, char **str);
 void write_connect_if(char **str, t_room **room, t_connect **connect);
 void write_check_start_end(t_lemin **lemin, char *line, int fd, int *i);
@@ -107,9 +105,8 @@ int check_start_end(t_lemin **lemin, char *line);
 
 void need_data_check(t_lemin **lemin);
 void simple_data_check(t_lemin **lemin);
-//int hard_data_check(t_lemin **lemin);
-//int		hard_data_check(t_lemin **lemin, int i, int j);
 int		hard_data_check(t_lemin **lemin, int j, char **queue, char **visit);
+void	hard_data_check_1(char **queue, t_connect **connect, t_room **room);
 void init_queue_visit(t_lemin **lemin, int len);
 int check_visit_end(t_lemin **lemin, char *s);
 int check_visit(char *name, char **visit);

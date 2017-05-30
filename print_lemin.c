@@ -55,9 +55,8 @@ void	push_old_ants(t_routes **routes, t_lemin **lemin)
 	t_route		*r;
 
 	rs = (*routes);
-	while (routes_is_ampty(routes))
+	while (routes_is_ampty(routes) && (r = rs->route->next))
 	{
-		r = rs->route->next;
 		if (route_is_ampty(r))
 		{
 			while (r->next->room)
@@ -73,10 +72,9 @@ void	push_old_ants(t_routes **routes, t_lemin **lemin)
 		}
 		rs = rs->next;
 		if (!rs)
-		{
-			rs = (*routes);
 			ft_printf("\n");
-		}
+		if (!rs)
+			rs = *routes;
 	}
 }
 
