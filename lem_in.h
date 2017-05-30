@@ -154,7 +154,7 @@ char *is_end(t_lemin **lemin);
 
 
 void free_lemin(t_lemin **lemin);
-void free_twodem_str(char **s);
+void *free_twodem_str(char **s);
 
 
 void ft_error(int id);

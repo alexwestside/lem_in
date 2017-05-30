@@ -48,30 +48,21 @@ int		valid_connect(t_lemin **lemin, char *line, char **str)
 	room = (*lemin)->room;
 	while (room)
 	{
-		if (room->name)
-			if (!ft_strcmp(str[0], room->name) || !ft_strcmp(str[1], room->name))
+		if (room->name && (!ft_strcmp(str[0], room->name) || !ft_strcmp(str[1], room->name)))
 			{
 				connect = room->connect;
 				if (!valid_room_name(lemin, !ft_strcmp(str[0], room->name) ? str[1] : str[0]))
-				{
-					free_twodem_str(str);
-					return (0);
-				}
+					return (free_twodem_str(str) == NULL ? 0 : 0);
 				while (connect)
 				{
 					if (!ft_strcmp(!ft_strcmp(str[0], room->name) ? str[1] : str[0], connect->room->name))
-					{
-						free_twodem_str(str);
-						return (0);
-					}
+						return (free_twodem_str(str) == NULL ? 0 : 0);
 					connect = connect->next;
 				}
 				write_connect(lemin, line);
-				free_twodem_str(str);
-				return (1);
+				return (free_twodem_str(str) == NULL ? 1 : 1);
 			}
 		room = room->next;
 	}
-	free_twodem_str(str);
-	return (0);
+	return (free_twodem_str(str) == NULL ? 0 : 0);
 }

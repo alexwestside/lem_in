@@ -1,7 +1,7 @@
 
 #include "lem_in.h"
 
-void free_twodem_str(char **s)
+void *free_twodem_str(char **s)
 {
 	int i = 0;
 
@@ -12,6 +12,7 @@ void free_twodem_str(char **s)
 		i++;
 	}
 	free(s);
+	return (NULL);
 }
 
 void free_pack_routes(t_pack_routes **pack_routes)
