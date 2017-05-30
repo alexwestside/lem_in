@@ -90,7 +90,7 @@ int type_comment(char *str);
 int valid_ants(t_lemin **lemin, int ants, char *line);
 int valid_start_end(t_lemin **lemin, char *line, int fd, int *i);
 int if_is_alnum_str(char *s);
-int valid_connect(t_lemin **lemin, char *line);
+int valid_connect(t_lemin **lemin, char *line, char **str);
 int valid_room(t_lemin **lemin, char *line);
 int valid_room_name(t_lemin **lemin, char *s);
 

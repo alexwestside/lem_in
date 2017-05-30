@@ -39,9 +39,8 @@ int		valid_start_end(t_lemin **lemin, char *line, int fd, int *i)
 	return (1);
 }
 
-int		valid_connect(t_lemin **lemin, char *line)
+int		valid_connect(t_lemin **lemin, char *line, char **str)
 {
-	char		**str;
 	t_room		*room;
 	t_connect	*connect;
 
@@ -50,7 +49,6 @@ int		valid_connect(t_lemin **lemin, char *line)
 	while (room)
 	{
 		if (room->name)
-		{
 			if (!ft_strcmp(str[0], room->name) || !ft_strcmp(str[1], room->name))
 			{
 				connect = room->connect;
@@ -72,7 +70,6 @@ int		valid_connect(t_lemin **lemin, char *line)
 				free_twodem_str(str);
 				return (1);
 			}
-		}
 		room = room->next;
 	}
 	free_twodem_str(str);

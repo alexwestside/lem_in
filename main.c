@@ -24,7 +24,7 @@ int		read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 	else if (type_start_end(line))
 		valid = valid_start_end(lemin, line, fd, i);
 	else if (type_connect(line))
-		valid = valid_connect(lemin, line);
+		valid = valid_connect(lemin, line, NULL);
 	else if (type_comment(line))
 		valid = 1;
 	return (valid ? 1 : 0);
