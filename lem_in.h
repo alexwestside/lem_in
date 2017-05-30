@@ -138,7 +138,8 @@ void						move_old_ants(t_routes **routes, t_lemin **lemin);
 void						move_new_ants(t_routes **routes, t_lemin **lemin, int *ant);
 void						check_ant_in_end(t_route **route, t_lemin **lemin);
 char						*is_end(t_lemin **lemin);
-void print_ants(int *ant, char *s, t_lemin **lemin);
+char	*is_start(t_lemin **lemin);
+void print_ants(int *ant, char *s, t_lemin **lemin, int id);
 
 int							if_is_alnum_str(char *s);
 int							if_is_digit_str(char *s);

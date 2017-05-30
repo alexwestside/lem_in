@@ -11,9 +11,15 @@ void	ft_error(int id)
 	}
 }
 
-void print_ants(int *ant, char *s, t_lemin **lemin)
+void	print_ants(int *ant, char *s, t_lemin **lemin, int id)
 {
+	char	*end;
 
-
-
+	end = is_end(lemin);
+	if (!id)
+		ft_printf(RED"L%d-%s "END, *ant, s);
+	if (!ft_strcmp(end, s))
+		ft_printf(BLU"L%d-%s "END, *ant, s);
+	else
+		ft_printf(GRN"L%d-%s "END, *ant, s);
 }

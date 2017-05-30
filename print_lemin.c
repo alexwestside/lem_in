@@ -15,7 +15,7 @@ void	move_new_ants(t_routes **routes, t_lemin **lemin, int *ant)
 			if ((*ant) <= (*lemin)->ants)
 			{
 				r->ant = *ant;
-				print_ants(ant, r->room, lemin);
+				print_ants(ant, r->room, lemin, 0);
 //				ft_printf("L%d-%s ", *ant, r->room);
 				(*ant)++;
 			}
@@ -39,7 +39,8 @@ void	move_old_ants(t_routes **routes, t_lemin **lemin)
 				r = r->next;
 			r->next->ant = r->ant;
 			r->ant = 0;
-			ft_printf("L%d-%s ", r->next->ant, r->next->room);
+			print_ants(&r->next->ant, r->next->room, lemin, 1);
+//			ft_printf("L%d-%s ", r->next->ant, r->next->room);
 			check_ant_in_end(&(*routes)->route, lemin);
 			rs = rs->next;
 			if (!rs)
@@ -68,7 +69,8 @@ void	push_old_ants(t_routes **routes, t_lemin **lemin)
 			}
 			r->next->ant = r->ant;
 			r->ant = 0;
-			ft_printf("L%d-%s ", r->next->ant, r->next->room);
+			print_ants(&r->next->ant, r->next->room, lemin, 1);
+//			ft_printf("L%d-%s ", r->next->ant, r->next->room);
 			end(&(r->next), lemin);
 		}
 		rs = rs->next;
@@ -101,7 +103,8 @@ void	push_one_route(t_routes **routes, t_lemin **lemin, int flag, int ant)
 		r->ant == ant ? flag = 1 : 0;
 		r->next->ant = r->ant;
 		r->ant = 0;
-		ft_printf("L%d-%s ", r->next->ant, r->next->room);
+		print_ants(&r->next->ant, r->next->room, lemin, 1);
+//		ft_printf("L%d-%s ", r->next->ant, r->next->room);
 		end(&(r->next), lemin);
 		r = rs->route;
 		flag == 1 ? ft_printf("\n") : 0;
