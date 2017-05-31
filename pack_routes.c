@@ -104,4 +104,5 @@ void	make_pack_routes(t_lemin **lemin)
 		init_pack_routes(lemin);
 		pack_routes = pack_routes->next;
 	}
+	print_4(lemin);
 }

@@ -15,8 +15,8 @@ void	move_new_ants(t_routes **routes, t_lemin **lemin, int *ant)
 			if ((*ant) <= (*lemin)->ants)
 			{
 				r->ant = *ant;
-				print_ants(ant, r->room, lemin, 0);
-//				ft_printf("L%d-%s ", *ant, r->room);
+//				print_ants(ant, r->room, lemin, 0);
+				ft_printf("L%d-%s ", *ant, r->room);
 				(*ant)++;
 			}
 		}
@@ -39,47 +39,102 @@ void	move_old_ants(t_routes **routes, t_lemin **lemin)
 				r = r->next;
 			r->next->ant = r->ant;
 			r->ant = 0;
-			print_ants(&r->next->ant, r->next->room, lemin, 1);
-//			ft_printf("L%d-%s ", r->next->ant, r->next->room);
-			check_ant_in_end(&(*routes)->route, lemin);
+//			print_ants(&r->next->ant, r->next->room, lemin, 1);
+			ft_printf("L%d-%s ", r->next->ant, r->next->room);
+			check_ant_in_end(/*&(*routes)->route*/&(r->next), lemin);
 			rs = rs->next;
 			if (!rs)
 				rs = (*routes);
 		}
 		else
-			break ;
+		{
+			if (rs->next->route->next->ant)
+				rs = rs->next;
+			else
+				break;
+		}
 	}
 }
+
+void move_old_route(t_route **route, t_lemin **lemin)
+{
+	t_route *r;
+
+	r = *route;
+	if (route_is_ampty(r))
+	{
+		while (!r->ant && !r->move)
+			r = r->next;
+		while (r->next->ant)
+			r = r->next;
+		if (!r->move && r->ant)
+		{
+			r->next->ant = r->ant;
+			r->next->move = 1;
+			r->ant = 0;
+			r->move = 0;
+			ft_printf("L%d-%s ", r->next->ant, r->next->room);
+			end(&(r->next), lemin);
+		}
+	}
+}
+
 
 void	push_old_ants(t_routes **routes, t_lemin **lemin)
 {
 	t_routes	*rs;
 	t_route		*r;
+	t_route *s;
 
-	rs = (*routes);
-	while (routes_is_ampty(routes) && (r = rs->route->next))
+	rs = *routes;
+	while (routes_is_ampty(routes))
 	{
-		if (route_is_ampty(r))
+		if (move_all_old(&rs, lemin))
 		{
-			while (r->next->room)
-			{
-				if (r->ant && !r->next->ant)
-					break ;
-				r = r->next;
-			}
-			r->next->ant = r->ant;
-			r->ant = 0;
-			print_ants(&r->next->ant, r->next->room, lemin, 1);
-//			ft_printf("L%d-%s ", r->next->ant, r->next->room);
-			end(&(r->next), lemin);
-		}
-		rs = rs->next;
-		if (!rs)
+			move_all_null(&rs, lemin);
 			ft_printf("\n");
+		}
+		r = rs->route->next;
+		move_old_route(&r, lemin);
+		rs = rs->next;
 		if (!rs)
 			rs = *routes;
 	}
 }
+
+
+//void	push_old_ants(t_routes **routes, t_lemin **lemin)
+//{
+//	t_routes	*rs;
+//	t_route		*r;
+//
+//	rs = (*routes);
+//	while (routes_is_ampty(routes) && (r = rs->route->next))
+//	{
+//		if (route_is_ampty(r))
+//		{
+//			while (r->next->room)
+//			{
+//				if (r->ant && !r->next->ant)
+//					break ;
+//				r = r->next;
+//			}
+//			if (rs->route->next->ant || (is_end(lemin), r->next->room))
+//			{
+//				r->next->ant = r->ant;
+//				r->ant = 0;
+////			print_ants(&r->next->ant, r->next->room, lemin, 1);
+//				ft_printf("L%d-%s ", r->next->ant, r->next->room);
+//				end(&(r->next), lemin);
+//			}
+//		}
+//		rs = rs->next;
+//		if (move_all_old(routes, lemin))
+//			ft_printf("\n");
+//		if (!rs)
+//			rs = *routes;
+//	}
+//}
 
 void	push_one_route(t_routes **routes, t_lemin **lemin, int flag, int ant)
 {
@@ -103,8 +158,8 @@ void	push_one_route(t_routes **routes, t_lemin **lemin, int flag, int ant)
 		r->ant == ant ? flag = 1 : 0;
 		r->next->ant = r->ant;
 		r->ant = 0;
-		print_ants(&r->next->ant, r->next->room, lemin, 1);
-//		ft_printf("L%d-%s ", r->next->ant, r->next->room);
+//		print_ants(&r->next->ant, r->next->room, lemin, 1);
+		ft_printf("L%d-%s ", r->next->ant, r->next->room);
 		end(&(r->next), lemin);
 		r = rs->route;
 		flag == 1 ? ft_printf("\n") : 0;

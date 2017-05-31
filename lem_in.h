@@ -19,6 +19,7 @@ typedef struct				s_route
 {
 	char 					*room;
 	int						ant;
+	int 					move;
 	struct s_route			*next;
 }							t_route;
 
@@ -138,8 +139,8 @@ void						move_old_ants(t_routes **routes, t_lemin **lemin);
 void						move_new_ants(t_routes **routes, t_lemin **lemin, int *ant);
 void						check_ant_in_end(t_route **route, t_lemin **lemin);
 char						*is_end(t_lemin **lemin);
-char	*is_start(t_lemin **lemin);
-void print_ants(int *ant, char *s, t_lemin **lemin, int id);
+char						*is_start(t_lemin **lemin);
+void						print_ants(int *ant, char *s, t_lemin **lemin, int id);
 
 int							if_is_alnum_str(char *s);
 int							if_is_digit_str(char *s);
@@ -149,6 +150,13 @@ int							limit_int(long int n);
 void						init_connect(t_connect **connect);
 void						*free_twodem_str(char **s);
 void						*free_visit_and_queue(char **visit, char **queue);
+
+int move_all_old(t_routes **routes, t_lemin **lemin);
+void move_all_null(t_routes **routes, t_lemin **lemin);
+int count_all_ants_in_routes(t_routes **routes);
 void						ft_error(int id);
+
+void print_2(t_routes *routes);
+void print_4(t_lemin **lemin);
 
 #endif //LEM_IN_LEM_IN_H_H

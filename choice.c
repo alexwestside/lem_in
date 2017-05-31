@@ -59,7 +59,9 @@ t_pack_routes	*routes_choice(t_lemin **lemin)
 				tmp += ((*lemin)->ants / prs->count_routes) * rs->len_route;
 				rs = rs->next;
 			}
+			tmp = tmp / prs->count_routes;
 			routes_choice_if(&moves, &tmp, &choice, &prs);
+			tmp = 0;
 		}
 		prs = prs->next;
 	}

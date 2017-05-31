@@ -61,7 +61,10 @@ void	end(t_route **room, t_lemin **lemin)
 	{
 		end = is_end(lemin);
 		if (!ft_strcmp((*room)->room, end))
+		{
 			(*room)->ant = 0;
+			(*room)->move = 0;
+		}
 	}
 	return ;
 }

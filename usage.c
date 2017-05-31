@@ -37,3 +37,42 @@ void	*free_twodem_str(char **s)
 	free(s);
 	return (NULL);
 }
+
+int move_all_old(t_routes **routes, t_lemin **lemin)
+{
+	t_routes *rs;
+	t_route *r;
+
+	rs = (*routes);
+	while (rs)
+	{
+		r = rs->route->next;
+		while (r->next->room)
+		{
+			if (!r->move && r->ant)
+				return (0);
+			r = r->next;
+		}
+		rs = rs->next;
+	}
+	return (1);
+}
+
+void move_all_null(t_routes **routes, t_lemin **lemin)
+{
+	t_routes *rs;
+	t_route *r;
+
+	rs = (*routes);
+	while (rs)
+	{
+		r = rs->route->next;
+		while (r->next->room)
+		{
+			if (r->move)
+				r->move = 0;
+			r = r->next;
+		}
+		rs = rs->next;
+	}
+}
