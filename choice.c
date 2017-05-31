@@ -39,6 +39,7 @@ void			routes_choice_if(int *moves, int *tmp,
 
 t_pack_routes	*routes_choice(t_lemin **lemin)
 {
+	print_4(lemin);
 	t_pack_routes	*choice;
 	t_routes		*rs;
 	t_pack_routes	*prs;
@@ -59,9 +60,9 @@ t_pack_routes	*routes_choice(t_lemin **lemin)
 				tmp += ((*lemin)->ants / prs->count_routes) * rs->len_route;
 				rs = rs->next;
 			}
-			tmp = tmp / prs->count_routes;
+//			tmp = tmp / prs->count_routes;
 			routes_choice_if(&moves, &tmp, &choice, &prs);
-			tmp = 0;
+//			tmp = 0;
 		}
 		prs = prs->next;
 	}

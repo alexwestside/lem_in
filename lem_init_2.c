@@ -81,6 +81,8 @@ void	make_route(char **visit, t_routes **routes)
 	while (visit[i])
 	{
 		r->room = ft_strdup(visit[i]);
+		r->move = 0;
+		r->ant = 0;
 		r->next = (t_route *)malloc(sizeof(t_route));
 		r->next->room = NULL;
 		r->next->ant = 0;

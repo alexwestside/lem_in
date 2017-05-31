@@ -158,5 +158,6 @@ void						ft_error(int id);
 
 void print_2(t_routes *routes);
 void print_4(t_lemin **lemin);
+void print_3(t_routes *routes);
 
 #endif //LEM_IN_LEM_IN_H_H
