@@ -23,3 +23,17 @@ void	print_ants(int *ant, char *s, t_lemin **lemin, int id)
 	else
 		ft_printf(GRN"L%d-%s "END, *ant, s);
 }
+
+void	*free_twodem_str(char **s)
+{
+	int	i = 0;
+
+	while (s[i])
+	{
+		free(s[i]);
+		s[i] = NULL;
+		i++;
+	}
+	free(s);
+	return (NULL);
+}
