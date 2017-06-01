@@ -36,7 +36,7 @@ void	read_and_valid(t_lemin **lemin, char ***std_in)
 	int	i;
 
 	i = -1;
-	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test6", O_RDONLY);
+	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test7", O_RDONLY);
 //	fd = 0;
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{
@@ -70,7 +70,7 @@ int		main(void)
 	init_lemin(&lemin, 0, NULL, NULL);
 	read_and_valid(&lemin, &lemin->std_in);
 	dfs(&lemin, start_room(lemin));
-	print_1(lemin);
+//	print_1(lemin);
 	make_route_pack(&lemin);
 	make_a_choice(&lemin);
 //	sleep(1000);

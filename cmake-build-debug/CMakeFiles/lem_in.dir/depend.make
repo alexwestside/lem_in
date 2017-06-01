@@ -85,6 +85,12 @@ CMakeFiles/lem_in.dir/print_lemin_2.c.o: ../libft/get_next_line.h
 CMakeFiles/lem_in.dir/print_lemin_2.c.o: ../libft/libft.h
 CMakeFiles/lem_in.dir/print_lemin_2.c.o: ../print_lemin_2.c
 
+CMakeFiles/lem_in.dir/print_lemin_one_route.c.o: ../lem_in.h
+CMakeFiles/lem_in.dir/print_lemin_one_route.c.o: ../libft/ft_printf.h
+CMakeFiles/lem_in.dir/print_lemin_one_route.c.o: ../libft/get_next_line.h
+CMakeFiles/lem_in.dir/print_lemin_one_route.c.o: ../libft/libft.h
+CMakeFiles/lem_in.dir/print_lemin_one_route.c.o: ../print_lemin_one_route.c
+
 CMakeFiles/lem_in.dir/sub.c.o: ../lem_in.h
 CMakeFiles/lem_in.dir/sub.c.o: ../libft/ft_printf.h
 CMakeFiles/lem_in.dir/sub.c.o: ../libft/get_next_line.h

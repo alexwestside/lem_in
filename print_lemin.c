@@ -48,7 +48,9 @@ void	move_old_ants(t_routes **routes, t_lemin **lemin)
 		}
 		else
 		{
-				if (rs->next->route->next->ant)
+			if (!rs->next)
+				return ;
+			if (rs->next->route->next->ant)
 					rs = rs->next;
 			else
 				break;
@@ -135,7 +137,7 @@ void	push_one_route(t_routes **routes, t_lemin **lemin, int flag, int ant)
 void	print_lemin(t_routes **routes, t_lemin **lemin, int ant)
 {
 	print_stdin(lemin);
-	if ((*routes)->len_route > 1)
+//	if ((*routes)->next)
 	{
 		move_new_ants(routes, lemin, &ant);
 		ft_printf("\n");
@@ -149,6 +151,6 @@ void	print_lemin(t_routes **routes, t_lemin **lemin, int ant)
 		(*routes)->next ? push_old_ants(routes, lemin) :
 		push_one_route(routes, lemin, 0, 0);
 	}
-	else
-		move_by_one_route(routes, lemin, 1);
+//	else
+//		move_by_one_route(routes, lemin, 1);
 }
