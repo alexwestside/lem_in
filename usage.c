@@ -18,10 +18,11 @@ void	print_ants(int *ant, char *s, t_lemin **lemin, int id)
 	end = is_end(lemin);
 	if (!id)
 		ft_printf(RED"L%d-%s "END, *ant, s);
+	if (id && ft_strcmp(end, s))
+		ft_printf(GRN"L%d-%s "END, *ant, s);
 	if (!ft_strcmp(end, s))
 		ft_printf(BLU"L%d-%s "END, *ant, s);
-	else
-		ft_printf(GRN"L%d-%s "END, *ant, s);
+
 }
 
 void	*free_twodem_str(char **s)

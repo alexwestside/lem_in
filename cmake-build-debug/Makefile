@@ -501,33 +501,6 @@ print_lemin_2.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_2.c.s
 .PHONY : print_lemin_2.c.s
 
-print_lemin_one_route.o: print_lemin_one_route.c.o
-
-.PHONY : print_lemin_one_route.o
-
-# target to build an object file
-print_lemin_one_route.c.o:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_one_route.c.o
-.PHONY : print_lemin_one_route.c.o
-
-print_lemin_one_route.i: print_lemin_one_route.c.i
-
-.PHONY : print_lemin_one_route.i
-
-# target to preprocess a source file
-print_lemin_one_route.c.i:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_one_route.c.i
-.PHONY : print_lemin_one_route.c.i
-
-print_lemin_one_route.s: print_lemin_one_route.c.s
-
-.PHONY : print_lemin_one_route.s
-
-# target to generate assembly for a file
-print_lemin_one_route.c.s:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_one_route.c.s
-.PHONY : print_lemin_one_route.c.s
-
 sub.o: sub.c.o
 
 .PHONY : sub.o
@@ -741,9 +714,6 @@ help:
 	@echo "... print_lemin_2.o"
 	@echo "... print_lemin_2.i"
 	@echo "... print_lemin_2.s"
-	@echo "... print_lemin_one_route.o"
-	@echo "... print_lemin_one_route.i"
-	@echo "... print_lemin_one_route.s"
 	@echo "... sub.o"
 	@echo "... sub.i"
 	@echo "... sub.s"
