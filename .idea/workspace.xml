@@ -12,17 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="beea2e7c-9063-4e31-a394-39b2b14ed3f3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test8" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test9" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/lem_in.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/lem_in" afterPath="$PROJECT_DIR$/cmake-build-debug/lem_in" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lem_in.h" afterPath="$PROJECT_DIR$/lem_in.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pack_routes.c" afterPath="$PROJECT_DIR$/pack_routes.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/print_lemin.c" afterPath="$PROJECT_DIR$/print_lemin.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/print_lemin_3.c" afterPath="$PROJECT_DIR$/print_lemin_3.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/usage.c" afterPath="$PROJECT_DIR$/usage.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -668,14 +660,7 @@
       <workItem from="1496299768150" duration="5462000" />
       <workItem from="1496329236136" duration="315000" />
       <workItem from="1496392479102" duration="2558000" />
-      <workItem from="1496401386410" duration="11965000" />
-    </task>
-    <task id="LOCAL-00058" summary="print_05">
-      <created>1495720080465</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1495720080465</updated>
+      <workItem from="1496401386410" duration="12091000" />
     </task>
     <task id="LOCAL-00059" summary="print_05">
       <created>1495729887779</created>
@@ -1013,11 +998,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496425727398</updated>
     </task>
-    <option name="localTasksCounter" value="107" />
+    <task id="LOCAL-00107" summary="finish_1">
+      <created>1496431989838</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1496431989838</updated>
+    </task>
+    <option name="localTasksCounter" value="108" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="442778000" />
+    <option name="totallyTimeSpent" value="442904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
@@ -1086,7 +1078,6 @@
     <MESSAGE value="print_color_1" />
     <MESSAGE value="print_color_2" />
     <MESSAGE value="finish" />
-    <MESSAGE value="finish_1" />
     <MESSAGE value="correct_print_1" />
     <MESSAGE value="correct_print_2" />
     <MESSAGE value="correct_print_3_one_route" />
@@ -1096,7 +1087,8 @@
     <MESSAGE value="norm_second_3" />
     <MESSAGE value="norm_second_4" />
     <MESSAGE value="norm_second_5" />
-    <option name="LAST_COMMIT_MESSAGE" value="norm_second_5" />
+    <MESSAGE value="finish_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish_1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
