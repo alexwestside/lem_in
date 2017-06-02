@@ -113,4 +113,5 @@ void	print_lemin(t_routes **routes, t_lemin **lemin, int ant)
 	}
 	(*routes)->next ? push_old_ants(routes, lemin) :
 	push_one_route(routes, lemin, 0, 0);
+	(*routes)->next ? ft_printf("\n") : 0;
 }

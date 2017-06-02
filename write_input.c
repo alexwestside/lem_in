@@ -81,7 +81,8 @@ void	write_check_start_end(t_lemin **lemin, char *line, int fd, int *i)
 	get_next_line(fd, &((*lemin)->std_in[++(*i)]));
 	if (type_room((*lemin)->std_in[(*i)]))
 	{
-		valid_room(lemin, (*lemin)->std_in[(*i)], ft_strsplit((*lemin)->std_in[(*i)], ' '));
+		if (!(valid_room(lemin, (*lemin)->std_in[(*i)], ft_strsplit((*lemin)->std_in[(*i)], ' '))))
+			return ;
 		if (!ft_strcmp(s, "##start"))
 			write_room(lemin, (*lemin)->std_in[(*i)], 1, 0);
 		if (!ft_strcmp(s, "##end"))

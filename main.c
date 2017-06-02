@@ -36,7 +36,7 @@ void	read_and_valid(t_lemin **lemin, char ***std_in)
 	int	i;
 
 	i = -1;
-	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test5", O_RDONLY);
+	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test4", O_RDONLY);
 //	fd = 0;
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{
