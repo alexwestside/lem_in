@@ -136,6 +136,7 @@ void						end(t_route **room, t_lemin **lemin);
 int							route_is_ampty(t_route *route);
 int							routes_is_ampty(t_routes **routes);
 void						move_old_ants(t_routes **routes, t_lemin **lemin);
+void						move_old_ants_1(t_route **route, t_lemin **lemin);
 void						move_new_ants(t_routes **routes, t_lemin **lemin, int *ant);
 void						check_ant_in_end(t_route **route, t_lemin **lemin);
 char						*is_end(t_lemin **lemin);
@@ -157,7 +158,6 @@ void						ft_error(int id);
 void print_2(t_routes *routes);
 void print_4(t_lemin **lemin);
 void print_3(t_routes *routes);
-
-void	print_1(t_lemin *lemin);
+void print_1(t_lemin *lemin);
 
 #endif //LEM_IN_LEM_IN_H_H

@@ -127,6 +127,9 @@
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/print_lemin_2.c">
 			<Option target="lem_in"/>
 		</Unit>
+		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/print_lemin_3.c.c">
+			<Option target="lem_in"/>
+		</Unit>
 		<Unit filename="/nfs/2016/o/orizhiy/ClionProjects/lem_in/sub.c">
 			<Option target="lem_in"/>
 		</Unit>
