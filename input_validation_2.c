@@ -15,14 +15,14 @@ int		valid_room_name(t_lemin **lemin, char *s)
 	return (0);
 }
 
-int		valid_room(t_lemin **lemin, char *line)
+int		valid_room(t_lemin **lemin, char *line, char **str)
 {
 	t_room	*room;
-	char	**str;
 	int		start_end;
 
 	room = (*lemin)->room;
-	str = ft_strsplit(line, ' ');
+	if (str[0][0] == 'L')
+		return 0;
 	start_end = check_start_end(lemin, line);
 	while (room)
 	{

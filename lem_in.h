@@ -84,7 +84,8 @@ int							type_comment(char *str);
 int							valid_ants(t_lemin **lemin, int ants, char *line);
 int							valid_start_end(t_lemin **lemin, char *line, int fd, int *i);
 int							valid_connect(t_lemin **lemin, char *line, char **str, t_room *room);
-int							valid_room(t_lemin **lemin, char *line);
+//int							valid_room(t_lemin **lemin, char *line);
+int		valid_room(t_lemin **lemin, char *line, char **str);
 int							valid_room_name(t_lemin **lemin, char *s);
 
 void						write_ants(t_lemin **lemin, char *line);

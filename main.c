@@ -20,7 +20,7 @@ int		read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 	if (type_num_ants(line))
 		valid = valid_ants(lemin, ft_atoi(line), line);
 	else if (type_room(line))
-		valid = valid_room(lemin, line);
+		valid = valid_room(lemin, line, ft_strsplit(line, ' '));
 	else if (type_start_end(line))
 		valid = valid_start_end(lemin, line, fd, i);
 	else if (type_connect(line))
@@ -40,6 +40,8 @@ void	read_and_valid(t_lemin **lemin, char ***std_in)
 //	fd = 0;
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{
+		if (i == 349)
+			write (1, "\n", 1);
 		if (!(read_stdin(lemin, (*std_in)[i], fd, &i)))
 			break ;
 		*std_in = ft_realloc(&(*std_in), two_dem_strlen(*std_in));
