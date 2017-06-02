@@ -3,13 +3,21 @@
 
 void	make_route_pack(t_lemin **lemin)
 {
-	int	i;
+	int		i;
+//	char	*start;
+//	char	*end;
 
 	i = 1;
+
 	sort_routes(lemin, i);
 	(*lemin)->pack_routes = NULL;
 	init_pack_routes(lemin);
-	make_pack_routes(lemin);
+//	if ((*lemin)->routes->len_route == 1)
+//	{
+//
+//	}
+//	else
+		make_pack_routes(lemin);
 }
 
 int		read_stdin(t_lemin **lemin, char *line, int fd, int *i)
@@ -36,12 +44,10 @@ void	read_and_valid(t_lemin **lemin, char ***std_in)
 	int	i;
 
 	i = -1;
-	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test4", O_RDONLY);
-//	fd = 0;
+//	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test10", O_RDONLY);
+	fd = 0;
 	while (get_next_line(fd, &((*std_in)[++i])))
 	{
-		if (i == 349)
-			write (1, "\n", 1);
 		if (!(read_stdin(lemin, (*std_in)[i], fd, &i)))
 			break ;
 		*std_in = ft_realloc(&(*std_in), two_dem_strlen(*std_in));

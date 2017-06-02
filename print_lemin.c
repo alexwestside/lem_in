@@ -102,16 +102,21 @@ void	push_one_route(t_routes **routes, t_lemin **lemin, int flag, int ant)
 void	print_lemin(t_routes **routes, t_lemin **lemin, int ant)
 {
 	print_stdin(lemin);
-	move_new_ants(routes, lemin, &ant);
-	ft_printf("\n");
-	while (ant <= (*lemin)->ants)
+	if ((*lemin)->pack_routes->count_routes >= 1 && (*routes)->len_route > 1)
 	{
-		move_old_ants(routes, lemin);
-		if (ant <= (*lemin)->ants)
-			move_new_ants(routes, lemin, &ant);
+		move_new_ants(routes, lemin, &ant);
 		ft_printf("\n");
+		while (ant <= (*lemin)->ants)
+		{
+			move_old_ants(routes, lemin);
+			if (ant <= (*lemin)->ants)
+				move_new_ants(routes, lemin, &ant);
+			ft_printf("\n");
+		}
+		(*routes)->next ? push_old_ants(routes, lemin) :
+		push_one_route(routes, lemin, 0, 0);
+		(*routes)->next ? ft_printf("\n") : 0;
 	}
-	(*routes)->next ? push_old_ants(routes, lemin) :
-	push_one_route(routes, lemin, 0, 0);
-	(*routes)->next ? ft_printf("\n") : 0;
+	else
+		print_start_end(routes, lemin, 1);
 }

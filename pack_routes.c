@@ -94,6 +94,8 @@ void	make_pack_routes(t_lemin **lemin)
 		pack_routes->routes->route = routes->route;
 		pack_routes->routes->len_route = routes->len_route;
 		rs = (*lemin)->routes;
+		if ((*lemin)->routes->len_route == 1)
+			break ;
 		while (rs)
 		{
 			if (check_cross1(&(pack_routes->routes), rs->route))

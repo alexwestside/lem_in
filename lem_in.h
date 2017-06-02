@@ -145,6 +145,7 @@ void						print_ants(int *ant, char *s, t_lemin **lemin, int id);
 int							move_all_old(t_routes **routes, t_lemin **lemin);
 void						move_all_null(t_routes **routes, t_lemin **lemin);
 void						move_old_route(t_route **route, t_lemin **lemin);
+void						print_start_end(t_routes **routes, t_lemin **lemin, int ants);
 
 int							if_is_alnum_str(char *s);
 int							if_is_digit_str(char *s);

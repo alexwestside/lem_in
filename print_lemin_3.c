@@ -24,7 +24,7 @@ void	move_old_ants(t_routes **routes, t_lemin **lemin)
 		r = rs->route->next;
 		if (r->ant)
 		{
-			while (r->next->ant)
+			while (r->next && r->next->ant)
 				r = r->next;
 			move_old_ants_1(&r, lemin);
 			rs = rs->next;
@@ -39,5 +39,14 @@ void	move_old_ants(t_routes **routes, t_lemin **lemin)
 			else
 				break ;
 		}
+	}
+}
+
+void print_start_end(t_routes **routes, t_lemin **lemin, int ants)
+{
+	while (ants <= (*lemin)->ants)
+	{
+		ft_printf(BLU"L%d-%s "END, ants, (*routes)->route->next->room);
+		ants++;
 	}
 }
