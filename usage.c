@@ -22,13 +22,13 @@ void	print_ants(int *ant, char *s, t_lemin **lemin, int id)
 		ft_printf(GRN"L%d-%s "END, *ant, s);
 	if (!ft_strcmp(end, s))
 		ft_printf(BLU"L%d-%s "END, *ant, s);
-
 }
 
 void	*free_twodem_str(char **s)
 {
-	int	i = 0;
+	int	i;
 
+	i = 0;
 	while (s[i])
 	{
 		free(s[i]);
@@ -39,10 +39,10 @@ void	*free_twodem_str(char **s)
 	return (NULL);
 }
 
-int move_all_old(t_routes **routes, t_lemin **lemin)
+int		move_all_old(t_routes **routes, t_lemin **lemin)
 {
-	t_routes *rs;
-	t_route *r;
+	t_routes	*rs;
+	t_route		*r;
 
 	rs = (*routes);
 	while (rs)
@@ -59,10 +59,10 @@ int move_all_old(t_routes **routes, t_lemin **lemin)
 	return (1);
 }
 
-void move_all_null(t_routes **routes, t_lemin **lemin)
+void	move_all_null(t_routes **routes, t_lemin **lemin)
 {
-	t_routes *rs;
-	t_route *r;
+	t_routes	*rs;
+	t_route		*r;
 
 	rs = (*routes);
 	while (rs)

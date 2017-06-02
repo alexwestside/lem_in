@@ -37,14 +37,11 @@ void			routes_choice_if(int *moves, int *tmp,
 	}
 }
 
-t_pack_routes	*routes_choice(t_lemin **lemin)
+t_pack_routes	*routes_choice(t_lemin **lemin, int moves, int tmp)
 {
-//	print_4(lemin);
 	t_pack_routes	*choice;
 	t_routes		*rs;
 	t_pack_routes	*prs;
-	int				moves;
-	int				tmp;
 
 	choice = NULL;
 	moves = 0;
@@ -74,6 +71,6 @@ void			make_a_choice(t_lemin **lemin)
 	t_pack_routes	*choice;
 
 	fill_count_routes(lemin);
-	choice = routes_choice(lemin);
+	choice = routes_choice(lemin, 0, 0);
 	print_lemin(&(choice->routes), lemin, 1);
 }

@@ -124,7 +124,7 @@ void						sort_routes(t_lemin **lemin, int i);
 void						sort_routes_if(t_routes **tmp, t_routes **rs, int *i);
 
 void						make_a_choice(t_lemin **lemin);
-t_pack_routes				*routes_choice(t_lemin **lemin);
+t_pack_routes				*routes_choice(t_lemin **lemin, int moves, int tmp);
 void						routes_choice_if(int *moves, int *tmp, t_pack_routes **choice, t_pack_routes **prs);
 void						fill_count_routes(t_lemin **lemin);
 
@@ -132,7 +132,6 @@ void						print_lemin(t_routes **routes, t_lemin **lemin, int ant);
 void						print_stdin(t_lemin **lemin);
 void						push_one_route(t_routes **routes, t_lemin **lemin, int flag, int ant);
 void						push_old_ants(t_routes **routes, t_lemin **lemin);
-void move_by_one_route(t_routes **routes, t_lemin **lemin, int ant);
 void						end(t_route **room, t_lemin **lemin);
 int							route_is_ampty(t_route *route);
 int							routes_is_ampty(t_routes **routes);
@@ -140,8 +139,10 @@ void						move_old_ants(t_routes **routes, t_lemin **lemin);
 void						move_new_ants(t_routes **routes, t_lemin **lemin, int *ant);
 void						check_ant_in_end(t_route **route, t_lemin **lemin);
 char						*is_end(t_lemin **lemin);
-char						*is_start(t_lemin **lemin);
 void						print_ants(int *ant, char *s, t_lemin **lemin, int id);
+int							move_all_old(t_routes **routes, t_lemin **lemin);
+void						move_all_null(t_routes **routes, t_lemin **lemin);
+void						move_old_route(t_route **route, t_lemin **lemin);
 
 int							if_is_alnum_str(char *s);
 int							if_is_digit_str(char *s);
@@ -151,10 +152,6 @@ int							limit_int(long int n);
 void						init_connect(t_connect **connect);
 void						*free_twodem_str(char **s);
 void						*free_visit_and_queue(char **visit, char **queue);
-
-int move_all_old(t_routes **routes, t_lemin **lemin);
-void move_all_null(t_routes **routes, t_lemin **lemin);
-int count_all_ants_in_routes(t_routes **routes);
 void						ft_error(int id);
 
 void print_2(t_routes *routes);
