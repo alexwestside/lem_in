@@ -37,7 +37,7 @@ void	move_old_ants(t_routes **routes, t_lemin **lemin)
 			if (rs->next->route->next->ant)
 				rs = rs->next;
 			else
-				break;
+				break ;
 		}
 	}
 }

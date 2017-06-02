@@ -501,32 +501,32 @@ print_lemin_2.c.s:
 	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_2.c.s
 .PHONY : print_lemin_2.c.s
 
-print_lemin_3.c.o: print_lemin_3.c.c.o
+print_lemin_3.o: print_lemin_3.c.o
 
-.PHONY : print_lemin_3.c.o
+.PHONY : print_lemin_3.o
 
 # target to build an object file
-print_lemin_3.c.c.o:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_3.c.c.o
-.PHONY : print_lemin_3.c.c.o
+print_lemin_3.c.o:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_3.c.o
+.PHONY : print_lemin_3.c.o
 
-print_lemin_3.c.i: print_lemin_3.c.c.i
+print_lemin_3.i: print_lemin_3.c.i
 
-.PHONY : print_lemin_3.c.i
+.PHONY : print_lemin_3.i
 
 # target to preprocess a source file
-print_lemin_3.c.c.i:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_3.c.c.i
-.PHONY : print_lemin_3.c.c.i
+print_lemin_3.c.i:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_3.c.i
+.PHONY : print_lemin_3.c.i
 
-print_lemin_3.c.s: print_lemin_3.c.c.s
+print_lemin_3.s: print_lemin_3.c.s
 
-.PHONY : print_lemin_3.c.s
+.PHONY : print_lemin_3.s
 
 # target to generate assembly for a file
-print_lemin_3.c.c.s:
-	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_3.c.c.s
-.PHONY : print_lemin_3.c.c.s
+print_lemin_3.c.s:
+	$(MAKE) -f CMakeFiles/lem_in.dir/build.make CMakeFiles/lem_in.dir/print_lemin_3.c.s
+.PHONY : print_lemin_3.c.s
 
 sub.o: sub.c.o
 
@@ -741,9 +741,9 @@ help:
 	@echo "... print_lemin_2.o"
 	@echo "... print_lemin_2.i"
 	@echo "... print_lemin_2.s"
-	@echo "... print_lemin_3.c.o"
-	@echo "... print_lemin_3.c.i"
-	@echo "... print_lemin_3.c.s"
+	@echo "... print_lemin_3.o"
+	@echo "... print_lemin_3.i"
+	@echo "... print_lemin_3.s"
 	@echo "... sub.o"
 	@echo "... sub.i"
 	@echo "... sub.s"
