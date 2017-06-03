@@ -42,25 +42,29 @@ int		valid_start_end(t_lemin **lemin, char *line, int fd, int *i)
 int		valid_connect(t_lemin **lemin, char *line, char **str, t_room *room)
 {
 	t_connect	*connect;
+	int flag;
 
 	room = (*lemin)->room;
 	while (room)
 	{
+		flag = 0;
 		if (room->name && (!ft_strcmp(str[0], room->name) ||
 	!ft_strcmp(str[1], room->name)))
 		{
 			connect = room->connect;
-			if (!valid_room_name(lemin, !ft_strcmp(str[0], room->name) ?
-	str[1] : str[0]))
+			if (!valid_room_name(lemin, !ft_strcmp(str[0], room->name) ? str[1] : str[0]))
 				return (free_twodem_str(str) == NULL ? 0 : 0);
 			while (connect)
 			{
-				if (!ft_strcmp(!ft_strcmp(str[0], room->name) ?
-	str[1] : str[0], connect->room->name))
-					return (free_twodem_str(str) == NULL ? 0 : 0);
+				if (!ft_strcmp(!ft_strcmp(str[0], room->name) ? str[1] : str[0], connect->room->name))
+				{
+//					return (free_twodem_str(str) == NULL ? 0 : 0);
+					flag = 1;
+					break ;
+				}
 				connect = connect->next;
 			}
-			write_connect(lemin, line, ft_strsplit(line, '-'));
+			!flag ? write_connect(lemin, line, ft_strsplit(line, '-')) : 0;
 			return (free_twodem_str(str) == NULL ? 1 : 1);
 		}
 		room = room->next;
