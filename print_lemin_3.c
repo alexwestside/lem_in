@@ -49,4 +49,5 @@ void print_start_end(t_routes **routes, t_lemin **lemin, int ants)
 		ft_printf(BLU"L%d-%s "END, ants, (*routes)->route->next->room);
 		ants++;
 	}
+	ft_printf("\n");
 }

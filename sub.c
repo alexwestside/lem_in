@@ -17,13 +17,20 @@ int		count_ants(char *s)
 int		check_start_end(t_lemin **lemin, char *line)
 {
 	char	**s;
+	int i = 0;
 
 	s = (*lemin)->std_in;
 	while (ft_strcmp(*s, line))
+	{
 		s++;
-	s--;
-	if (!ft_strcmp(*s, "##start") || !ft_strcmp(*s, "##end"))
-		return (1);
+		i++;
+	}
+	if (i)
+	{
+		s--;
+		if (!ft_strcmp(*s, "##start") || !ft_strcmp(*s, "##end"))
+			return (1);
+	}
 	return (0);
 }
 
@@ -54,4 +61,17 @@ char	*is_end(t_lemin **lemin)
 		room = room->next;
 	}
 	return (room->name);
+}
+
+
+int		valid_connect_if(char **str, t_room *room, t_connect *connect, int *flag)
+{
+
+	if (!ft_strcmp(!ft_strcmp(str[0], room->name) ?
+				   str[1] : str[0], connect->room->name))
+	{
+		*flag = 1;
+		return (1);
+	}
+	return (0);
 }
