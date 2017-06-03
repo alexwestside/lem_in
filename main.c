@@ -16,8 +16,8 @@ int		read_stdin(t_lemin **lemin, char *line, int fd, int *i)
 {
 	int	valid;
 
-//	if (!line)
-//		ft_error (1);
+	if (!line)
+		ft_error (1);
 	valid = 0;
 	if (type_num_ants(line))
 		valid = valid_ants(lemin, ft_atoi(line), line);
@@ -38,7 +38,7 @@ void	read_and_valid(t_lemin **lemin, char ***std_in)
 	int	i;
 
 	i = -1;
-	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/test5", O_RDONLY);
+	fd = open("/nfs/2016/o/orizhiy/ClionProjects/lem_in/!!!", O_RDONLY);
 //	fd = 0;
 //	(*std_in)[0] = NULL;
 	while (get_next_line(fd, &((*std_in)[++i])))
