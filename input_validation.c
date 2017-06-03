@@ -39,6 +39,18 @@ int		valid_start_end(t_lemin **lemin, char *line, int fd, int *i)
 	return (1);
 }
 
+int valid_connect_if(char **str, t_room *room, t_connect *connect, int *flag)
+{
+
+	if (!ft_strcmp(!ft_strcmp(str[0], room->name) ?
+				   str[1] : str[0], connect->room->name))
+	{
+		*flag = 1;
+		return (1);
+	}
+	return (0);
+}
+
 int		valid_connect(t_lemin **lemin, char *line, char **str, t_room *room)
 {
 	t_connect	*connect;
@@ -52,16 +64,24 @@ int		valid_connect(t_lemin **lemin, char *line, char **str, t_room *room)
 	!ft_strcmp(str[1], room->name)))
 		{
 			connect = room->connect;
-			if (!valid_room_name(lemin, !ft_strcmp(str[0], room->name) ? str[1] : str[0]))
+			if (!valid_room_name(lemin, !ft_strcmp(str[0], room->name) ?
+				str[1] : str[0]))
 				return (free_twodem_str(str) == NULL ? 0 : 0);
 			while (connect)
 			{
-				if (!ft_strcmp(!ft_strcmp(str[0], room->name) ? str[1] : str[0], connect->room->name))
+				if (valid_connect_if(str, room, connect, &flag))
 				{
-//					return (free_twodem_str(str) == NULL ? 0 : 0);
-					flag = 1;
-					break ;
+//					free_twodem_str(str);
+					break;
 				}
+//				if (!ft_strcmp(!ft_strcmp(str[0], room->name) ?
+//				str[1] : str[0], connect->room->name))
+//				{
+////					return (free_twodem_str(str) == NULL ? 0 : 0);
+//					free_twodem_str(str);
+//					flag = 1;
+//					break ;
+//				}
 				connect = connect->next;
 			}
 			!flag ? write_connect(lemin, line, ft_strsplit(line, '-')) : 0;
